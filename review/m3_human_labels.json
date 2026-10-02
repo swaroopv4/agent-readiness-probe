@@ -1,0 +1,121 @@
+{
+  "reviewer": "Swaroop",
+  "recorded_at": "2026-10-02T09:00:44.408677+00:00",
+  "source": "Human labels supplied directly by Swaroop in the conversation; timestamp is transcription time, not inferred review time. Assistant hypothesis verification is recorded separately and does not amend supplied labels or notes.",
+  "labels": [
+    {
+      "trajectory": "M3-01",
+      "task": "click-002",
+      "events_sha256": "5da3517b7defb371cd9299cb641e21bbccb81212b9c7059ebc9e0299b6c5a03b",
+      "human_primary": "no_failure",
+      "human_secondary": [
+        "env_setup"
+      ],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-02",
+      "task": "click-003",
+      "events_sha256": "88d54ff1b7d8eea6734829857404124f7ef942c544d7eb3cb86dc77ffb0525f6",
+      "human_primary": "no_failure",
+      "human_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-03",
+      "task": "click-009",
+      "events_sha256": "c14aaca87732c6e9ae0520e8792a4c79aa091e16306074b52abf59683e93533a",
+      "human_primary": "no_failure",
+      "human_secondary": [],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-04",
+      "task": "click-010",
+      "events_sha256": "98d23a92760e6636a8ddd31947fa64e7db206b20299b7e9da7a16040a68c0095",
+      "human_primary": "reasoning_error",
+      "human_secondary": [
+        "reasoning_error"
+      ],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-05",
+      "task": "click-001",
+      "events_sha256": "49449e36d3efbcbca2629db46b4a98ea38d3b8554b8d555edf92c2452e995d0c",
+      "human_primary": "no_failure",
+      "human_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-06",
+      "task": "click-004",
+      "events_sha256": "d96d4d165020eb3f0d6238fa399979af3f3a0f5f44a82fef301d1e8cf3c00249",
+      "human_primary": "no_failure",
+      "human_secondary": [],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-07",
+      "task": "click-005",
+      "events_sha256": "a174bd1b64f769f2eb17290e1885d032730e784ca895fc5eb77c4ecc5d08775f",
+      "human_primary": "no_failure",
+      "human_secondary": [
+        "reasoning_error"
+      ],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-08",
+      "task": "click-006",
+      "events_sha256": "4ac7a516379c189fb78b34854ccabb074bf55c21667ab24b1ce662ab19dcc918",
+      "human_primary": "reasoning_error",
+      "human_secondary": [
+        "missing_context"
+      ],
+      "human_notes": "patch strips ANSI even when color is enabled. Agent never tested the color-enabled branch stated in the requirement. Hypothesis, unconfirmed: direct import of should_strip_ansi bypasses CliRunner's color patching."
+    },
+    {
+      "trajectory": "M3-09",
+      "task": "click-007",
+      "events_sha256": "15cbd3de84546a4a2291ea0ac1c0f929f8f56383fe99e81c2408a82d7cff1a6a",
+      "human_primary": "no_failure",
+      "human_secondary": [
+        "reasoning_error"
+      ],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-10",
+      "task": "click-008",
+      "events_sha256": "03aa17b5821656c5c3fe4a507be0eb12d1af29cc288f388f61e1928c7581fba1",
+      "human_primary": "reasoning_error",
+      "human_secondary": [],
+      "human_notes": "fix only applies when the stream is MaybeStripAnsi. Agent's diagnostics never exercised the TTY with nonexistent PAGER path stated in the requirement and were not rerun after the final patch."
+    },
+    {
+      "trajectory": "M3-11",
+      "task": "click-011",
+      "events_sha256": "b9e3ecb78a2ed75b9ea5924714cd1b0ffffff361ca01e077cab4ad8056cdcd19",
+      "human_primary": "no_failure",
+      "human_secondary": [],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    },
+    {
+      "trajectory": "M3-12",
+      "task": "click-012",
+      "events_sha256": "98bbdbc30c28196555b289e8a1d94aacfe7c12df5957cc7c05c17e83706129d0",
+      "human_primary": "no_failure",
+      "human_secondary": [],
+      "human_notes": "Agree with rule_primary and rule_secondary as listed."
+    }
+  ],
+  "cross_trajectory_note": "both confirmation failures stopped after existing tests passed without verifying every stated requirement.",
+  "future_work": "Observed pattern and untested candidate intervention for future work: require explicit checks covering each stated requirement and rerun relevant checks after the final patch. This was noticed on confirmation data; do not change frozen AGENTS.md or test it on these same confirmation tasks as an untouched held-out set."
+}

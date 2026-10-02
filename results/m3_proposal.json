@@ -1,0 +1,128 @@
+{
+  "status": "approved_and_superseded_by_results/m3_freeze.json",
+  "calibration_commit": "e4b0637",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "outcomes": {
+    "success": "primary",
+    "wall_time": "prespecified key secondary",
+    "tool_calls": "diagnostic",
+    "tokens": "diagnostic",
+    "failed_public_test_runs": "diagnostic"
+  },
+  "intervention_path": "interventions/drafts/setup-v1/AGENTS.md",
+  "draft_sha256": "ae59af6e5b2ef1b510958ef4159c0e0c05d9cbc0d313db7617fb6781dbc43c89",
+  "delivery": {
+    "mechanism": "workspace file, not inline prompt text",
+    "agent_path": "/workspace/AGENTS.md",
+    "common_prompt_sentence": "If /workspace/AGENTS.md exists, read it before starting the task.",
+    "identical_common_prompt_in_both_arms": true,
+    "automatic_rule_discovery": "remains disabled as in M2; explicit file reading requested",
+    "baseline": "no AGENTS overlay or automatic package installation",
+    "intervention": "exact same candidate AGENTS bytes for every task, copied into the sanitized workspace; setup remains agent-executed",
+    "immutable_overlay": "host checks collected AGENTS hash against the approved overlay before source-only patch capture",
+    "evaluator": "unchanged; no AGENTS overlay, no agent scratch distribution, hidden tests injected only there"
+  },
+  "m3_plan": {
+    "status": "approved",
+    "baseline_confirmation_tasks": 8,
+    "baseline_attempts_per_task": 1,
+    "baseline_confirmation_attempts": 8,
+    "development_rubric_calibration_labels": 4,
+    "confirmation_evaluation_labels": 8,
+    "human_labels_total": 12,
+    "already_human_labeled": 0,
+    "original_20_label_requirement": "User approved reduced 12-label total",
+    "development_held_out": false,
+    "optional_model_judge_calls": 0,
+    "baseline_repeat": 1
+  },
+  "base_only_provenance": [
+    {
+      "task_id": "click-002",
+      "agent_workspace": "artifacts\\private\\m1-v7\\agent_workspaces\\click-002",
+      "public_base_file_sha256": {
+        "pyproject.toml": "6cca567eef4004426c3a42a94de7ef6b971992f1d7292faea3a17dd322d92717",
+        "tests/test_basic.py": "af3e91d16bebb42750737f297da9825dce6ecc516db9295b3b0c6d6d62a1337d",
+        "tests/conftest.py": "192be82444d6048fd222e2d73cd5c3bec768d65c6e10c0ffc230f307f363590b",
+        "tests/test_deprecations.py": "1b384f420f17b274e9552386da4e2b94643349b79219f84fa0b0fe5c0d842a0a"
+      },
+      "verification_summary": [
+        "102 passed in 0.16s",
+        "1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 5.32s"
+      ]
+    },
+    {
+      "task_id": "click-003",
+      "agent_workspace": "artifacts\\private\\m1-v7\\agent_workspaces\\click-003",
+      "public_base_file_sha256": {
+        "pyproject.toml": "ec245d751757743ffe2fafe58bc924bbdbda50cc4bbc3aec77109eb0b9418c75",
+        "tests/test_basic.py": "af3e91d16bebb42750737f297da9825dce6ecc516db9295b3b0c6d6d62a1337d",
+        "tests/conftest.py": "192be82444d6048fd222e2d73cd5c3bec768d65c6e10c0ffc230f307f363590b",
+        "tests/test_deprecations.py": "1b384f420f17b274e9552386da4e2b94643349b79219f84fa0b0fe5c0d842a0a"
+      },
+      "verification_summary": [
+        "102 passed in 0.17s",
+        "1940 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.40s"
+      ]
+    },
+    {
+      "task_id": "click-009",
+      "agent_workspace": "artifacts\\private\\m1-v7\\agent_workspaces\\click-009",
+      "public_base_file_sha256": {
+        "pyproject.toml": "f9a2bc31f584a32f88b9d9bcaf7c34bf8ab714eaf124b01b714b0394ca0f327b",
+        "tests/test_basic.py": "516bc1e39389b91c506403cabc2026b7fac56991276933b3e9e3db0fa8d953df",
+        "tests/conftest.py": "192be82444d6048fd222e2d73cd5c3bec768d65c6e10c0ffc230f307f363590b"
+      },
+      "verification_summary": [
+        "88 passed in 0.14s",
+        "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.69s"
+      ]
+    },
+    {
+      "task_id": "click-010",
+      "agent_workspace": "artifacts\\private\\m1-v7\\agent_workspaces\\click-010",
+      "public_base_file_sha256": {
+        "pyproject.toml": "f99bdc45ed564e9f228bfe62c8a0393d505f8627211c216b83cba93fd6fa5254",
+        "tests/test_basic.py": "516bc1e39389b91c506403cabc2026b7fac56991276933b3e9e3db0fa8d953df",
+        "tests/conftest.py": "192be82444d6048fd222e2d73cd5c3bec768d65c6e10c0ffc230f307f363590b"
+      },
+      "verification_summary": [
+        "88 passed in 0.16s",
+        "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.56s"
+      ]
+    }
+  ],
+  "click_010_trace_review": {
+    "events_sha256": "98d23a92760e6636a8ddd31947fa64e7db206b20299b7e9da7a16040a68c0095",
+    "collection_or_metadata_errors_found": [],
+    "full_public_pytest_event": "item_12",
+    "full_public_failures": 29,
+    "full_public_passes": 1481,
+    "last_focused_pytest_event": "item_20",
+    "last_focused_failures": 1,
+    "offline_evaluator_failures": 69,
+    "offline_evaluator_collection_errors": 0,
+    "offline_failure_types": [
+      "AssertionError"
+    ],
+    "interpretation": "Observed failures are behavioral; the older public base lacks tests/test_deprecations.py. No evidence of the repeated metadata collection problem in this trajectory."
+  },
+  "verification": {
+    "development_command_checks": 4,
+    "inference_calls": 0,
+    "confirmation_tasks_executed": 0,
+    "gold_or_hidden_tests_used_to_draft": false,
+    "docker_timeouts": 0
+  },
+  "budget": {
+    "incremental_paid_api_spend": 0,
+    "dollar_cost": "not measured",
+    "cli_invocations_so_far": 19,
+    "proposed_m3_scored_calls": 8,
+    "proposed_m3_gate_calls": 1,
+    "projected_after_m3": 28,
+    "original_approximate_ceiling": 50
+  },
+  "future_M5": "User approved retention of M3 baseline repeat 1 and randomized interleaving of remaining baseline repeat 2 plus intervention repeats 1 and 2; execution stops at M3 sheet for review."
+}

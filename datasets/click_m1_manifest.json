@@ -1,0 +1,656 @@
+{
+  "host_only": true,
+  "instruction": "Never mount selection metadata, history, or oracle artifacts into an agent workspace.",
+  "dataset_version": "m1-v7",
+  "tasks": [
+    {
+      "task_id": "click-001",
+      "title": "Short help handles abbreviations and word boundaries",
+      "category": "terminal_text",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "base_commit": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "date": "2026-09-11",
+      "archive_sha256": "6331db9412e8c379ac5953ed34d7163cae4ec5890efc4e3605e21103b6f60a0e",
+      "statement_sha256": "18a7fa595444ccdcb6343108d1224046ac8aea6b441ddd9f033ce4773547a8cb",
+      "gold_sha256": "e094b7282fce589a82ca94f1cc44d2b19002867ce64d48f2e23280b911190b9f",
+      "oracle_sha256": "3cb3a9fd651957bd8a4f275380bb6314492cb3fab3983441703a3fe4258a4d04",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 2070,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 2095
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 2086,
+          "failed_each": 6,
+          "skipped_each": 25,
+          "collected_each": 2117
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 2092,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 2117
+        }
+      },
+      "human_review": {
+        "task_id": "click-001",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept with the statement revisions approved in this conversation. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-002",
+      "title": "Sentinels survive copying and serialization",
+      "category": "object_lifecycle",
+      "split": "development",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+      "base_commit": "420c8fb44eeadb537cae69d2fee3796e808558dd",
+      "date": "2026-08-29",
+      "archive_sha256": "e5eb8a12adb15202318c0c175f0bd18fa0a20c1453831a78979902477b363791",
+      "statement_sha256": "cf4354d1fe58f1433569a831a14b4ab22fbd71b58f0838e1f7f82f9227fffc03",
+      "gold_sha256": "263c441fb7feeb73f830f30ada0cf62ca921c6a79a790fd7b56196bd2bb39a05",
+      "oracle_sha256": "1a246202e19ffae4c31f462d3c73f37e7a881ca9da80b2ba457b92edfcca628a",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1991,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 2016
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1997,
+          "failed_each": 3,
+          "skipped_each": 25,
+          "collected_each": 2025
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 2000,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 2025
+        }
+      },
+      "human_review": {
+        "task_id": "click-002",
+        "split": "development",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept, no statement changes. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-003",
+      "title": "Help option aliases have stable order",
+      "category": "parameter_resolution",
+      "split": "development",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "047adef258fc25566163ffc3efd14effc0ef7352",
+      "base_commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+      "date": "2026-07-31",
+      "archive_sha256": "49a92579ee9bfca7980b086c356ae3729258c2fa8c100947e23cff80b55984bf",
+      "statement_sha256": "87f5ef1cd1b9ae4cce39275c4f015e3328e7bf1322cc369f2badaf1706380942",
+      "gold_sha256": "ea68fc115aaf232e964b09f8f1c358a1b96e9b5dc71230cd973df4f6b9fd430e",
+      "oracle_sha256": "089de4a226e0a226b17ee56011a2f542f16a6fe344990a1e0e92c29bb3cc3363",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1940,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1965
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1949,
+          "failed_each": 4,
+          "skipped_each": 25,
+          "collected_each": 1978
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1953,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1978
+        }
+      },
+      "human_review": {
+        "task_id": "click-003",
+        "split": "development",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept, no statement changes. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-004",
+      "title": "Color values are validated consistently",
+      "category": "terminal_text",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+      "base_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+      "date": "2026-07-08",
+      "archive_sha256": "3fe9d319df6ef267b7754387ba87c78ec895ed6f117809f9737028eb2dd137b8",
+      "statement_sha256": "8c6140bebab92bfcec58ae4014339f2e1186c5e6ac0fdf78da14dced404ee2b5",
+      "gold_sha256": "f231bee5bb8dbd4138b31695927779fe7762bddbe37e8a18a1ab5d1ab6d5ee8a",
+      "oracle_sha256": "1ecd4538f6df4248bffb86bfa7c138087d33e83bf74a8f95abdf760db96bb394",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1685,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1710
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1711,
+          "failed_each": 38,
+          "skipped_each": 25,
+          "collected_each": 1774
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1749,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1774
+        }
+      },
+      "human_review": {
+        "task_id": "click-004",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept with the statement revisions approved in this conversation. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-005",
+      "title": "Terminal escape handling supports complete CSI sequences",
+      "category": "terminal_text",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "71f2bafa541e7f798834e74076786ff4281ac83e",
+      "base_commit": "8a4ce842564ae94ab050062db8525196ad476c19",
+      "date": "2026-07-09",
+      "archive_sha256": "93758f3ea9bd22d8452579074bbded1848d0fccb71166eecfaeb7a10a0c93301",
+      "statement_sha256": "0fffd456e3d3be818cddff46077cc817cd06f3ccd222aaf016dae6ff66d5ea35",
+      "gold_sha256": "796bf48f9748f8f609eca4ce79e4b39eb373ff56272cdcc3aa261aa9125f1fc8",
+      "oracle_sha256": "3db920366c28f2a58c559a2ee11e3a0dd2cc1a2c5a7aa7307d29a3b26afeb198",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1749,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1774
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1864,
+          "failed_each": 30,
+          "skipped_each": 25,
+          "collected_each": 1919
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1894,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1919
+        }
+      },
+      "human_review": {
+        "task_id": "click-005",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept with the statement revisions approved in this conversation. Revised statement names _ansi_re because the hidden test inspects it directly. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-006",
+      "title": "Prompt color follows output policy",
+      "category": "terminal_text",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "93ba0075f4881b858b61f89a753c7c10e330027e",
+      "base_commit": "240603f240a9ff179d834fede836060d897c6980",
+      "date": "2026-07-01",
+      "archive_sha256": "9fede1aa6e6191afe69493b2fba4a8fbdfe82295c5e903e7d206f91bc893fc89",
+      "statement_sha256": "d8ced992fa2d6a56b0aa759cae3622065373fd0f1ab40921950bd372745930fb",
+      "gold_sha256": "b5775f0f99456acf751241c94910a1ef0a6fca691a64c8083af4e759e93f67a4",
+      "oracle_sha256": "89700761d9fcf714f049963057ec47d98b1a9a9566090b813495af23e322cd51",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1677,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1702
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1679,
+          "failed_each": 2,
+          "skipped_each": 25,
+          "collected_each": 1706
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1681,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1706
+        }
+      },
+      "human_review": {
+        "task_id": "click-006",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept, no statement changes. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-007",
+      "title": "Version option resolves import names",
+      "category": "package_metadata",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "bec59289d8cf9b9b4010642b2fee483e5f8eeefc",
+      "base_commit": "916883afad450c0c9bbc4212817900949131adbd",
+      "date": "2026-06-14",
+      "archive_sha256": "0c2f91ea0c019d334625e81411a7a45a770a112e9aeed2638d9e6ea786fd0265",
+      "statement_sha256": "b98d00ea47481f37cec660ece9e2b6387a5470e263b60b3d432f52e13e3aea14",
+      "gold_sha256": "bfe246f99862632c2917197d5dab3ca8a1c1649f6f2c354be24f8ad70b94e459",
+      "oracle_sha256": "cf881f79ae9d764aa2ad88e8df554dd214250348072b81142df0de60689a423d",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1658,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1683
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1659,
+          "failed_each": 2,
+          "skipped_each": 25,
+          "collected_each": 1686
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1661,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1686
+        }
+      },
+      "human_review": {
+        "task_id": "click-007",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept with the statement revisions approved in this conversation. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-008",
+      "title": "Pager fallback preserves borrowed output streams",
+      "category": "object_lifecycle",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "051bb0f30b545cf7426deef819811815297c2798",
+      "base_commit": "cd9bdd96a9dcc8e4ecabd45b5c244dbc70034484",
+      "date": "2026-06-03",
+      "archive_sha256": "dd56410da5d444167a4eb222b1ba83d586481b0e9499ff2a060b59666a40bf5e",
+      "statement_sha256": "32b146494eb63634602b7f4922814d1ea67a70a9281df3d171a2fd1860cb7d64",
+      "gold_sha256": "0c723e4fb8a0a1ee70928bb9fef1bb4f1ccbb97cb4e05233e0c566db8f15092d",
+      "oracle_sha256": "57d60cbe302ddc2b07f972048a1b89b139e356f5735d34b4477b9a8370544f5e",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1654,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1679
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1654,
+          "failed_each": 2,
+          "skipped_each": 25,
+          "collected_each": 1681
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1656,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1681
+        }
+      },
+      "human_review": {
+        "task_id": "click-008",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept, no statement changes. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-009",
+      "title": "Parameter source is available during conversion and callbacks",
+      "category": "parameter_resolution",
+      "split": "development",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "7d05a59b9d46a415d85937630d1d812cf477f60a",
+      "base_commit": "4b24a6c8f6658ef89fd6db4dcaf8ee88eef75dfa",
+      "date": "2026-05-21",
+      "archive_sha256": "4d4071b54bd5426c6b8c2a8b7f8c072c02c6a9b0d03f09b8aae948046f8578ac",
+      "statement_sha256": "ae5bdbbff89b36e17d10f2517cfb20fa5764b14f4b0f43b5f23e76cf374f1090",
+      "gold_sha256": "778a9fab6c71b964a2c543c5774d5fe1e046311c3da629b15479107bb92bfe73",
+      "oracle_sha256": "5d0025b01e3c6a34023ab49cc5c1e951d82d4590b9b8de3efb1fc90058b74e3e",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1624,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1649
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1627,
+          "failed_each": 3,
+          "skipped_each": 25,
+          "collected_each": 1655
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1630,
+          "failed_each": 0,
+          "skipped_each": 25,
+          "collected_each": 1655
+        }
+      },
+      "human_review": {
+        "task_id": "click-009",
+        "split": "development",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept with the statement revisions approved in this conversation. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-010",
+      "title": "Competing flags respect value-source precedence",
+      "category": "parameter_resolution",
+      "split": "development",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "0f71fe771ceefd5715b3b375c9b2e3a701c0648e",
+      "base_commit": "c943271a269e6941fcc51e3506ead074b9dda6be",
+      "date": "2026-05-15",
+      "archive_sha256": "3db3437ff316d62b8cff20bcdf1c42af9b783a29b77b33c1d77f348a97a40a80",
+      "statement_sha256": "5943d9960da6d0cd6aa7407c5da6d38f46403eee50d33df650d3e4c352e50419",
+      "gold_sha256": "8aa8a903df88c2e5bebddc1364bbd9b0fd8fcce419532cf4ffc146b323930592",
+      "oracle_sha256": "d6b9b2d677901dfa91b3b3b71b953800e566578463acbad079e905c8e7bb9d0f",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1510,
+          "failed_each": 0,
+          "skipped_each": 24,
+          "collected_each": 1534
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1569,
+          "failed_each": 18,
+          "skipped_each": 24,
+          "collected_each": 1611
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1587,
+          "failed_each": 0,
+          "skipped_each": 24,
+          "collected_each": 1611
+        }
+      },
+      "human_review": {
+        "task_id": "click-010",
+        "split": "development",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept with the statement revisions approved in this conversation. Development task only. Its oracle includes an unrelated duplicate-option warning check. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-011",
+      "title": "Hidden prompts retain safe validation feedback",
+      "category": "private_input",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "a09c1c655eef3d43181eb46036b66cf058d72df4",
+      "base_commit": "fc6c7c47edd6110b6bd5a1a5297b2035214b0cd1",
+      "date": "2026-05-08",
+      "archive_sha256": "4c42c28c87bfe480ceb5b7fe67fd802e18027acb1af69f8746e364587ebd1cc3",
+      "statement_sha256": "f702956300c65a6c6631967681d7ffd500120faf6bbe2d44b8f9095cc9c06813",
+      "gold_sha256": "8c93b497b82d19b580c6a9cdce3bc648af22a7c04ee735213382bd179db49933",
+      "oracle_sha256": "aaf70ddb83c8ed49bc0e2b50a5dc78b024f773d5225a22f2c9a691fd19db1e7e",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1494,
+          "failed_each": 0,
+          "skipped_each": 24,
+          "collected_each": 1518
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1495,
+          "failed_each": 2,
+          "skipped_each": 24,
+          "collected_each": 1521
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1497,
+          "failed_each": 0,
+          "skipped_each": 24,
+          "collected_each": 1521
+        }
+      },
+      "human_review": {
+        "task_id": "click-011",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept with the statement revisions approved in this conversation. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    },
+    {
+      "task_id": "click-012",
+      "title": "Multi-value defaults accept serialized strings",
+      "category": "parameter_resolution",
+      "split": "confirmation",
+      "repo_url": "https://github.com/pallets/click.git",
+      "license": "BSD-3-Clause",
+      "fix_commit": "3a3e0350b6a2ea3e799440d48e779acabcf44de9",
+      "base_commit": "8bd8b4a074c55c03b6eb5666edc44a9c43df38a2",
+      "date": "2026-04-27",
+      "archive_sha256": "f9939a5783bc526201f23945006202fdae9db0769c5747059d518fcc26c43dc1",
+      "statement_sha256": "0f0a42677a4396b95f6ff130308ecfd25af9ffd0276ab5eddcdbe65076ccb7de",
+      "gold_sha256": "a5f15465373f759e4e749cc1eb388807431940720efcb6d367c7a6c2a34aee18",
+      "oracle_sha256": "61801a20f30b0c2b2a0708d603079e2610d0695c13b41ad70074a8c89dc10593",
+      "image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+      "human_acceptance": "accepted",
+      "exposure_risk": "unknown",
+      "known_overlap": "not measured, public benchmark metadata checks incomplete",
+      "state_checks": {
+        "base": {
+          "repetitions": 3,
+          "passed_each": 1436,
+          "failed_each": 0,
+          "skipped_each": 24,
+          "collected_each": 1460
+        },
+        "buggy": {
+          "repetitions": 3,
+          "passed_each": 1439,
+          "failed_each": 2,
+          "skipped_each": 24,
+          "collected_each": 1465
+        },
+        "gold": {
+          "repetitions": 3,
+          "passed_each": 1441,
+          "failed_each": 0,
+          "skipped_each": 24,
+          "collected_each": 1465
+        }
+      },
+      "human_review": {
+        "task_id": "click-012",
+        "split": "confirmation",
+        "decision": "accept",
+        "clear_specification": "",
+        "assertions_aligned": "",
+        "alternate_solutions_allowed": "",
+        "meaningful_task": "",
+        "notes": "Accept, no statement changes. Overall note: Statements were revised to match hidden assertions before any agent run. Revised tasks are more precisely specified than typical real-world tickets. Record this as a limitation.",
+        "reviewer": "Swaroop",
+        "reviewed_at": "2026-10-01T02:22:34.934247+00:00"
+      }
+    }
+  ],
+  "parent_dataset_version": "m1-v6"
+}

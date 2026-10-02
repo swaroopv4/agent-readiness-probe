@@ -1,0 +1,49 @@
+run_id,task_id,split,arm,repeat,success,agent_wall_seconds,metadata_error_attempt,metadata_error_commands,trace_confirmed_failed_public_commands,original_failed_public_commands,native_tool_calls,input_tokens,cached_input_tokens,output_tokens,agents_read,agents_read_reference,trace_path
+01-click-001-baseline-1,click-001,confirmation,baseline,1,True,66.656,True,1,2,2,8,131111,108288,2798,not delivered,,artifacts/private/m3-confirmation-001/01-click-001-baseline-1/events.jsonl
+02-click-004-baseline-1,click-004,confirmation,baseline,1,True,48.891,False,0,0,0,5,90132,63232,1862,not delivered,,artifacts/private/m3-confirmation-001/02-click-004-baseline-1/events.jsonl
+03-click-005-baseline-1,click-005,confirmation,baseline,1,True,56.079,False,0,0,0,7,97649,65792,2311,not delivered,,artifacts/private/m3-confirmation-001/03-click-005-baseline-1/events.jsonl
+04-click-006-baseline-1,click-006,confirmation,baseline,1,False,50.187,False,0,0,0,7,148493,116224,2017,not delivered,,artifacts/private/m3-confirmation-001/04-click-006-baseline-1/events.jsonl
+05-click-007-baseline-1,click-007,confirmation,baseline,1,True,67.875,False,0,0,0,10,180445,153856,2806,not delivered,,artifacts/private/m3-confirmation-001/05-click-007-baseline-1/events.jsonl
+06-click-008-baseline-1,click-008,confirmation,baseline,1,False,77.343,False,0,0,0,8,141408,114432,3089,not delivered,,artifacts/private/m3-confirmation-001/06-click-008-baseline-1/events.jsonl
+07-click-011-baseline-1,click-011,confirmation,baseline,1,True,67.359,False,0,0,0,8,128682,106240,2207,not delivered,,artifacts/private/m3-confirmation-001/07-click-011-baseline-1/events.jsonl
+08-click-012-baseline-1,click-012,confirmation,baseline,1,True,47.844,False,0,0,0,7,131387,103168,1752,not delivered,,artifacts/private/m3-confirmation-001/08-click-012-baseline-1/events.jsonl
+01-click-007-baseline-2,click-007,confirmation,baseline,2,False,42.64,False,0,0,0,6,102869,85248,1654,not delivered,,artifacts/private/m5-run-001/01-click-007-baseline-2/events.jsonl
+02-click-007-intervention-2,click-007,confirmation,intervention,2,True,62.125,False,0,0,0,8,134618,100096,2176,True,item_2 at line 6,artifacts/private/m5-run-001/02-click-007-intervention-2/events.jsonl
+03-click-007-intervention-1,click-007,confirmation,intervention,1,False,38.843,False,0,0,0,5,97234,76288,1419,True,item_2 at line 6,artifacts/private/m5-run-001/03-click-007-intervention-1/events.jsonl
+04-click-002-baseline-1,click-002,development,baseline,1,True,61.781,True,2,2,2,9,174926,154624,2134,not delivered,,artifacts/private/m5-run-001/04-click-002-baseline-1/events.jsonl
+05-click-002-baseline-2,click-002,development,baseline,2,True,63.422,True,1,1,1,10,191091,156416,2160,not delivered,,artifacts/private/m5-run-001/05-click-002-baseline-2/events.jsonl
+06-click-002-intervention-1,click-002,development,intervention,1,True,70.86,True,1,1,1,9,133051,109312,2430,True,item_2 at line 6,artifacts/private/m5-run-001/06-click-002-intervention-1/events.jsonl
+07-click-002-intervention-2,click-002,development,intervention,2,True,63.703,True,1,1,1,8,116367,95232,2212,True,item_2 at line 6,artifacts/private/m5-run-001/07-click-002-intervention-2/events.jsonl
+08-click-005-intervention-2,click-005,confirmation,intervention,2,True,48.125,False,0,0,0,6,93828,78592,1701,True,item_2 at line 6,artifacts/private/m5-run-001/08-click-005-intervention-2/events.jsonl
+09-click-005-intervention-1,click-005,confirmation,intervention,1,True,44.516,False,0,0,0,7,96566,81920,1574,True,item_2 at line 6,artifacts/private/m5-run-001/09-click-005-intervention-1/events.jsonl
+10-click-005-baseline-2,click-005,confirmation,baseline,2,True,42.375,False,0,0,0,6,87946,68864,1497,not delivered,,artifacts/private/m5-run-001/10-click-005-baseline-2/events.jsonl
+11-click-001-intervention-1,click-001,confirmation,intervention,1,True,79.5,True,1,3,3,8,155837,131584,2903,True,item_2 at line 6,artifacts/private/m5-run-001/11-click-001-intervention-1/events.jsonl
+12-click-001-baseline-2,click-001,confirmation,baseline,2,True,40.875,True,1,2,2,9,123500,107776,2899,not delivered,,artifacts/private/m5-run-001/12-click-001-baseline-2/events.jsonl
+13-click-001-intervention-2,click-001,confirmation,intervention,2,True,79.0,True,1,2,2,6,92570,76032,2839,True,item_2 at line 6,artifacts/private/m5-run-001/13-click-001-intervention-2/events.jsonl
+14-click-010-intervention-2,click-010,development,intervention,2,True,91.687,False,0,0,0,14,317694,288512,3247,True,item_2 at line 6,artifacts/private/m5-run-001/14-click-010-intervention-2/events.jsonl
+15-click-010-baseline-1,click-010,development,baseline,1,False,105.969,False,0,0,0,15,337669,306176,4009,not delivered,,artifacts/private/m5-run-001/15-click-010-baseline-1/events.jsonl
+16-click-010-baseline-2,click-010,development,baseline,2,False,71.609,False,0,0,0,9,272139,222208,2705,not delivered,,artifacts/private/m5-run-001/16-click-010-baseline-2/events.jsonl
+17-click-010-intervention-1,click-010,development,intervention,1,False,74.765,False,0,0,0,11,221336,189696,2886,True,item_2 at line 6; item_3 at line 8,artifacts/private/m5-run-001/17-click-010-intervention-1/events.jsonl
+18-click-008-intervention-1,click-008,confirmation,intervention,1,False,64.25,False,0,0,1,8,129345,109312,2527,True,item_2 at line 6,artifacts/private/m5-run-001/18-click-008-intervention-1/events.jsonl
+19-click-008-baseline-2,click-008,confirmation,baseline,2,True,44.781,False,0,0,0,7,139606,121344,1486,not delivered,,artifacts/private/m5-run-001/19-click-008-baseline-2/events.jsonl
+20-click-008-intervention-2,click-008,confirmation,intervention,2,True,48.297,False,0,0,1,5,71851,37888,1894,True,item_2 at line 6,artifacts/private/m5-run-001/20-click-008-intervention-2/events.jsonl
+21-click-004-intervention-1,click-004,confirmation,intervention,1,True,44.422,False,0,0,0,5,77064,65792,1771,True,item_2 at line 6,artifacts/private/m5-run-001/21-click-004-intervention-1/events.jsonl
+22-click-004-intervention-2,click-004,confirmation,intervention,2,True,52.172,False,0,0,0,8,106202,93696,2066,True,item_2 at line 6,artifacts/private/m5-run-001/22-click-004-intervention-2/events.jsonl
+23-click-004-baseline-2,click-004,confirmation,baseline,2,True,54.391,False,0,0,0,6,109440,78080,2060,not delivered,,artifacts/private/m5-run-001/23-click-004-baseline-2/events.jsonl
+24-click-006-intervention-1,click-006,confirmation,intervention,1,False,64.656,False,0,0,0,12,216420,174080,2596,True,item_2 at line 6,artifacts/private/m5-run-001/24-click-006-intervention-1/events.jsonl
+25-click-006-baseline-2,click-006,confirmation,baseline,2,False,49.36,False,0,0,0,7,114243,76032,1601,not delivered,,artifacts/private/m5-run-001/25-click-006-baseline-2/events.jsonl
+26-click-006-intervention-2,click-006,confirmation,intervention,2,False,57.328,False,0,0,0,11,191128,161792,1927,True,item_2 at line 6,artifacts/private/m5-run-001/26-click-006-intervention-2/events.jsonl
+27-click-009-intervention-1,click-009,development,intervention,1,True,56.75,False,0,0,0,9,155414,115456,1918,True,item_2 at line 6; item_3 at line 8,artifacts/private/m5-run-001/27-click-009-intervention-1/events.jsonl
+28-click-009-baseline-1,click-009,development,baseline,1,True,56.063,False,0,0,0,8,137814,112640,1892,not delivered,,artifacts/private/m5-run-001/28-click-009-baseline-1/events.jsonl
+29-click-009-intervention-2,click-009,development,intervention,2,True,44.735,False,0,0,0,8,138896,114432,1598,True,item_2 at line 6,artifacts/private/m5-run-001/29-click-009-intervention-2/events.jsonl
+30-click-009-baseline-2,click-009,development,baseline,2,True,48.531,False,0,0,0,9,168912,147712,1780,not delivered,,artifacts/private/m5-run-001/30-click-009-baseline-2/events.jsonl
+31-click-012-intervention-1,click-012,confirmation,intervention,1,True,41.485,False,0,0,0,6,89592,68096,1442,True,item_2 at line 6,artifacts/private/m5-run-001/31-click-012-intervention-1/events.jsonl
+32-click-012-baseline-2,click-012,confirmation,baseline,2,True,45.343,False,0,0,0,7,127119,92160,1598,not delivered,,artifacts/private/m5-run-001/32-click-012-baseline-2/events.jsonl
+33-click-012-intervention-2,click-012,confirmation,intervention,2,True,56.468,False,0,0,0,7,116898,104192,1803,True,item_2 at line 6,artifacts/private/m5-run-001/33-click-012-intervention-2/events.jsonl
+34-click-011-intervention-2,click-011,confirmation,intervention,2,True,53.891,False,0,0,0,7,113442,75776,1808,True,item_2 at line 6,artifacts/private/m5-run-001/34-click-011-intervention-2/events.jsonl
+35-click-011-intervention-1,click-011,confirmation,intervention,1,True,76.859,False,0,0,0,9,169614,149760,1916,True,item_2 at line 6,artifacts/private/m5-run-001/35-click-011-intervention-1/events.jsonl
+36-click-011-baseline-2,click-011,confirmation,baseline,2,True,67.344,False,0,0,0,7,112115,82944,2028,not delivered,,artifacts/private/m5-run-001/36-click-011-baseline-2/events.jsonl
+37-click-003-baseline-1,click-003,development,baseline,1,True,50.703,True,1,1,1,9,161577,125440,2090,not delivered,,artifacts/private/m5-run-001/37-click-003-baseline-1/events.jsonl
+38-click-003-intervention-1,click-003,development,intervention,1,True,73.375,True,1,1,1,10,236041,192256,2461,True,item_2 at line 6,artifacts/private/m5-run-001/38-click-003-intervention-1/events.jsonl
+39-click-003-baseline-2,click-003,development,baseline,2,True,84.594,True,1,1,1,12,199109,153088,3011,not delivered,,artifacts/private/m5-run-001/39-click-003-baseline-2/events.jsonl
+40-click-003-intervention-2,click-003,development,intervention,2,True,56.11,True,1,1,1,9,188276,159232,1674,True,item_2 at line 6,artifacts/private/m5-run-001/40-click-003-intervention-2/events.jsonl

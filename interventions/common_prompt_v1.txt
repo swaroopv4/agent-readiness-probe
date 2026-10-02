@@ -1,0 +1,2 @@
+Complete the maintenance task in /workspace/TASK.md. Dependencies are preinstalled. If /workspace/AGENTS.md exists, read it before starting the task. Change only production Python files under src/click. Preserve TASK.md, tests, and configuration. Temporary diagnostics are allowed outside tests. Run the public test suite using PYTHONPATH=/workspace/src. Use native Linux shell and file tools. Keep each shell command within 120 seconds. Do not access credentials or the network. Leave the source changes in /workspace and explain the result.
+

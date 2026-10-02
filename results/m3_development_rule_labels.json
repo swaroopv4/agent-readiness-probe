@@ -1,0 +1,168 @@
+{
+  "status": "development_only_rubric_calibration_not_human_labels",
+  "rows": [
+    {
+      "run_id": "01-click-002-baseline-0",
+      "task_id": "click-002",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 0,
+      "state": "resolved",
+      "success": true,
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup"
+      ],
+      "applicability": "task",
+      "rule_reason": "Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.",
+      "evidence": [
+        {
+          "item_id": "item_7",
+          "event_line": 15,
+          "kind": "env_setup",
+          "exit_code": 2,
+          "excerpt": "raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 1.97s"
+        },
+        {
+          "item_id": "item_11",
+          "event_line": 22,
+          "kind": "env_setup",
+          "exit_code": 2,
+          "excerpt": "raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 1.96s"
+        },
+        {
+          "item_id": "host-evaluation",
+          "event_line": null,
+          "kind": "outcome",
+          "excerpt": "State=resolved; evaluator passed=2000; failures=0; errors=0"
+        }
+      ],
+      "events_sha256": "5da3517b7defb371cd9299cb641e21bbccb81212b9c7059ebc9e0299b6c5a03b",
+      "human_primary": "",
+      "human_secondary": "",
+      "human_notes": ""
+    },
+    {
+      "run_id": "02-click-003-baseline-0",
+      "task_id": "click-003",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 0,
+      "state": "resolved",
+      "success": true,
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ],
+      "applicability": "task",
+      "rule_reason": "Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.",
+      "evidence": [
+        {
+          "item_id": "item_7",
+          "event_line": 15,
+          "kind": "env_setup",
+          "exit_code": 2,
+          "excerpt": "raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 2.47s"
+        },
+        {
+          "item_id": "item_9",
+          "event_line": 18,
+          "kind": "public_test_run",
+          "exit_code": 0,
+          "excerpt": "665 passed, 71 deselected in 0.69s"
+        },
+        {
+          "item_id": "item_10",
+          "event_line": 20,
+          "kind": "reasoning_error",
+          "exit_code": 0,
+          "excerpt": "AssertionError"
+        },
+        {
+          "item_id": "host-evaluation",
+          "event_line": null,
+          "kind": "outcome",
+          "excerpt": "State=resolved; evaluator passed=1953; failures=0; errors=0"
+        }
+      ],
+      "events_sha256": "88d54ff1b7d8eea6734829857404124f7ef942c544d7eb3cb86dc77ffb0525f6",
+      "human_primary": "",
+      "human_secondary": "",
+      "human_notes": ""
+    },
+    {
+      "run_id": "03-click-009-baseline-0",
+      "task_id": "click-009",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 0,
+      "state": "resolved",
+      "success": true,
+      "rule_primary": "no_failure",
+      "rule_secondary": [],
+      "applicability": "task",
+      "rule_reason": "Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.",
+      "evidence": [
+        {
+          "item_id": "item_10",
+          "event_line": 21,
+          "kind": "public_test_run",
+          "exit_code": 0,
+          "excerpt": "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.31s"
+        },
+        {
+          "item_id": "host-evaluation",
+          "event_line": null,
+          "kind": "outcome",
+          "excerpt": "State=resolved; evaluator passed=1630; failures=0; errors=0"
+        }
+      ],
+      "events_sha256": "c14aaca87732c6e9ae0520e8792a4c79aa091e16306074b52abf59683e93533a",
+      "human_primary": "",
+      "human_secondary": "",
+      "human_notes": ""
+    },
+    {
+      "run_id": "04-click-010-baseline-0",
+      "task_id": "click-010",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 0,
+      "state": "test_failure",
+      "success": false,
+      "rule_primary": "reasoning_error",
+      "rule_secondary": [
+        "reasoning_error"
+      ],
+      "applicability": "task",
+      "rule_reason": "Submitted failure and visible public behavioral test failures; no inference about hidden reasoning.",
+      "evidence": [
+        {
+          "item_id": "item_12",
+          "event_line": 25,
+          "kind": "reasoning_error",
+          "exit_code": 1,
+          "excerpt": "E           AssertionError: assert 'None' == '1'; tests/test_options.py:2316: AssertionError; tests/test_options.py:2499: AssertionError; 29 failed, 1481 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.75s"
+        },
+        {
+          "item_id": "item_20",
+          "event_line": 41,
+          "kind": "reasoning_error",
+          "exit_code": 1,
+          "excerpt": "E       AssertionError: assert 'green' in '\\n'; tests/test_defaults.py:157: AssertionError; 1 failed in 0.08s"
+        },
+        {
+          "item_id": "host-evaluation",
+          "event_line": null,
+          "kind": "outcome",
+          "excerpt": "State=test_failure; evaluator passed=1518; failures=69; errors=0"
+        }
+      ],
+      "events_sha256": "98d23a92760e6636a8ddd31947fa64e7db206b20299b7e9da7a16040a68c0095",
+      "human_primary": "",
+      "human_secondary": "",
+      "human_notes": ""
+    }
+  ]
+}

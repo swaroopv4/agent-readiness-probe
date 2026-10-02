@@ -1,0 +1,43 @@
+{
+  "version": "m3-rubric-v1",
+  "status": "frozen_by_user_authorization_before_confirmation_runs",
+  "development_only": true,
+  "labels": [
+    "env_setup",
+    "missing_context",
+    "wrong_file_located",
+    "convention_violation",
+    "test_flakiness",
+    "reasoning_error",
+    "unclassified",
+    "no_failure"
+  ],
+  "primary_definition": "Terminal task failure category; resolved submissions receive no_failure even if intermediate tests failed. Intermediate obstacles are secondary diagnostics.",
+  "precedence": [
+    "infrastructure status => unclassified/outside task taxonomy",
+    "resolved => no_failure",
+    "host immutable/source rejection => convention_violation",
+    "test_failure plus visible public behavior/assertion failure => reasoning_error",
+    "test_failure/cancelled plus visible import/collection obstacle and no public behavior failure => provisional env_setup",
+    "otherwise unclassified"
+  ],
+  "definitions": {
+    "env_setup": "Observable import, distribution metadata, or collection obstacle. Attribution from failed validation to setup is provisional for human review.",
+    "missing_context": "Manual only: cite an available public contract/setup fact that the trace demonstrably failed to use.",
+    "wrong_file_located": "Manual only: cite work on an unrelated area; gold-file mismatch is forbidden evidence.",
+    "convention_violation": "Host verifies a predeclared source-only/immutable file constraint violation; other constraints require explicit human evidence.",
+    "test_flakiness": "Manual only: repeated unchanged patch/environment gives inconsistent results; a single failing run is insufficient.",
+    "reasoning_error": "Observable public assertion/behavioral failure accompanying a submitted task failure; behavioral shorthand, not hidden reasoning or causal proof.",
+    "unclassified": "Insufficient evidence, ambiguity, caps without a supported class, or infrastructure outside the task taxonomy.",
+    "no_failure": "Independent evaluator and host submission checks passed."
+  },
+  "secondary_rules": {
+    "env_setup": "Actual public pytest collection errors or import/metadata traceback; displayed source alone is insufficient",
+    "reasoning_error": "Actual public pytest failures or assertion traceback, including failures masked by a later successful shell command. Displayed source alone is insufficient."
+  },
+  "evidence_policy": "Use exposed agent shell outputs, host submission constraints, and aggregate independent outcome. Do not use gold patches or hidden test content to choose labels. Preserve event IDs and line numbers. Expected xfails and intentional pre-fix reproduction can be discounted by human reviewers; the lexical secondary detector is not a causal classifier.",
+  "calibration": "Only the four prior Luna development traces. No human labels exist yet; these are deterministic development rule outputs, not completed human calibration.",
+  "held_out": "Eight new confirmation trajectories; rules, rubric, intervention, and common prompt cannot be revised after exposure.",
+  "review_policy": "User sees task, outcome, evidence, and rule predictions as requested. This is unblinded review with possible anchoring; no independent blinded or inter-human validation claim.",
+  "agreement": "Compute only after user supplies labels: held-out eight separately from development four; absent classes not measured; no model judge."
+}

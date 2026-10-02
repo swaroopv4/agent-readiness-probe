@@ -1,0 +1,10 @@
+ARG EVALUATOR_IMAGE=arp-m1-evaluator:v1
+FROM ${EVALUATOR_IMAGE}
+USER root
+ARG CODEX_VERSION=0.153.1
+RUN apt-get update && apt-get install --yes --no-install-recommends git ripgrep nodejs npm ca-certificates curl && rm -rf /var/lib/apt/lists/*
+RUN npm install --global @openai/codex@${CODEX_VERSION} && npm cache clean --force
+RUN node --version > /opt/agent-system-packages.txt && codex --version >> /opt/agent-system-packages.txt && git --version >> /opt/agent-system-packages.txt && rg --version >> /opt/agent-system-packages.txt && dpkg-query -W >> /opt/agent-system-packages.txt
+RUN mkdir -p /codex /auth /workspace && chown 1000:1000 /codex /workspace
+USER 1000:1000
+WORKDIR /workspace

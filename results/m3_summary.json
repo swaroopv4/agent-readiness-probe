@@ -1,0 +1,708 @@
+{
+  "milestone": "M3",
+  "status": "completed_approved_reduced_scope_stop_before_M4",
+  "freeze_commit": "19b880e",
+  "freeze_json_sha256": "2700acc2d124be41f1c9c14c4c62bd962ee5500e423f36457c0946b71ea783a8",
+  "intervention_sha256": "ae59af6e5b2ef1b510958ef4159c0e0c05d9cbc0d313db7617fb6781dbc43c89",
+  "rubric_sha256": "47cb0a1f9900df853e00fbb72000ac76710f27379560ea7722098b07730a0834",
+  "common_prompt_sha256": "7fa0f683918a188744dc92649f9fa723132e3c13f66bc76f39226ddb5e7757d1",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "baseline_confirmation_attempts": 8,
+  "baseline_repeat": 1,
+  "retained_for_M5": true,
+  "resolved": 6,
+  "failed": 2,
+  "human_labeling": {
+    "development_calibration_rows": 4,
+    "held_out_confirmation_rows": 8,
+    "total_rows": 12,
+    "human_labels_supplied": 12,
+    "agreement": "results/m3_agreement.json",
+    "reviewer": "Swaroop",
+    "recorded_at": "2026-10-02T09:00:44.408677+00:00",
+    "held_out_primary_exact_agreement": 0.75,
+    "held_out_primary_kappa": 0.42857142857142855,
+    "held_out_secondary_exact_agreement": 0.875
+  },
+  "attempts": [
+    {
+      "run_id": "01-click-001-baseline-1",
+      "task_id": "click-001",
+      "split": "confirmation",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 66.656,
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 6,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 131111,
+        "cached_input_tokens": 108288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2798,
+        "reasoning_output_tokens": 961
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.02s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 128,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "E       IndexError: list index out of range",
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "3 failed, 11 passed in 0.03s"
+          ],
+          "command_sha256": "fa5638f0ed5ecd6c595626c89195cbe4a2e2148efaf32d005cc132d1e6885755",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "12 passed, 2 deselected in 0.01s"
+          ],
+          "command_sha256": "a3690e33e42dd88fc65f0187cbd897467cd34ff71fdfaf3cc74258990d9b5bcb",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 2,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.280999999959022,
+        "collected": 2117,
+        "passed": 2092,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "49449e36d3efbcbca2629db46b4a98ea38d3b8554b8d555edf92c2452e995d0c",
+      "result_sha256": "5b6e06df54419accb20b5ae05c313ea4c6bfe3f21cd423d83af3c0ba45355b0a"
+    },
+    {
+      "run_id": "02-click-004-baseline-1",
+      "task_id": "click-004",
+      "split": "confirmation",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 48.891,
+      "cli_turns": 1,
+      "native_tool_calls": 5,
+      "command_calls": 4,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 90132,
+        "cached_input_tokens": 63232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1862,
+        "reasoning_output_tokens": 261
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.59s"
+          ],
+          "command_sha256": "d0ded67413d505fe52a2dfa04be05d1cf437bfe82358f1121a5086e5318994ec",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_3",
+          "exit_code": 128,
+          "summary_lines": [
+            "        except KeyError:",
+            "        except KeyError:"
+          ]
+        },
+        {
+          "item_id": "item_8",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.297000000020489,
+        "collected": 1774,
+        "passed": 1749,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "d96d4d165020eb3f0d6238fa399979af3f3a0f5f44a82fef301d1e8cf3c00249",
+      "result_sha256": "8d2ab87dc2d3d592c86c5999cd71ccc34359c2c49be0f1efb16904765ada77d9"
+    },
+    {
+      "run_id": "03-click-005-baseline-1",
+      "task_id": "click-005",
+      "split": "confirmation",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 56.079,
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 97649,
+        "cached_input_tokens": 65792,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2311,
+        "reasoning_output_tokens": 555
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.85s"
+          ],
+          "command_sha256": "0a173ee76ce74c49cd6d355bb46c556913ccac3120a50541636bcdb8ae60d1bf",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.23399999999674,
+        "collected": 1919,
+        "passed": 1894,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "a174bd1b64f769f2eb17290e1885d032730e784ca895fc5eb77c4ecc5d08775f",
+      "result_sha256": "26e7a11e695b4f8c357f06fc3879ca0c82d1ae13d4b803d5e88479f9a3e555df"
+    },
+    {
+      "run_id": "04-click-006-baseline-1",
+      "task_id": "click-006",
+      "split": "confirmation",
+      "state": "test_failure",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 50.187,
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 148493,
+        "cached_input_tokens": 116224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2017,
+        "reasoning_output_tokens": 588
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.44s"
+          ],
+          "command_sha256": "681606321f6e70701aef94e8d36d196509f9ba9fdad542a4b0d22f3518ceeddf",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_9",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.09399999998277,
+        "collected": 1706,
+        "passed": 1679,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "4ac7a516379c189fb78b34854ccabb074bf55c21667ab24b1ce662ab19dcc918",
+      "result_sha256": "ca8824c12c77e90d8f5879322336e4a231239d3d6780750377194e83a7202c72"
+    },
+    {
+      "run_id": "05-click-007-baseline-1",
+      "task_id": "click-007",
+      "split": "confirmation",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 67.875,
+      "cli_turns": 1,
+      "native_tool_calls": 10,
+      "command_calls": 9,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 180445,
+        "cached_input_tokens": 153856,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2806,
+        "reasoning_output_tokens": 698
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.45s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_12",
+          "exit_code": 1,
+          "summary_lines": [
+            "AssertionError"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.125,
+        "collected": 1686,
+        "passed": 1661,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "15cbd3de84546a4a2291ea0ac1c0f929f8f56383fe99e81c2408a82d7cff1a6a",
+      "result_sha256": "3f632ba7a2c9724c9f3cdac80df58f21ac7d377a90c8529a8c9afa7bccf7db68"
+    },
+    {
+      "run_id": "06-click-008-baseline-1",
+      "task_id": "click-008",
+      "split": "confirmation",
+      "state": "test_failure",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 77.343,
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 141408,
+        "cached_input_tokens": 114432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3089,
+        "reasoning_output_tokens": 1370
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "AttributeError: 'tuple' object has no attribute 'buffer'",
+            "405 passed, 24 skipped, 1000 deselected in 0.60s"
+          ],
+          "command_sha256": "7176f6e9c20dc26a7963b2a5d2a7172ab0e0357fc173e88762f599f14aac47b0",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.22s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 7.89000000001397,
+        "collected": 1681,
+        "passed": 1654,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "03aa17b5821656c5c3fe4a507be0eb12d1af29cc288f388f61e1928c7581fba1",
+      "result_sha256": "2806647d9a45c87d80b3ea84cba23200dae6f8b8a5197b6143f9afaceb6981d6"
+    },
+    {
+      "run_id": "07-click-011-baseline-1",
+      "task_id": "click-011",
+      "split": "confirmation",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 67.359,
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 6,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 128682,
+        "cached_input_tokens": 106240,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2207,
+        "reasoning_output_tokens": 676
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.08s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 128,
+          "summary_lines": []
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 1,
+          "summary_lines": [
+            "TypeError: Parameter.__init__() got an unexpected keyword argument 'value_proc'"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.3439999999827705,
+        "collected": 1521,
+        "passed": 1497,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "b9e3ecb78a2ed75b9ea5924714cd1b0ffffff361ca01e077cab4ad8056cdcd19",
+      "result_sha256": "5c6c0d4cba8728a8a4ce72978e2ba4cdb36adabd46d1d18f6d78cf796f0f3ef5"
+    },
+    {
+      "run_id": "08-click-012-baseline-1",
+      "task_id": "click-012",
+      "split": "confirmation",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 47.844,
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 131387,
+        "cached_input_tokens": 103168,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1752,
+        "reasoning_output_tokens": 563
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.92s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_9",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.296999999962281,
+        "collected": 1465,
+        "passed": 1441,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "98bbdbc30c28196555b289e8a1d94aacfe7c12df5957cc7c05c17e83706129d0",
+      "result_sha256": "a8cd298f68d2d90ebdaf84179a3781713e1565b0b382e079f3c1ae33dd4e939c"
+    }
+  ],
+  "rule_labels": [
+    {
+      "trajectory": "M3-01",
+      "task_id": "click-002",
+      "review_role": "development calibration",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [
+        "env_setup"
+      ],
+      "events_sha256": "5da3517b7defb371cd9299cb641e21bbccb81212b9c7059ebc9e0299b6c5a03b"
+    },
+    {
+      "trajectory": "M3-02",
+      "task_id": "click-003",
+      "review_role": "development calibration",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [
+        "env_setup",
+        "reasoning_error"
+      ],
+      "events_sha256": "88d54ff1b7d8eea6734829857404124f7ef942c544d7eb3cb86dc77ffb0525f6"
+    },
+    {
+      "trajectory": "M3-03",
+      "task_id": "click-009",
+      "review_role": "development calibration",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [],
+      "events_sha256": "c14aaca87732c6e9ae0520e8792a4c79aa091e16306074b52abf59683e93533a"
+    },
+    {
+      "trajectory": "M3-04",
+      "task_id": "click-010",
+      "review_role": "development calibration",
+      "state": "test_failure",
+      "primary": "reasoning_error",
+      "secondary": [
+        "reasoning_error"
+      ],
+      "events_sha256": "98d23a92760e6636a8ddd31947fa64e7db206b20299b7e9da7a16040a68c0095"
+    },
+    {
+      "trajectory": "M3-05",
+      "task_id": "click-001",
+      "review_role": "held-out confirmation",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [
+        "env_setup",
+        "reasoning_error"
+      ],
+      "events_sha256": "49449e36d3efbcbca2629db46b4a98ea38d3b8554b8d555edf92c2452e995d0c"
+    },
+    {
+      "trajectory": "M3-06",
+      "task_id": "click-004",
+      "review_role": "held-out confirmation",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [],
+      "events_sha256": "d96d4d165020eb3f0d6238fa399979af3f3a0f5f44a82fef301d1e8cf3c00249"
+    },
+    {
+      "trajectory": "M3-07",
+      "task_id": "click-005",
+      "review_role": "held-out confirmation",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [
+        "reasoning_error"
+      ],
+      "events_sha256": "a174bd1b64f769f2eb17290e1885d032730e784ca895fc5eb77c4ecc5d08775f"
+    },
+    {
+      "trajectory": "M3-08",
+      "task_id": "click-006",
+      "review_role": "held-out confirmation",
+      "state": "test_failure",
+      "primary": "unclassified",
+      "secondary": [],
+      "events_sha256": "4ac7a516379c189fb78b34854ccabb074bf55c21667ab24b1ce662ab19dcc918"
+    },
+    {
+      "trajectory": "M3-09",
+      "task_id": "click-007",
+      "review_role": "held-out confirmation",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [
+        "reasoning_error"
+      ],
+      "events_sha256": "15cbd3de84546a4a2291ea0ac1c0f929f8f56383fe99e81c2408a82d7cff1a6a"
+    },
+    {
+      "trajectory": "M3-10",
+      "task_id": "click-008",
+      "review_role": "held-out confirmation",
+      "state": "test_failure",
+      "primary": "unclassified",
+      "secondary": [],
+      "events_sha256": "03aa17b5821656c5c3fe4a507be0eb12d1af29cc288f388f61e1928c7581fba1"
+    },
+    {
+      "trajectory": "M3-11",
+      "task_id": "click-011",
+      "review_role": "held-out confirmation",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [],
+      "events_sha256": "b9e3ecb78a2ed75b9ea5924714cd1b0ffffff361ca01e077cab4ad8056cdcd19"
+    },
+    {
+      "trajectory": "M3-12",
+      "task_id": "click-012",
+      "review_role": "held-out confirmation",
+      "state": "resolved",
+      "primary": "no_failure",
+      "secondary": [],
+      "events_sha256": "98bbdbc30c28196555b289e8a1d94aacfe7c12df5957cc7c05c17e83706129d0"
+    }
+  ],
+  "accounting": {
+    "prior_cli_invocations": 19,
+    "m3_baseline_invocations": 8,
+    "m3_gate_invocations": 1,
+    "total_cli_invocations": 28,
+    "model_labeling_invocations": 0,
+    "incremental_paid_api_spend": 0,
+    "dollar_cost": "not measured",
+    "docker_timeouts": 0,
+    "remaining_original_approximately_50_ceiling": 22,
+    "later_M5_scored_attempts": 24,
+    "later_M5_gate_attempts": 1,
+    "projected_total_M5": 53
+  },
+  "gate": {
+    "passed": true,
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "finished": "2026-10-02T08:22:41.590305+00:00"
+  },
+  "probes": {
+    "https://github.com": "proxy CONNECT 403",
+    "https://pypi.org": "proxy CONNECT 403",
+    "https://1.1.1.1": "proxy CONNECT 403",
+    "direct 1.1.1.1": "OSError: [Errno 101] Network is unreachable",
+    "direct 8.8.8.8": "OSError: [Errno 101] Network is unreachable",
+    "external_dns": "blocked",
+    "codex_endpoint_tls": 401,
+    "auth_mount": "read-only",
+    "identity": "1000:1000"
+  },
+  "cleanup": {
+    "agent_proxy_containers_remaining": [],
+    "agent_networks_remaining": [],
+    "owned_evaluator_containers_remaining": [],
+    "credential_bytes_in_evidence_or_review": false,
+    "docker_timeouts": 0,
+    "frozen_artifacts_unchanged": true
+  },
+  "M5_started": false,
+  "arm_order_limitation": "All eight M3 baseline repeat-1 runs precede intervention runs. Only the remaining baseline repeat 2 and intervention repeats 1 and 2 are randomized/interleaved. Arm order is not fully randomized; cohort/time confounding remains.",
+  "review_artifacts_sha256": {
+    "review/m3_labeling_evidence.json": "779830e7541391f4ea87ee447a315010745898166bfd0d081063638f352096e8",
+    "review/m3_labeling_sheet.csv": "71278f008ae29b5a9bae81463492d80b983a9c8a83f4bf998ab0c327fca43bd8",
+    "review/m3_labeling_sheet.html": "fe4c48b4c1dd44189ad3821023d6492bda5003e4591ef313bfefb0a16b600ccf",
+    "review/m3_trace_index.md": "40925c42bf95af654696917da4c5c3e9304f621c16fb8439fa0ddf48cc5da061"
+  },
+  "presentation_fix": "Frozen sheet generator has a literal CR/LF escaping defect in its CSV download script. Apply arp.m3_review_fixup after generation. This presentation-only byte substitution changes no rule, outcome, evidence, or human-label field.",
+  "verification": {
+    "eight_baseline_evidence_audit": "passed",
+    "html_editable_rows": 12,
+    "javascript_syntax": "passed",
+    "CSV_download_round_trip": "twelve rows identical",
+    "human_fields": "twelve supplied primary labels, secondary sets and notes recorded; reviewer Swaroop"
+  }
+}

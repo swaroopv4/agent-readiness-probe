@@ -1,0 +1,100 @@
+[
+  {
+    "commit": "f67c2bb",
+    "title": "Short help handles abbreviations and word boundaries",
+    "category": "terminal_text",
+    "statement": "Short command help should summarize the first paragraph, collapse whitespace, ignore an initial no-rewrap marker, and recognize sentence endings without cutting off abbreviations such as \"vs. pears\". A period followed by a lowercase word continues the sentence. A period at the end of the text or before a non-lowercase word ends it. Respect the width using a three-dot suffix when truncation is needed. Never split a word, including a hyphenated word. If the available width is smaller than the suffix, return the complete suffix for overlong text. Preserve text that already fits. Empty input should remain empty. The initial no-rewrap marker is a standalone `\\b`, which may follow leading whitespace. When truncating, retain the longest whole-word prefix that fits together with `...`. Append those three dots directly after the retained text, preserving an existing final period."
+  },
+  {
+    "commit": "f58ca3e",
+    "title": "Sentinels survive copying and serialization",
+    "category": "object_lifecycle",
+    "statement": "Click sentinel values must preserve singleton identity through shallow copy, deep copy, and a pickle round trip. Copying or serializing an Option with an unspecified default should succeed and preserve its sentinel default and option name. Preserve normal parameter behavior.",
+    "behavioral_exception_types": [
+      "ValueError"
+    ],
+    "review_notes": "The contract requires copying and pickling to succeed. A ValueError rejecting a newly copied enum value is a behavioral failure, not an environment failure. Review the singleton-identity assertions and parameter-copy cases."
+  },
+  {
+    "commit": "047adef",
+    "title": "Help option aliases have stable order",
+    "category": "parameter_resolution",
+    "statement": "Configured help option names must retain their declaration order when displayed or returned. Remove duplicates by retaining their first occurrence. Names claimed by ordinary parameters, including both sides of a boolean flag pair, must be excluded. Handle the case where no help aliases remain. Preserve standard help invocation."
+  },
+  {
+    "commit": "07c909f",
+    "title": "Color values are validated consistently",
+    "category": "terminal_text",
+    "statement": "Terminal styling must accept named colors, palette indices from 0 through 255, and three-channel RGB sequences, including three-element tuples and lists, with integer channels from 0 through 255. Palette index 0 and RGB black are valid for foreground and background. Reject unknown names, empty strings, bytes, booleans, floats, out-of-range values, and malformed RGB sequences with ValueError whose message contains the case-sensitive text `Unknown color`. Preserve the existing ANSI SGR encodings for named, indexed, and RGB colors. Emit zero-valued colors, append `\\x1b[0m` by default even without styles, honor reset=False, and let unstyle recover the original text. Named colors are case-sensitive strings: black, red, green, yellow, blue, magenta, cyan, white, their bright_ variants, and reset. For example, \"red\" is valid, while \"BLACK\" and `b\"red\"` are invalid.",
+    "behavioral_exception_types": [
+      "TypeError"
+    ],
+    "review_notes": "Invalid color inputs must raise ValueError. The original implementation raises TypeError for some inputs, which is a direct exception-contract violation. All such failures are in color oracle cases, while the same environment passes the base and gold suites."
+  },
+  {
+    "commit": "71f2baf",
+    "title": "Terminal escape handling supports complete CSI sequences",
+    "category": "terminal_text",
+    "statement": "Removing terminal styling must remove complete ECMA-48 CSI escape sequences, including colon-separated color parameters, mouse-reporting parameters, intermediate bytes, and non-letter final bytes. Retain plain text and incomplete escape sequences. Visible-length calculations, help wrapping, and visible-prefix truncation must treat complete sequences as zero-width. Preserve the escape sequences themselves when truncating styled text and preserve existing supported ANSI behavior. The existing `_ansi_re` matcher must recognize each complete CSI sequence from its introducer through its first final byte as one match. `term_len(text)` must equal `len(strip_ansi(text))`. Visible-prefix truncation returns empty text for a nonpositive budget. Otherwise, retain sequences encountered before the requested visible-character boundary and stop immediately after reaching it, excluding subsequent sequences."
+  },
+  {
+    "commit": "93ba007",
+    "title": "Prompt color follows output policy",
+    "category": "terminal_text",
+    "statement": "Styled text passed to prompt and confirm must follow the same color policy as ordinary output. Strip ANSI escapes when color is disabled or the destination does not support it. Retain them when color is enabled. Handle both stdout and stderr destinations while preserving input handling and prompt suffixes."
+  },
+  {
+    "commit": "bec5928",
+    "title": "Version option resolves import names",
+    "category": "package_metadata",
+    "statement": "When a version option receives or detects a top-level import name that is different from its installed distribution name, resolve the installed distribution and print its version. A direct installed distribution name still takes precedence. If an import name maps to multiple distributions, fail with a nonzero command exit status and an exception message containing the case-sensitive phrase `multiple installed distributions`, naming every candidate and asking for an explicit package_name. If no distribution resolves, fail with a nonzero exit status and retain an exception message containing `not installed`. Preserve explicitly supplied versions."
+  },
+  {
+    "commit": "051bb0f",
+    "title": "Pager fallback preserves borrowed output streams",
+    "category": "object_lifecycle",
+    "statement": "When a pager is unavailable and output falls back to the caller's stdout, leaving the pager context and garbage-collecting its wrappers must keep the borrowed output stream and its underlying buffer open. Written text must remain readable. This must also work on a TTY with PAGER naming a nonexistent executable and through echo_via_pager inside CliRunner. Flush output without taking ownership of a borrowed stream. Preserve normal subprocess and temporary-file ownership.",
+    "behavioral_exception_types": [
+      "ValueError"
+    ],
+    "review_notes": "The contract requires borrowed output streams to stay open. The original pager closes a stream and raises ValueError on subsequent I/O in the regression case. That closed-stream exception is behavioral. Base and gold pass under the same environment."
+  },
+  {
+    "commit": "7d05a59",
+    "title": "Parameter source is available during conversion and callbacks",
+    "category": "parameter_resolution",
+    "statement": "Custom parameter conversion and eager callbacks must be able to inspect the current value's ParameterSource before processing completes. Distinguish default, default_map, environment, and command-line input accurately. A callback that skips a default debug flag must leave an existing debug environment variable untouched, while an explicit flag may update it. For competing flags sharing a parameter name, final source tracking must remain consistent with the winning value. An omitted optional option with no default must remain None."
+  },
+  {
+    "commit": "0f71fe7",
+    "title": "Competing flags respect value-source precedence",
+    "category": "parameter_resolution",
+    "statement": "For options sharing one callback parameter, preserve value-source precedence: command-line input beats environment values, which beat default_map, which beats parameter defaults. At default precedence, an explicitly configured default beats an inferred default, independent of decorator order. If multiple equal-precedence defaults are explicit, the last declared option wins. Preserve falsy values and explicit None, boolean and non-boolean feature-switch groups, callbacks, and accurate ParameterSource tracking. Command-line pairs should keep the parser's last supplied value. Without a configured default, boolean flags infer False and non-boolean flags infer None. For a non-boolean flag_value, default=True selects that flag_value, including an empty string. Explicit default=UNSET is equivalent to omitting the default, and UNSET in default_map falls through to parameter defaults. Mixed boolean and non-boolean flag_value options in one group follow the same arbitration rules. Repeated declaration of the same option spelling emits UserWarning containing the case-sensitive text `used more than once`. With warnings configured as errors, invocation must exit with code 1 and expose that UserWarning as the exception."
+  },
+  {
+    "commit": "a09c1c6",
+    "title": "Hidden prompts retain safe validation feedback",
+    "category": "private_input",
+    "statement": "A hidden-input prompt should provide useful validation feedback without revealing the entered secret. Preserve a custom error message verbatim when it contains no entered value. For built-in errors quoting the entered value, replace that quoted value with the literal `'***'`, including its single quotes, and preserve the remaining message. For example, invalid hidden integer input should produce feedback containing `'***' is not a valid integer` without the entered secret. If a custom message contains the raw unquoted entered value, use the existing generic feedback `Error: The value you entered was invalid.` and omit the secret. Retain the Error prefix, retry behavior, and non-hidden prompt behavior."
+  },
+  {
+    "commit": "3a3e035",
+    "title": "Multi-value defaults accept serialized strings",
+    "category": "parameter_resolution",
+    "statement": "String values in default_map for multi-value options should be split using the parameter type's environment-value splitting contract, then converted into the expected values. For example, a two-integer option with \"3 4\" should produce (3, 4), and a two-string tuple type with \"hello world\" should produce (\"hello\", \"world\"). Existing tuples and lists should remain valid, and explicit command-line values must override default_map. Preserve single-value behavior."
+  },
+  {
+    "commit": "b96c260",
+    "title": "Editor commands preserve argument boundaries",
+    "category": "process_invocation",
+    "statement": "Pager and editor command strings should honor quoted executable paths, escaped spaces, and ordinary command flags. Editor filenames must be passed as literal arguments, including spaces or shell metacharacters, rather than interpreted as shell code. Preserve custom environment values and report failed or missing editors as Click exceptions. Retain normal pager output and error handling.",
+    "review_notes": "Not used in the frozen set. The historical mock test requires omitted shell= rather than allowing explicit shell=False. That is stricter than the behavioral contract and needs oracle correction before a future dataset version.",
+    "exclusion_reason": "oracle_constrains_shell_keyword_omission_instead_of_behavior"
+  },
+  {
+    "commit": "546f285",
+    "title": "Callable flag values are not invoked as defaults",
+    "category": "parameter_resolution",
+    "statement": "A flag configured with a callable or class as flag_value and an unprocessed type should deliver that callable or class itself when enabled by its default or explicit flag. It must not instantiate or call the value. Preserve explicit defaults, default_map precedence, and help rendering that names the callable without invoking it."
+  }
+]

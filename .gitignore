@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+.pytest-tmp-*/
+.coverage
+htmlcov/
+artifacts/private/
+workspaces/
+*.log

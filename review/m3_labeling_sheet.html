@@ -1,0 +1,1318 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>M3 human labeling sheet</title>
+<style>body{font:15px system-ui;margin:24px;color:#182433;background:#f5f7fa}h1{font-size:25px}.wrap{overflow:auto}table{border-collapse:collapse;background:white;min-width:1200px;width:100%}td,th{border:1px solid #d3dbe5;padding:10px;vertical-align:top;text-align:left}th{background:#e7edf4}small{display:block;margin-top:8px;color:#516174}select,input,textarea{box-sizing:border-box;width:100%;margin:4px 0;padding:8px;min-width:210px}textarea{min-height:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:400px;overflow:auto;font-size:12px}button{padding:10px 16px;margin:8px 10px 16px 0}summary{cursor:pointer}td:nth-child(7){min-width:300px}</style>
+<h1>M3 human labeling sheet</h1><p>12 trajectories: 4 development calibration and 8 held-out confirmation. All 12 human labels supplied by Swaroop are recorded. The CSV and human-label JSON are the canonical review record; rule predictions remain unchanged.</p>
+<p>Primary rule labels describe final outcomes; intermediate setup/behavior obstacles appear as secondary diagnostics. Expected xfails and intentional pre-fix reproductions need human judgment. Rule predictions are shown as requested: this review is unblinded and may be anchored. This is one supplied human review, with no independent blinded or inter-human validation claim.</p>
+<p>The eight confirmation rows are M5 baseline repeat 1 and will not be rerun. The intervention and rubric were frozen before these runs. No M5 intervention attempt has started.</p>
+<button id="download">Download labeled CSV</button><span id="count"></span><div class="wrap"><table><thead><tr><th>Trajectory</th><th>Role</th><th>Task</th><th>Outcome</th><th>Agent seconds</th><th>Rule label</th><th>Key trace evidence</th><th>Your review</th></tr></thead><tbody><tr><td>M3-01</td><td>development calibration</td><td>click-002</td><td>pass</td><td>53.593</td><td>no_failure<small>Secondary: env_setup</small></td><td><details><summary>Key evidence (3 references)</summary><p><strong>item_7</strong> raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 1.97s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+import copy,pickle
+from click import Option
+from click._utils import UNSET
+assert copy.copy(UNSET) is UNSET
+assert copy.deepcopy(UNSET) is UNSET
+assert pickle.loads(pickle.dumps(UNSET)) is UNSET
+option = Option([&#x27;--foo&#x27;])
+for copier in (copy.copy, copy.deepcopy):
+    copied = copier(option)
+    assert copied.name == &#x27;foo&#x27; and copied.default is UNSET
+copied = pickle.loads(pickle.dumps(option))
+assert copied.name == &#x27;foo&#x27; and copied.default is UNSET
+print(&#x27;sentinel checks passed&#x27;)
+PY
+PYTHONPATH=/workspace/src pytest -q&quot;
+
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 6, in &lt;module&gt;
+  File &quot;/usr/local/lib/python3.11/enum.py&quot;, line 714, in __call__
+    return cls.__new__(cls, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/usr/local/lib/python3.11/enum.py&quot;, line 1137, in __new__
+    raise ve_exc
+ValueError: &lt;object object at 0x7e7b80f10640&gt; is not a valid Sentinel
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_deprecations.py __________________
+ImportError while importing test module &#x27;/workspace/tests/test_deprecations.py&#x27;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:563: in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   StopIteration
+
+During handling of the above exception, another exception occurred:
+/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_deprecations.py:42: in &lt;module&gt;
+    (click, &quot;__version__&quot;, importlib.metadata.version(&quot;click&quot;)),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:1009: in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:982: in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:565: in from_name
+    raise PackageNotFoundError(name)
+E   importlib.metadata.PackageNotFoundError: No package metadata was found for click
+=========================== short test summary info ============================
+ERROR tests/test_deprecations.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+31000 deselected, 1 error in 1.97s
+</pre></details><p><strong>item_11</strong> raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 1.96s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=/workspace/src pytest -q&#x27;
+
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_deprecations.py __________________
+ImportError while importing test module &#x27;/workspace/tests/test_deprecations.py&#x27;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:563: in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   StopIteration
+
+During handling of the above exception, another exception occurred:
+/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_deprecations.py:42: in &lt;module&gt;
+    (click, &quot;__version__&quot;, importlib.metadata.version(&quot;click&quot;)),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:1009: in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:982: in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:565: in from_name
+    raise PackageNotFoundError(name)
+E   importlib.metadata.PackageNotFoundError: No package metadata was found for click
+=========================== short test summary info ============================
+ERROR tests/test_deprecations.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+31000 deselected, 1 error in 1.96s
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=2000; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="0" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="0" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="0" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-02</td><td>development calibration</td><td>click-003</td><td>pass</td><td>49.437</td><td>no_failure<small>Secondary: env_setup, reasoning_error</small></td><td><details><summary>Key evidence (4 references)</summary><p><strong>item_7</strong> raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 2.47s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;pwd; rg --files -g &#x27;&quot;&#x27;!*TASK.md&#x27;&quot;&#x27; | head -40; PYTHONPATH=/workspace/src pytest -q&quot;
+
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_deprecations.py __________________
+ImportError while importing test module &#x27;/workspace/tests/test_deprecations.py&#x27;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:563: in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   StopIteration
+
+During handling of the above exception, another exception occurred:
+/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_deprecations.py:42: in &lt;module&gt;
+    (click, &quot;__version__&quot;, importlib.metadata.version(&quot;click&quot;)),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:1009: in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:982: in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:565: in from_name
+    raise PackageNotFoundError(name)
+E   importlib.metadata.PackageNotFoundError: No package metadata was found for click
+=========================== short test summary info ============================
+ERROR tests/test_deprecations.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+31000 deselected, 1 error in 2.47s
+</pre></details><p><strong>item_9</strong> 665 passed, 71 deselected in 0.69s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src pytest -q tests/test_commands.py tests/test_options.py -k &#x27;help or option&#x27;&quot;
+
+........................................................................ [ 10%]
+........................................................................ [ 21%]
+........................................................................ [ 32%]
+........................................................................ [ 43%]
+........................................................................ [ 54%]
+........................................................................ [ 64%]
+........................................................................ [ 75%]
+........................................................................ [ 86%]
+........................................................................ [ 97%]
+.................                                                        [100%]
+665 passed, 71 deselected in 0.69s
+</pre></details><p><strong>item_10</strong> AssertionError</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+import click
+from click.testing import CliRunner
+
+@click.command(context_settings={&#x27;help_option_names&#x27;: [&#x27;--z&#x27;, &#x27;--help&#x27;, &#x27;--z&#x27;, &#x27;-h&#x27;]})
+def ordered():
+    pass
+
+assert ordered.get_help_option_names(click.Context(ordered)) == [&#x27;--z&#x27;, &#x27;--help&#x27;, &#x27;-h&#x27;]
+
+@click.command(context_settings={&#x27;help_option_names&#x27;: [&#x27;--z&#x27;, &#x27;--help&#x27;, &#x27;-h&#x27;]})
+@click.option(&#x27;--z/--no-z&#x27;)
+@click.option(&#x27;--other&#x27;)
+def filtered(z, other):
+    pass
+
+assert filtered.get_help_option_names(click.Context(filtered)) == [&#x27;--help&#x27;, &#x27;-h&#x27;]
+assert CliRunner().invoke(filtered, [&#x27;--help&#x27;]).exit_code == 0
+
+@click.command(context_settings={&#x27;help_option_names&#x27;: [&#x27;--help&#x27;]})
+@click.option(&#x27;--help/--no-help&#x27;)
+def empty(help):
+    pass
+
+assert empty.get_help_option_names(click.Context(empty)) == []
+assert empty.get_help_option(click.Context(empty)) is None
+print(&#x27;focused checks passed&#x27;)
+PY
+sed -n &#x27;1172,1190p&#x27; src/click/core.py&quot;
+
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 8, in &lt;module&gt;
+AssertionError
+        for param in self.get_params(ctx):
+            rv.extend(param.get_usage_pieces(ctx))
+
+        return rv
+
+    def get_help_option_names(self, ctx: Context) -&gt; list[str]:
+        &quot;&quot;&quot;Returns the names for the help option.&quot;&quot;&quot;
+        all_names = dict.fromkeys(ctx.help_option_names)
+        for param in self.params:
+            for name in [*param.opts, *param.secondary_opts]:
+                all_names.pop(name, None)
+        return list(all_names)
+
+    def get_help_option(self, ctx: Context) -&gt; Option | None:
+        &quot;&quot;&quot;Returns the help option object.
+
+        Skipped if :attr:`add_help_option` is ``False``.
+
+        .. versionchanged:: 8.5.0
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=1953; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="1" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="1" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="1" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-03</td><td>development calibration</td><td>click-009</td><td>pass</td><td>48.016</td><td>no_failure<small>Secondary: none</small></td><td><details><summary>Key evidence (2 references)</summary><p><strong>item_10</strong> 1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.31s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;ls -d tests 2&gt;/dev/null || true; rg --files | rg &#x27;(&quot;&#x27;^|/)(test|tests)&#x27;&quot;&#x27; | head -20; PYTHONPATH=/workspace/src pytest -q&quot;
+
+........................................................................ [  4%]
+........................................................................ [  8%]
+..................................................x..................... [ 13%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 26%]
+........................................................................ [ 30%]
+........................................................................ [ 34%]
+........................................................................ [ 39%]
+........................................................................ [ 43%]
+........................................................................ [ 48%]
+........................................................................ [ 52%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+........................................................................ [ 65%]
+........................................................................ [ 69%]
+........................................................................ [ 74%]
+.sssssssssssssssssssss................ss................................ [ 78%]
+........................................................................ [ 82%]
+........................................................................ [ 87%]
+........s............................................................... [ 91%]
+........................................................................ [ 96%]
+.................................................................        [100%]
+1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.31s
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=1630; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="2" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="2" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="2" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-04</td><td>development calibration</td><td>click-010</td><td>fail</td><td>122.219</td><td>reasoning_error<small>Secondary: reasoning_error</small></td><td><details><summary>Key evidence (3 references)</summary><p><strong>item_12</strong> E           AssertionError: assert &#x27;None&#x27; == &#x27;1&#x27;; tests/test_options.py:2316: AssertionError; tests/test_options.py:2499: AssertionError; 29 failed, 1481 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.75s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=/workspace/src pytest -q&#x27;
+
+........................................................................ [  4%]
+........................................................................ [  9%]
+.......FFFFF..FFFF................................x..................... [ 14%]
+........................................................................ [ 18%]
+........................................................................ [ 23%]
+.........F.............................................................. [ 28%]
+........................................................................ [ 32%]
+........................................................................ [ 37%]
+........................................................................ [ 42%]
+........................................................................ [ 46%]
+...........................................................FFFFF..FFFF.. [ 51%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+.............................F..F.F..FFFFFF..............F.............. [ 65%]
+........................................................................ [ 70%]
+.......................................................sssssssssssssssss [ 75%]
+ssss................ss.................................................. [ 79%]
+........................................................................ [ 84%]
+........................................................................ [ 89%]
+........................................................................ [ 93%]
+........................................................................ [ 98%]
+......................                                                   [100%]
+=================================== FAILURES ===================================
+_______________ test_flag_value_dual_options[upper-args10-upper] _______________
+
+runner = &lt;click.testing.CliRunner object at 0x7248079496d0&gt;, default = &#x27;upper&#x27;
+args = [], expected = &#x27;upper&#x27;
+
+    @pytest.mark.parametrize(
+        (&quot;default&quot;, &quot;args&quot;, &quot;expected&quot;),
+        # These test cases are similar to the ones in
+        # tests/test_options.py::test_default_dual_option_callback, so keep them in sync.
+        (
+            # Each option is returning its own flag_value, whatever the default is.
+            (True, [&quot;--upper&quot;], &quot;upper&quot;),
+            (True, [&quot;--lower&quot;], &quot;lower&quot;),
+            (False, [&quot;--upper&quot;], &quot;upper&quot;),
+            (False, [&quot;--lower&quot;], &quot;lower&quot;),
+            (None, [&quot;--upper&quot;], &quot;upper&quot;),
+            (None, [&quot;--lower&quot;], &quot;lower&quot;),
+            (UNSET, [&quot;--upper&quot;], &quot;upper&quot;),
+            (UNSET, [&quot;--lower&quot;], &quot;lower&quot;),
+            # Check that the last option wins when both are specified.
+            (True, [&quot;--upper&quot;, &quot;--lower&quot;], &quot;lower&quot;),
+            (True, [&quot;--lower&quot;, &quot;--upper&quot;], &quot;upper&quot;),
+            # Check that the default is returned as-is when no option is specified.
+            (&quot;upper&quot;, [], &quot;upper&quot;),
+            (&quot;lower&quot;, [], &quot;lower&quot;),
+            (&quot;uPPer&quot;, [], &quot;uPPer&quot;),
+            (&quot;lOwEr&quot;, [], &quot;lOwEr&quot;),
+            (&quot; ᕕ( ᐛ )ᕗ &quot;, [], &quot; ᕕ( ᐛ )ᕗ &quot;),
+            (None, [], None),
+            # Default is normalized to None if it is UNSET.
+            (UNSET, [], None),
+            # Special case: if default=True and flag_value is set, the value returned is the
+            # flag_value, not the True Python value itself.
+            (True, [], &quot;upper&quot;),
+            # Non-string defaults are process as strings by the default Parameter&#x27;s type.
+            (False, [], &quot;False&quot;),
+            (42, [], &quot;42&quot;),
+            (12.3, [], &quot;12.3&quot;),
+        ),
+    )
+    def test_flag_value_dual_options(runner, default, args, expected):
+        &quot;&quot;&quot;Check how default is processed when options compete for the same variable name.
+    
+        Covers the regression reported in
+        https://github.com/pallets/click/issues/3024#issuecomment-3146199461
+    
+        .. hint::
+            Similar to ``test_options.py::test_default_dual_option_callback``.
+    
+            ``test_defaults.py::test_shared_param_prefers_first_default``
+            is a smoke-test complement that exercises both default placements.
+        &quot;&quot;&quot;
+    
+        @click.command()
+        @click.option(&quot;--upper&quot;, &quot;case&quot;, flag_value=&quot;upper&quot;, default=default)
+        @click.option(&quot;--lower&quot;, &quot;case&quot;, flag_value=&quot;lower&quot;)
+        def cli(case):
+            click.echo(repr(case), nl=False)
+    
+        result = runner.invoke(cli, args)
+&gt;       assert result.output == repr(expected)
+E       assert &#x27;None&#x27; == &quot;&#x27;upper&#x27;&quot;
+E         
+E         - &#x27;upper&#x27;
+E         + None
+
+tests/test_basic.py:334: AssertionError
+_______________ test_flag_value_dual_options[lower-args11-lower] _______________
+
+runner = &lt;click.testing.CliRunner object at 0x724807c09c90&gt;, default = &#x27;lower&#x27;
+args = [], expected = &#x27;lower&#x27;
+
+    @pytest.mark.parametrize(
+        (&quot;default&quot;, &quot;args&quot;, &quot;expected&quot;),
+        # These test cases are similar to the ones in
+        # tests/test_options.py::test_default_dual_option_callback, so keep them in sync.
+        (
+            # Each option is returning its own flag_value, whatever the default is.
+            (True, [&quot;--upper&quot;], &quot;upper&quot;),
+            (True, [&quot;--lower&quot;], &quot;lower&quot;),
+            (False, [&quot;--upper&quot;], &quot;upper&quot;),
+            (False, [&quot;--lower&quot;], &quot;lower&quot;),
+            (None, [&quot;--upper&quot;], &quot;upper&quot;),
+            (None, [&quot;--lower&quot;], &quot;lower&quot;),
+            (UNSET, [&quot;--upper&quot;], &quot;upper&quot;),
+            (UNSET, [&quot;--lower&quot;], &quot;lower&quot;),
+            # Check that the last option wins when both are specified.
+            (True, [&quot;--upper&quot;, &quot;--lower&quot;], &quot;lower&quot;),
+            (True, [&quot;--lower&quot;, &quot;--upper&quot;], &quot;upper&quot;),
+            # Check that the default is returned as-is when no option is specified.
+            (&quot;upper&quot;, [], &quot;upper&quot;),
+            (&quot;lower&quot;, [], &quot;lower&quot;),
+            (&quot;uPPer&quot;, [], &quot;uPPer&quot;),
+            (&quot;lOwEr&quot;, [], &quot;lOwEr&quot;),
+            (&quot; ᕕ( ᐛ )ᕗ &quot;, [], &quot; ᕕ( ᐛ )ᕗ &quot;),
+            (None, [], None),
+            # Default is normalized to None if it is UNSET.
+            (UNSET, [], None),
+            # Special case: if default=True and flag_value is set, the value returned is the
+            # flag_value, not the True Python value itself.
+            (True, [], &quot;upper&quot;),
+            # Non-string defaults are process as strings by the default Parameter&#x27;s type.
+            (False, [], &quot;False&quot;),
+            (42, [], &quot;42&quot;),
+            (12.3, [], &quot;12.3&quot;),
+        ),
+    )
+    def test_flag_value_dual_options(runner, default, args, expected):
+        &quot;&quot;&quot;Check how default is processed when options compete for the same variable name.
+    
+        Covers the regression reported in
+        https://github.com/pallets/click/issues/3024#issuecomment-3146199461
+    
+        .. hint::
+            Similar to ``test_options.py::test_default_dual_option_callback``.
+    
+            ``test_defaults.py::test_shared_param_prefers_first_default``
+            is a smoke-test complement that exercises both default placements.
+        &quot;&quot;&quot;
+    
+        @click.command()
+        @click.option(&quot;--upper&quot;, &quot;case&quot;, flag_value=&quot;upper&quot;, default=default)
+        @click.option(&quot;--lower&quot;, &quot;case&quot;, flag_value=&quot;lower&quot;)
+        def cli(case):
+            click.echo(repr(case), nl=False)
+    
+        result = runner.invoke(cli, args)
+&gt;       assert result.output == repr(expected)
+E       assert &#x27;None&#x27; == &quot;&#x27;lower&#x27;&quot;
+E         
+E         - &#x27;lower&#x27;
+E         + None
+
+tests/test_basic.py:334: AssertionError
+_______________ test_flag_value_dual_options[uPPer-args12-uPPer] _______________
+
+runner = &lt;click.testing.CliRunner object at 0x724807c0a610&gt;, default = &#x27;uPPer&#x27;
+args = [], expected = &#x27;uPPer&#x27;
+
+    @pytest.mark.parametrize(
+        (&quot;default&quot;, &quot;args&quot;, &quot;expected&quot;),
+        # These test cases are similar to the ones in
+        # tests/test_options.py::test_default_dual_option_callback, so keep them in sync.
+        (
+            # Each option is returning its own flag_value, whatever the default is.
+            (True, [&quot;--upper&quot;], &quot;upper&quot;),
+            (True, [&quot;--lower&quot;], &quot;lower&quot;),
+            (False, [&quot;--upper&quot;], &quot;upper&quot;),
+            (False, [&quot;--lower&quot;], &quot;lower&quot;),
+            (None, [&quot;--upper&quot;], &quot;upper&quot;),
+            (None, [&quot;--lower&quot;], &quot;lower&quot;),
+            (UNSET, [&quot;--upper&quot;], &quot;upper&quot;),
+            (UNSET, [&quot;--lower&quot;], &quot;lower&quot;),
+            # Check that the last option wins when both are specified.
+            (True, [&quot;--upper&quot;, &quot;--lower&quot;], &quot;lower&quot;),
+            (True, [&quot;--lower&quot;, &quot;--upper&quot;], &quot;upper&quot;),
+            # Check that the default is returned as-is when no option is specified.
+            (&quot;upper&quot;, [], &quot;upper&quot;),
+            (&quot;lower&quot;, [], &quot;lower&quot;),
+            (&quot;uPPer&quot;, [], &quot;uPPer&quot;),
+            (&quot;lOwEr&quot;, [], &quot;lOwEr&quot;),
+            (&quot; ᕕ( ᐛ )ᕗ &quot;, [], &quot; ᕕ( ᐛ )ᕗ &quot;),
+            (None, [], None),
+            # Default is normalized to None if it is UNSET.
+            (UNSET, [], None),
+            # Special case: if default=True and flag_value is set, the value returned is the
+            # flag_value, not the True Python value itself.
+            (True, [], &quot;upper&quot;),
+            # Non-string defaults are process as strings by the default Parameter&#x27;s type.
+            (False, [], &quot;False&quot;),
+            (42, [], &quot;42&quot;),
+            (12.3, [], &quot;12.3&quot;),
+        ),
+    )
+    def test_flag_value_dual_options(runner, default, args, expected):
+        &quot;&quot;&quot;Check how default is processed when options compete for the same variable name.
+    
+        Covers the regression reported in
+        https://github.com/pallets/click/issues/3024#issuecomment-3146199461
+    
+        .. hint::
+            Similar to ``test_options.py::test_default_dual_option_callback``.
+    
+            ``test_defaults.py::test_shared_param_prefers_first_default``
+            is a smoke-test complement that exercises both default placements.
+        &quot;&quot;&quot;
+    
+        @click.command()
+        @click.option(&quot;--upper&quot;, &quot;case&quot;, flag_value=&quot;upper&quot;, default=default)
+        @click.option(&quot;--lower&quot;, &quot;case&quot;, flag_value=&quot;lower&quot;)
+        def cli(case):
+            click.echo(repr(case), nl=False)
+    
+        result = runner.invoke(cli, args)
+&gt;       assert result.output == repr(expected)
+E       assert &#x27;None&#x27; == &quot;&#x27;uPPer&#x27;&quot;
+E         
+E         - &#x27;uPPer&#x27;
+E         + None
+
+tests/test_basic.py:334: AssertionError
+_______________ test_flag_value_dual_options[lOwEr-args13-lOwEr] _______________
+
+runner = &lt;click.testing.CliRunner object at 0x72480c504c90&gt;, default = &#x27;lOwEr&#x27;
+args = [], expected = &#x27;lOwEr&#x27;
+
+    @pytest.mark.parametrize(
+        (&quot;default&quot;, &quot;args&quot;, &quot;expected&quot;),
+        # These test cases are similar to the ones in
+        # tests/test_options.py::test_default_dual_option_callback, so keep them in sync.
+        (
+            # Each option is returning its own flag_value, whatever the default is.
+            (True, [&quot;--upper&quot;], &quot;upper&quot;),
+            (True, [&quot;--lower&quot;], &quot;lower&quot;),
+            (False, [&quot;--upper&quot;], &quot;upper&quot;),
+            (False, [&quot;--lower&quot;], &quot;lower&quot;),
+            (None, [&quot;--upper&quot;], &quot;upper&quot;),
+            (None, [&quot;--lower&quot;], &quot;lower&quot;),
+            (UNSET, [&quot;--upper&quot;], &quot;upper&quot;),
+            (UNSET, [&quot;--lower&quot;], &quot;lower&quot;),
+            # Check that the last option wins when both are specified.
+            (True, [&quot;--upper&quot;, &quot;--lower&quot;], &quot;lower&quot;),
+            (True, [&quot;--lower&quot;, &quot;--upper&quot;], &quot;upper&quot;),
+            # Check that the default is returned as-is when no option is specified.
+            (&quot;upper&quot;, [], &quot;upper&quot;),
+            (&quot;lower&quot;, [], &quot;lower&quot;),
+            (&quot;uPPer&quot;, [], &quot;uPPer&quot;),
+            (&quot;lOwEr&quot;, [], &quot;lOwEr&quot;),
+            (&quot; ᕕ( ᐛ )ᕗ &quot;, [], &quot; ᕕ( ᐛ )ᕗ &quot;),
+            (None, [], None),
+            # Default is normalized to None if it is UNSET.
+            (UNSET, [], None),
+            # Special case: if default=True and flag_value is set, the value returned is the
+            # flag_value, not the True Python value itself.
+            (True, [], &quot;upper&quot;),
+            # Non-string defaults are process as strings by the default Parameter&#x27;s type.
+            (False, [], &quot;False&quot;),
+     </pre></details><p><strong>item_20</strong> E       AssertionError: assert &#x27;green&#x27; in &#x27;\n&#x27;; tests/test_defaults.py:157: AssertionError; 1 failed in 0.08s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=src pytest -q tests/test_defaults.py::test_shared_param_prefers_first_default tests/test_basic.py::test_flag_value_dual_options --maxfail=1&#x27;
+
+F
+=================================== FAILURES ===================================
+___________________ test_shared_param_prefers_first_default ____________________
+
+runner = &lt;click.testing.CliRunner object at 0x7d67f80f3650&gt;
+
+    def test_shared_param_prefers_first_default(runner):
+        &quot;&quot;&quot;The first ``default=True`` wins when multiple ``flag_value`` options share
+        a parameter name, regardless of which positional option carries it.
+    
+        .. hint::
+            ``test_basic.py::test_flag_value_dual_options`` and
+            ``test_options.py::test_default_dual_option_callback`` are wider
+            parametrized sibling tests covering many more default-value types (``None``,
+            ``UNSET``, strings, numbers) but always place the default on the first
+            option. This test complements them by exercising both placements.
+        &quot;&quot;&quot;
+    
+        @click.command
+        @click.option(&quot;--red&quot;, &quot;color&quot;, flag_value=&quot;red&quot;)
+        @click.option(&quot;--green&quot;, &quot;color&quot;, flag_value=&quot;green&quot;, default=True)
+        def prefers_green(color):
+            click.echo(color)
+    
+        @click.command
+        @click.option(&quot;--red&quot;, &quot;color&quot;, flag_value=&quot;red&quot;, default=True)
+        @click.option(&quot;--green&quot;, &quot;color&quot;, flag_value=&quot;green&quot;)
+        def prefers_red(color):
+            click.echo(color)
+    
+        result = runner.invoke(prefers_green, [])
+&gt;       assert &quot;green&quot; in result.output
+E       AssertionError: assert &#x27;green&#x27; in &#x27;\n&#x27;
+E        +  where &#x27;\n&#x27; = &lt;Result okay&gt;.output
+
+tests/test_defaults.py:157: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_defaults.py::test_shared_param_prefers_first_default - Asse...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed in 0.08s
+</pre></details><p><strong>host-evaluation</strong> State=test_failure; evaluator passed=1518; failures=69; errors=0</p></details><small>Submitted failure and visible public behavioral test failures; no inference about hidden reasoning.</small></td><td><select data-row="3" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="3" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="3" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-05</td><td>held-out confirmation</td><td>click-001</td><td>pass</td><td>66.656</td><td>no_failure<small>Secondary: env_setup, reasoning_error</small></td><td><details><summary>Key evidence (4 references)</summary><p><strong>item_7</strong> raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 2.02s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=/workspace/src pytest -q&#x27;
+
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_deprecations.py __________________
+ImportError while importing test module &#x27;/workspace/tests/test_deprecations.py&#x27;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:563: in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   StopIteration
+
+During handling of the above exception, another exception occurred:
+/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_deprecations.py:42: in &lt;module&gt;
+    (click, &quot;__version__&quot;, importlib.metadata.version(&quot;click&quot;)),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:1009: in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:982: in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.11/importlib/metadata/__init__.py:565: in from_name
+    raise PackageNotFoundError(name)
+E   importlib.metadata.PackageNotFoundError: No package metadata was found for click
+=========================== short test summary info ============================
+ERROR tests/test_deprecations.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+31000 deselected, 1 error in 2.02s
+</pre></details><p><strong>item_9</strong> tests/test_utils/test_make_default_short_help.py:39: AssertionError; E       AssertionError: assert &#x27;123 567...&#x27; == &#x27;123 567 9.&#x27;; tests/test_utils/test_make_default_short_help.py:39: AssertionError; 3 failed, 11 passed in 0.03s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src pytest -q tests/test_utils/test_make_default_short_help.py
+PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+from click.utils import _make_default_short_help as f
+cases = [
+    (\&quot;alpha vs. pears beta\&quot;, 45),
+    (\&quot;alpha. Beta gamma\&quot;, 45),
+    (\&quot;alpha. beta gamma\&quot;, 45),
+    (\&quot;one two three\&quot;, 9),
+    (\&quot;one two three\&quot;, 2),
+    (\&quot;abcdefgh ij\&quot;, 6),
+    (\&quot;  \\\\b   one   two\&quot;, 20),
+]
+for text, width in cases:
+    print(repr(f(text, width)))
+PY
+git -C /workspace diff -- src/click/utils.py
+git -C /workspace status --short&quot;
+
+..F....F.F....                                                           [100%]
+=================================== FAILURES ===================================
+________________ test_make_default_short_help[-sentence &lt; max] _________________
+
+value = &#x27;123 567 9. aaaa bbb&#x27;, max_length = 10, alter = None
+expect = &#x27;123 567 9.&#x27;
+
+    @pytest.mark.parametrize(
+        (&quot;value&quot;, &quot;max_length&quot;, &quot;expect&quot;),
+        [
+            pytest.param(&quot;&quot;, 10, &quot;&quot;, id=&quot;empty&quot;),
+            pytest.param(&quot;123 567 90&quot;, 10, &quot;123 567 90&quot;, id=&quot;equal length, no dot&quot;),
+            pytest.param(&quot;123 567 9. aaaa bbb&quot;, 10, &quot;123 567 9.&quot;, id=&quot;sentence &lt; max&quot;),
+            pytest.param(&quot;123 567\n\n 9. aaaa bbb&quot;, 10, &quot;123 567&quot;, id=&quot;paragraph &lt; max&quot;),
+            pytest.param(&quot;123 567 90123.&quot;, 10, &quot;123 567...&quot;, id=&quot;truncate&quot;),
+            pytest.param(&quot;123 5678 xxxxxx&quot;, 10, &quot;123...&quot;, id=&quot;length includes suffix&quot;),
+            pytest.param(
+                &quot;token in ~/.netrc ciao ciao&quot;,
+                20,
+                &quot;token in ~/.netrc...&quot;,
+                id=&quot;ignore dot in word&quot;,
+            ),
+        ],
+    )
+    @pytest.mark.parametrize(
+        &quot;alter&quot;,
+        [
+            pytest.param(None, id=&quot;&quot;),
+            pytest.param(
+                lambda text: &quot;\n\b\n&quot; + &quot;  &quot;.join(text.split(&quot; &quot;)) + &quot;\n&quot;, id=&quot;no-wrap mark&quot;
+            ),
+        ],
+    )
+    def test_make_default_short_help(value, max_length, alter, expect):
+        assert len(expect) &lt;= max_length
+    
+        if alter:
+            value = alter(value)
+    
+        out = click.utils._make_default_short_help(value, max_length)
+&gt;       assert out == expect
+E       AssertionError: assert &#x27;123 567...&#x27; == &#x27;123 567 9.&#x27;
+E         
+E         - 123 567 9.
+E         ?        --
+E         + 123 567...
+E         ?         ++
+
+tests/test_utils/test_make_default_short_help.py:39: AssertionError
+_______________ test_make_default_short_help[no-wrap mark-empty] _______________
+
+value = &#x27;\n\x08\n\n&#x27;, max_length = 10
+alter = &lt;function &lt;lambda&gt; at 0x753280db5a80&gt;, expect = &#x27;&#x27;
+
+    @pytest.mark.parametrize(
+        (&quot;value&quot;, &quot;max_length&quot;, &quot;expect&quot;),
+        [
+            pytest.param(&quot;&quot;, 10, &quot;&quot;, id=&quot;empty&quot;),
+            pytest.param(&quot;123 567 90&quot;, 10, &quot;123 567 90&quot;, id=&quot;equal length, no dot&quot;),
+            pytest.param(&quot;123 567 9. aaaa bbb&quot;, 10, &quot;123 567 9.&quot;, id=&quot;sentence &lt; max&quot;),
+            pytest.param(&quot;123 567\n\n 9. aaaa bbb&quot;, 10, &quot;123 567&quot;, id=&quot;paragraph &lt; max&quot;),
+            pytest.param(&quot;123 567 90123.&quot;, 10, &quot;123 567...&quot;, id=&quot;truncate&quot;),
+            pytest.param(&quot;123 5678 xxxxxx&quot;, 10, &quot;123...&quot;, id=&quot;length includes suffix&quot;),
+            pytest.param(
+                &quot;token in ~/.netrc ciao ciao&quot;,
+                20,
+                &quot;token in ~/.netrc...&quot;,
+                id=&quot;ignore dot in word&quot;,
+            ),
+        ],
+    )
+    @pytest.mark.parametrize(
+        &quot;alter&quot;,
+        [
+            pytest.param(None, id=&quot;&quot;),
+            pytest.param(
+                lambda text: &quot;\n\b\n&quot; + &quot;  &quot;.join(text.split(&quot; &quot;)) + &quot;\n&quot;, id=&quot;no-wrap mark&quot;
+            ),
+        ],
+    )
+    def test_make_default_short_help(value, max_length, alter, expect):
+        assert len(expect) &lt;= max_length
+    
+        if alter:
+            value = alter(value)
+    
+&gt;       out = click.utils._make_default_short_help(value, max_length)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_utils/test_make_default_short_help.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+help = &#x27;\n\x08&#x27;, max_length = 10
+
+    def _make_default_short_help(help: str, max_length: int = 45) -&gt; str:
+        &quot;&quot;&quot;Returns a condensed version of help string.
+    
+        :meta private:
+        &quot;&quot;&quot;
+        # Consider only the first paragraph.
+        paragraph_end = help.find(&quot;\n\n&quot;)
+    
+        if paragraph_end != -1:
+            help = help[:paragraph_end]
+    
+        # Collapse newlines, tabs, and spaces.
+        words = help.split()
+    
+        if not words:
+            return &quot;&quot;
+    
+        # The first paragraph started with a &quot;no rewrap&quot; marker, ignore it.
+        if words[0] == &quot;\b&quot;:
+            words = words[1:]
+    
+        # A period ends a sentence unless the following word starts with a
+        # lowercase letter.  This keeps abbreviations such as ``vs. pears``
+        # together.
+        sentence_end = len(words)
+        for i, word in enumerate(words[:-1]):
+            if word.endswith(&quot;.&quot;) and not words[i + 1][0].islower():
+                sentence_end = i + 1
+                break
+    
+&gt;       if sentence_end == len(words) and words[-1].endswith(&quot;.&quot;):
+                                          ^^^^^^^^^
+E       IndexError: list index out of range
+
+src/click/utils.py:92: IndexError
+__________ test_make_default_short_help[no-wrap mark-sentence &lt; max] ___________
+
+value = &#x27;\n\x08\n123  567  9.  aaaa  bbb\n&#x27;, max_length = 10
+alter = &lt;function &lt;lambda&gt; at 0x753280db5a80&gt;, expect = &#x27;123 567 9.&#x27;
+
+    @pytest.mark.parametrize(
+        (&quot;value&quot;, &quot;max_length&quot;, &quot;expect&quot;),
+        [
+            pytest.param(&quot;&quot;, 10, &quot;&quot;, id=&quot;empty&quot;),
+            pytest.param(&quot;123 567 90&quot;, 10, &quot;123 567 90&quot;, id=&quot;equal length, no dot&quot;),
+            pytest.param(&quot;123 567 9. aaaa bbb&quot;, 10, &quot;123 567 9.&quot;, id=&quot;sentence &lt; max&quot;),
+            pytest.param(&quot;123 567\n\n 9. aaaa bbb&quot;, 10, &quot;123 567&quot;, id=&quot;paragraph &lt; max&quot;),
+            pytest.param(&quot;123 567 90123.&quot;, 10, &quot;123 567...&quot;, id=&quot;truncate&quot;),
+            pytest.param(&quot;123 5678 xxxxxx&quot;, 10, &quot;123...&quot;, id=&quot;length includes suffix&quot;),
+            pytest.param(
+                &quot;token in ~/.netrc ciao ciao&quot;,
+                20,
+                &quot;token in ~/.netrc...&quot;,
+                id=&quot;ignore dot in word&quot;,
+            ),
+        ],
+    )
+    @pytest.mark.parametrize(
+        &quot;alter&quot;,
+        [
+            pytest.param(None, id=&quot;&quot;),
+            pytest.param(
+                lambda text: &quot;\n\b\n&quot; + &quot;  &quot;.join(text.split(&quot; &quot;)) + &quot;\n&quot;, id=&quot;no-wrap mark&quot;
+            ),
+        ],
+    )
+    def test_make_default_short_help(value, max_length, alter, expect):
+        assert len(expect) &lt;= max_length
+    
+        if alter:
+            value = alter(value)
+    
+        out = click.utils._make_default_short_help(value, max_length)
+&gt;       assert out == expect
+E       AssertionError: assert &#x27;123 567...&#x27; == &#x27;123 567 9.&#x27;
+E         
+E         - 123 567 9.
+E         ?        --
+E         + 123 567...
+E         ?         ++
+
+tests/test_utils/test_make_default_short_help.py:39: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_utils/test_make_default_short_help.py::test_make_default_short_help[-sentence &lt; max]
+FAILED tests/test_utils/test_make_default_short_help.py::test_make_default_short_help[no-wrap mark-empty]
+FAILED tests/test_utils/test_make_default_short_help.py::test_make_default_short_help[no-wrap mark-sentence &lt; max]
+3 failed, 11 passed in 0.03s
+&#x27;alpha vs. pears beta&#x27;
+&#x27;alpha.&#x27;
+&#x27;alpha. beta gamma&#x27;
+&#x27;one...&#x27;
+&#x27;...&#x27;
+&#x27;...&#x27;
+&#x27;\\b one two&#x27;
+warning: Not a git repository. Use --no-index to compare two paths outside a working tree
+usage: git diff --no-index [&lt;options&gt;] &lt;path&gt; &lt;path&gt;
+
+Diff output format options
+    -p, --patch           generate patch
+    -s, --no-patch        suppress diff output
+    -u                    generate patch
+    -U, --unified[=&lt;n&gt;]   generate diffs with &lt;n&gt; lines context
+    -W, --function-context
+                          generate diffs with &lt;n&gt; lines context
+    --raw                 generate the diff in raw format
+    --patch-with-raw      synonym for &#x27;-p --raw&#x27;
+    --patch-with-stat     synonym for &#x27;-p --stat&#x27;
+    --numstat             machine friendly --stat
+    --shortstat           output only the last line of --stat
+    -X, --dirstat[=&lt;param1,param2&gt;...]
+                          output the distribution of relative amount of changes for each sub-directory
+    --cumulative          synonym for --dirstat=cumulative
+    --dirstat-by-file[=&lt;param1,param2&gt;...]
+                          synonym for --dirstat=files,param1,param2...
+    --check               warn if changes introduce conflict markers or whitespace errors
+    --summary             condensed summary such as creations, renames and mode changes
+    --name-only           show only names of changed files
+    --name-status         show only names and status of changed files
+    --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+                          generate diffstat
+    --stat-width &lt;width&gt;  generate diffstat with a given width
+    --stat-name-width &lt;width&gt;
+                          generate diffstat with a given name width
+    --stat-graph-width &lt;width&gt;
+                          generate diffstat with a given graph width
+    --stat-count &lt;count&gt;  generate diffstat with limited lines
+    --compact-summary     generate compact summary in diffstat
+    --binary              output a binary diff that can be applied
+    --full-index          show full pre- and post-image object names on the &quot;index&quot; lines
+    --color[=&lt;when&gt;]      show colored diff
+    --ws-error-highlight &lt;kind&gt;
+                          highlight whitespace errors in the &#x27;context&#x27;, &#x27;old&#x27; or &#x27;new&#x27; lines in the diff
+    -z                    do not munge pathnames and use NULs as output field terminators in --raw or --numstat
+    --abbrev[=&lt;n&gt;]        use &lt;n&gt; digits to display object names
+    --src-prefix &lt;prefix&gt;
+                          show the given source prefix instead of &quot;a/&quot;
+    --dst-prefix &lt;prefix&gt;
+                          show the given destination prefix instead of &quot;b/&quot;
+    --line-prefix &lt;prefix&gt;
+                          prepend an additional prefix to every line of output
+    --no-prefix           do not show any source or destination prefix
+    --inter-hunk-context &lt;n&gt;
+                          show context between diff hunks up to the specified number of lines
+    --output-indicator-new &lt;char&gt;
+                          specify the character to indicate a new line instead of &#x27;+&#x27;
+    --output-indicator-old &lt;char&gt;
+                          specify the character to indicate an old line instead of &#x27;-&#x27;
+    --output-indicator-context &lt;char&gt;
+                          specify the character to indicate a context instead of &#x27; &#x27;
+
+Diff rename options
+    -B, --break-rewrites[=&lt;n&gt;[/&lt;m&gt;]]
+                          break complete rewrite changes into pairs of delete and create
+    -M, --find-renames[=&lt;n&gt;]
+                          detect renames
+    -D, --irreversible-delete
+                          omit the preimage for deletes
+    -C, --find-copies[=&lt;n&gt;]
+                          detect copies
+    --find-copies-harder  use unmodified files as source to find copies
+    --no-renames          disable rename detection
+    --rename-empty        use empty blobs as rename source
+    --follow              continue listing the history of a file beyond renames
+    -l &lt;n&gt;                prevent rename/copy detection if the number of rename/copy targets exceeds given limit
+
+Diff algorithm options
+    --minimal             produce the smallest possible diff
+    -w, --ignore-all-space
+                          ignore whitespace when comparing lines
+    -b, --ignore-space-change
+                          ignore changes in amount of whitespace
+    --ignore-space-at-eol
+                          ignore changes in whitespace at EOL
+    --ignore-cr-at-eol    ignore carrier-return at the end of line
+    --ignore-blank-lines  ignore changes whose lines are all blank
+    -I, --ignore-matching-lines &lt;regex&gt;
+                          ignore changes whose all lines match &lt;regex&gt;
+    --indent-heuristic    heuristic to shift diff hunk boundaries for easy reading
+    --patience            generate diff using the &quot;patience diff&quot; algorithm
+    --histogram           generate diff using the &quot;histogram diff&quot; algorithm
+    --diff-algorithm &lt;algorithm&gt;
+                          choose a diff algorithm
+    --anchored &lt;text&gt;     generate diff using the &quot;anchored diff&quot; algorithm
+    --word-diff[=&lt;mode&gt;]  show word diff, using &lt;mode&gt; to delimit changed words
+    --w</pre></details><p><strong>item_11</strong> 12 passed, 2 deselected in 0.01s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;pwd; find /workspace -maxdepth 2 -name .git -type d -print
+PYTHONPATH=/workspace/src pytest -q tests/test_utils/test_make_default_short_help.py -k &#x27;empty or truncate or length or ignore or equal or paragraph&#x27; 
+PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+from click.utils import _make_default_short_help as f
+for text, width in [(\&quot;alpha vs. pears beta\&quot;,45),(\&quot;alpha. Beta gamma\&quot;,45),(\&quot;alpha. beta gamma\&quot;,45),(\&quot;one two three\&quot;,9),(\&quot;one two three\&quot;,2),(\&quot;abcdefgh ij\&quot;,6),(\&quot;  \\b   one   two\&quot;,20),(\&quot;  \\b  \&quot;,20)]:
+ print(repr(f(text,width)))
+PY&quot;
+
+............                                                             [100%]
+12 passed, 2 deselected in 0.01s
+&#x27;alpha vs. pears beta&#x27;
+&#x27;alpha.&#x27;
+&#x27;alpha. beta gamma&#x27;
+&#x27;one...&#x27;
+&#x27;...&#x27;
+&#x27;...&#x27;
+&#x27;one two&#x27;
+&#x27;&#x27;
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=2092; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="4" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="4" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="4" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-06</td><td>held-out confirmation</td><td>click-004</td><td>pass</td><td>48.891</td><td>no_failure<small>Secondary: none</small></td><td><details><summary>Key evidence (2 references)</summary><p><strong>item_6</strong> 1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.59s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;ls -la /workspace | head -40
+rg -n \&quot;style\\(|unstyle\&quot; /workspace/tests | head -80
+PYTHONPATH=/workspace/src pytest -q&quot;
+
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 12%]
+....x................................................................... [ 16%]
+........................................................................ [ 21%]
+........................................................................ [ 25%]
+........................................................................ [ 29%]
+........................................................................ [ 33%]
+........................................................................ [ 37%]
+........................................................................ [ 42%]
+........................................................................ [ 46%]
+........................................................................ [ 50%]
+........................................................................ [ 54%]
+........................................................................ [ 58%]
+........................................................................ [ 63%]
+........................................................................ [ 67%]
+........................................................................ [ 71%]
+....................................................ssssssssssssssssssss [ 75%]
+s................ss..................................................... [ 80%]
+........................................................................ [ 84%]
+...................................................................s.... [ 88%]
+........................................................................ [ 92%]
+........................................................................ [ 96%]
+......................................................                   [100%]
+1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.59s
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=1749; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="5" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="5" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="5" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-07</td><td>held-out confirmation</td><td>click-005</td><td>pass</td><td>56.079</td><td>no_failure<small>Secondary: reasoning_error</small></td><td><details><summary>Key evidence (3 references)</summary><p><strong>item_6</strong> 1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.85s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;git -C /workspace diff -- src/click/_compat.py
+PYTHONPATH=/workspace/src pytest -q&#x27;
+
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 12%]
+....x................................................................... [ 16%]
+........................................................................ [ 20%]
+........................................................................ [ 24%]
+........................................................................ [ 28%]
+........................................................................ [ 32%]
+........................................................................ [ 36%]
+........................................................................ [ 40%]
+........................................................................ [ 44%]
+........................................................................ [ 48%]
+........................................................................ [ 52%]
+........................................................................ [ 56%]
+........................................................................ [ 60%]
+........................................................................ [ 64%]
+........................................................................ [ 68%]
+....................................................ssssssssssssssssssss [ 73%]
+s................ss..................................................... [ 77%]
+........................................................................ [ 81%]
+...................................................................s.... [ 85%]
+........................................................................ [ 89%]
+........................................................................ [ 93%]
+........................................................................ [ 97%]
+..............................................                           [100%]
+1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.85s
+</pre></details><p><strong>item_8</strong> AssertionError</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+from click._compat import _ansi_re, strip_ansi, term_len
+from click._textwrap import _truncate_visible
+
+cases = [
+    &#x27;\\x1b[38:2::255:0:0mred&#x27;,
+    &#x27;\\x1b[?1000;1006hmouse&#x27;,
+    &#x27;\\x1b[1 2mintermediate&#x27;,
+    &#x27;\\x1b[2Jclear&#x27;,
+    &#x27;\\x1b[31&#x27;,
+]
+for value in cases:
+    assert term_len(value) == len(strip_ansi(value))
+assert strip_ansi(&#x27;a\\x1b[38:2::255:0:0mred&#x27;) == &#x27;ared&#x27;
+assert strip_ansi(&#x27;a\\x1b[?1000;1006hmouse&#x27;) == &#x27;amouse&#x27;
+assert strip_ansi(&#x27;a\\x1b[1 2mintermediate&#x27;) == &#x27;aintermediate&#x27;
+assert strip_ansi(&#x27;a\\x1b[2Jclear&#x27;) == &#x27;aclear&#x27;
+assert strip_ansi(&#x27;\\x1b[31&#x27;) == &#x27;\\x1b[31&#x27;
+styled = &#x27;\\x1b[31mab\\x1b[0mc\\x1b[32md&#x27;
+assert _truncate_visible(styled, 0) == &#x27;&#x27;
+assert _truncate_visible(styled, 2) == &#x27;\\x1b[31mab&#x27;
+assert _truncate_visible(styled, 3) == &#x27;\\x1b[31mab\\x1b[0mc&#x27;
+print(&#x27;focused checks passed&#x27;)
+PY
+sed -n &#x27;10,20p&#x27; /workspace/src/click/_compat.py&quot;
+
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 15, in &lt;module&gt;
+AssertionError
+from types import TracebackType
+from weakref import WeakKeyDictionary
+
+CYGWIN = sys.platform.startswith(&quot;cygwin&quot;)
+WIN = sys.platform.startswith(&quot;win&quot;)
+_ansi_re = re.compile(r&quot;\033\[[\x30-\x3f]*[\x20-\x2f]*[\x40-\x7e]&quot;)
+
+
+def _make_text_stream(
+    stream: t.BinaryIO,
+    encoding: str | None,
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=1894; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="6" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="6" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="6" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-08</td><td>held-out confirmation</td><td>click-006</td><td>fail</td><td>50.187</td><td>unclassified<small>Secondary: none</small></td><td><details><summary>Key evidence (2 references)</summary><p><strong>item_8</strong> 1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.44s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;ls -la /workspace | sed -n &#x27;1,100p&#x27;
+PYTHONPATH=/workspace/src pytest -q&quot;
+
+........................................................................ [  4%]
+........................................................................ [  8%]
+........................................................................ [ 12%]
+.x...................................................................... [ 16%]
+........................................................................ [ 21%]
+........................................................................ [ 25%]
+........................................................................ [ 29%]
+........................................................................ [ 33%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 46%]
+........................................................................ [ 50%]
+........................................................................ [ 54%]
+........................................................................ [ 59%]
+........................................................................ [ 63%]
+........................................................................ [ 67%]
+........................................................................ [ 71%]
+.................................................sssssssssssssssssssss.. [ 76%]
+..............ss........................................................ [ 80%]
+........................................................................ [ 84%]
+............................................................s........... [ 88%]
+........................................................................ [ 93%]
+........................................................................ [ 97%]
+..............................................                           [100%]
+1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.44s
+</pre></details><p><strong>host-evaluation</strong> State=test_failure; evaluator passed=1679; failures=2; errors=0</p></details><small>Insufficient public trajectory evidence for a narrower terminal failure class.</small></td><td><select data-row="7" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="7" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="7" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-09</td><td>held-out confirmation</td><td>click-007</td><td>pass</td><td>67.875</td><td>no_failure<small>Secondary: reasoning_error</small></td><td><details><summary>Key evidence (4 references)</summary><p><strong>item_10</strong> 1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.45s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=/workspace/src pytest -q&#x27;
+
+........................................................................ [  4%]
+........................................................................ [  8%]
+............................................................x........... [ 12%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 25%]
+........................................................................ [ 29%]
+........................................................................ [ 34%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 51%]
+........................................................................ [ 55%]
+........................................................................ [ 59%]
+........................................................................ [ 64%]
+........................................................................ [ 68%]
+........................................................................ [ 72%]
+..............................sssssssssssssssssssss................ss... [ 77%]
+........................................................................ [ 81%]
+........................................................................ [ 85%]
+.........................................s.............................. [ 89%]
+........................................................................ [ 94%]
+........................................................................ [ 98%]
+...........................                                              [100%]
+1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.45s
+</pre></details><p><strong>item_11</strong> AssertionError; except importlib.metadata.PackageNotFoundError:; except importlib.metadata.PackageNotFoundError:</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+from unittest.mock import patch
+import click
+from click.testing import CliRunner
+
+@click.command()
+@click.version_option(package_name=\&quot;import_name\&quot;)
+def command():
+    pass
+
+runner = CliRunner()
+with patch(\&quot;importlib.metadata.version\&quot;, side_effect=lambda name: {\&quot;dist-name\&quot;: \&quot;1.2.3\&quot;}[name]), patch(\&quot;importlib.metadata.packages_distributions\&quot;, return_value={\&quot;import_name\&quot;: [\&quot;dist-name\&quot;]}):
+    result = runner.invoke(command, [\&quot;--version\&quot;])
+    assert result.exit_code == 0, result.output
+    assert result.output == \&quot;command, version 1.2.3\\n\&quot;, result.output
+
+with patch(\&quot;importlib.metadata.version\&quot;, side_effect=__import__(\&quot;importlib\&quot;).metadata.PackageNotFoundError), patch(\&quot;importlib.metadata.packages_distributions\&quot;, return_value={\&quot;import_name\&quot;: [\&quot;one\&quot;, \&quot;two\&quot;]}):
+    result = runner.invoke(command, [\&quot;--version\&quot;])
+    assert result.exit_code &quot;&#x27;!= 0
+    assert &quot;multiple installed distributions&quot; in result.exception.args[0]
+    assert &quot;one&quot; in str(result.exception) and &quot;two&quot; in str(result.exception)
+    assert &quot;explicit package_name&quot; in str(result.exception)
+
+print(&quot;focused checks passed&quot;)
+PY
+sed -n &#x27;&quot;&#x27;485,525p&#x27; /workspace/src/click/decorators.py
+find /workspace -maxdepth 2 -type f -newermt &#x27;2026-10-02 08:27:00&#x27; -print&quot;
+
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 13, in &lt;module&gt;
+AssertionError
+        if not value or ctx.resilient_parsing:
+            return
+
+        nonlocal prog_name
+        nonlocal version
+
+        if prog_name is None:
+            prog_name = ctx.find_root().info_name
+
+        if version is None and package_name is not None:
+            import importlib.metadata
+
+            try:
+                version = importlib.metadata.version(package_name)
+            except importlib.metadata.PackageNotFoundError:
+                distributions = importlib.metadata.packages_distributions().get(
+                    package_name, []
+                )
+
+                if len(distributions) &gt; 1:
+                    candidates = &quot;, &quot;.join(repr(name) for name in distributions)
+                    raise RuntimeError(
+                        f&quot;{package_name!r} maps to multiple installed distributions: &quot;
+                        f&quot;{candidates}. Please pass an explicit package_name.&quot;
+                    )
+
+                if len(distributions) == 1:
+                    try:
+                        version = importlib.metadata.version(distributions[0])
+                    except importlib.metadata.PackageNotFoundError:
+                        pass
+
+                if version is None:
+                    raise RuntimeError(
+                        f&quot;{package_name!r} is not installed. Try passing&quot;
+                        &quot; &#x27;package_name&#x27; instead.&quot;
+                    ) from None
+
+        if version is None:
+            raise RuntimeError(
+                f&quot;Could not determine the version for {package_name!r} automatically.&quot;
+/workspace/.pytest_cache/CACHEDIR.TAG
+/workspace/.pytest_cache/.gitignore
+/workspace/.pytest_cache/README.md
+/workspace/.gitignore
+/workspace/.editorconfig
+/workspace/uv.lock
+/workspace/tests/test_utils.py
+/workspace/tests/test_types.py
+/workspace/tests/test_testing.py
+/workspace/tests/test_termui.py
+/workspace/tests/test_stream_lifecycle.py
+/workspace/tests/test_shell_completion.py
+/workspace/tests/test_parser.py
+/workspace/tests/test_options.py
+/workspace/tests/test_normalization.py
+/workspace/tests/test_info_dict.py
+/workspace/tests/test_imports.py
+/workspace/tests/test_formatting.py
+/workspace/tests/test_defaults.py
+/workspace/tests/test_custom_classes.py
+/workspace/tests/test_context.py
+/workspace/tests/test_compat.py
+/workspace/tests/test_command_decorators.py
+/workspace/tests/test_commands.py
+/workspace/tests/test_chain.py
+/workspace/tests/test_basic.py
+/workspace/tests/test_arguments.py
+/workspace/tests/conftest.py
+/workspace/TASK.md
+/workspace/README.md
+/workspace/pyproject.toml
+/workspace/LICENSE.txt
+/workspace/examples/README
+/workspace/docs/contrib.md
+/workspace/docs/unicode-support.md
+/workspace/docs/index.md
+/workspace/docs/setuptools.md
+/workspace/docs/exceptions.md
+/workspace/docs/conf.py
+/workspace/docs/wincmd.md
+/workspace/docs/why.md
+/workspace/docs/virtualenv.md
+/workspace/docs/utils.md
+/workspace/docs/upgrade-guides.md
+/workspace/docs/testing.md
+/workspace/docs/quickstart.md
+/workspace/docs/parameter-types.md
+/workspace/docs/options.md
+/workspace/docs/option-decorators.md
+/workspace/docs/license.md
+/workspace/docs/handling-files.md
+/workspace/docs/faqs.md
+/workspace/docs/entry-points.md
+/workspace/docs/documentation.md
+/workspace/docs/shell-completion.md
+/workspace/docs/prompts.md
+/workspace/docs/parameters.md
+/workspace/docs/contributing.md
+/workspace/docs/complex.md
+/workspace/docs/commands.md
+/workspace/docs/commands-and-groups.md
+/workspace/docs/command-line-reference.md
+/workspace/docs/click-concepts.md
+/workspace/docs/changes.md
+/workspace/docs/arguments.md
+/workspace/docs/api.md
+/workspace/docs/advanced.md
+/workspace/docs/support-multiple-versions.md
+/workspace/docs/standalone-apps.md
+/workspace/docs/extending-click.md
+/workspace/docs/design-opinions.md
+/workspace/CHANGES.md
+/workspace/.readthedocs.yaml
+/workspace/.pre-commit-config.yaml
+/workspace/.github/pull_request_template.md
+/workspace/.devcontainer/on-create-command.sh
+/workspace/.devcontainer/devcontainer.json
+</pre></details><p><strong>item_12</strong> AssertionError</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+from unittest.mock import patch
+import importlib.metadata
+import click
+from click.testing import CliRunner
+
+@click.command()
+@click.version_option(package_name=\&quot;import_name\&quot;)
+def command():
+    pass
+
+def version(name):
+    if name == \&quot;dist-name\&quot;:
+        return \&quot;1.2.3\&quot;
+    raise importlib.metadata.PackageNotFoundError(name)
+
+result = CliRunner().invoke(command, [\&quot;--version\&quot;])
+with patch(\&quot;importlib.metadata.version\&quot;, side_effect=version), patch(\&quot;importlib.metadata.packages_distributions\&quot;, return_value={\&quot;import_name\&quot;: [\&quot;dist-name\&quot;]}):
+    result = CliRunner().invoke(command, [\&quot;--version\&quot;])
+    assert result.exit_code == 0, (result.exit_code, result.output, result.exception)
+    assert result.output.endswith(\&quot;1.2.3\\n\&quot;), result.output
+
+with patch(\&quot;importlib.metadata.version\&quot;, side_effect=importlib.metadata.PackageNotFoundError), patch(\&quot;importlib.metadata.packages_distributions\&quot;, return_value={\&quot;import_name\&quot;: [\&quot;one\&quot;, \&quot;two\&quot;]}):
+    result = CliRunner().invoke(command, [\&quot;--version\&quot;])
+    assert result.exit_code &quot;&#x27;!= 0
+    message = str(result.exception)
+    assert &quot;multiple installed distributions&quot; in message
+    assert &quot;one&quot; in message and &quot;two&quot; in message and &quot;explicit package_name&quot; in message
+print(&quot;focused checks passed&quot;)
+PY&#x27;
+
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 24, in &lt;module&gt;
+AssertionError
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=1661; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="8" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="8" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="8" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-10</td><td>held-out confirmation</td><td>click-008</td><td>fail</td><td>77.343</td><td>unclassified<small>Secondary: none</small></td><td><details><summary>Key evidence (3 references)</summary><p><strong>item_7</strong> 405 passed, 24 skipped, 1000 deselected in 0.60s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &quot;PYTHONPATH=/workspace/src python - &lt;&lt;&#x27;PY&#x27;
+import click, gc, io
+from click.testing import CliRunner
+
+r=CliRunner()
+@click.command()
+def c():
+    click.echo_via_pager(&#x27;hello&#x27;)
+res=r.invoke(c)
+print(&#x27;result&#x27;,repr(res.output),res.exception)
+
+b=io.BytesIO(); s=io.TextIOWrapper(b)
+with click._termui_impl._nullpager(s) as x:
+    y=click._termui_impl.MaybeStripAnsi(x.buffer,color=False,encoding=&#x27;utf-8&#x27;)
+    y.write(&#x27;hello&#x27;); y.flush(); del y; gc.collect()
+print(&#x27;closed&#x27;,s.closed,b.closed,&#x27;val&#x27;,b.getvalue())
+PY
+PYTHONPATH=/workspace/src pytest -q tests/test_utils.py tests/test_testing.py tests/test_termui.py&quot;
+
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 13, in &lt;module&gt;
+AttributeError: &#x27;tuple&#x27; object has no attribute &#x27;buffer&#x27;
+result &#x27;hello\n&#x27; None
+........................................................................ [ 16%]
+........................................................................ [ 33%]
+...................................s.................................... [ 50%]
+...................sssssssssssssssssssss................ss.............. [ 67%]
+........................................................................ [ 83%]
+.....................................................................    [100%]
+405 passed, 24 skipped, 1000 deselected in 0.60s
+</pre></details><p><strong>item_11</strong> 1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.22s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=/workspace/src pytest -q&#x27;
+
+........................................................................ [  4%]
+........................................................................ [  8%]
+..........................................................x............. [ 12%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 25%]
+........................................................................ [ 30%]
+........................................................................ [ 34%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 51%]
+........................................................................ [ 55%]
+........................................................................ [ 60%]
+........................................................................ [ 64%]
+........................................................................ [ 68%]
+........................................................................ [ 72%]
+............................sssssssssssssssssssss................ss..... [ 77%]
+........................................................................ [ 81%]
+........................................................................ [ 85%]
+.....................................s.................................. [ 90%]
+........................................................................ [ 94%]
+........................................................................ [ 98%]
+.......................                                                  [100%]
+1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.22s
+</pre></details><p><strong>host-evaluation</strong> State=test_failure; evaluator passed=1654; failures=2; errors=0</p></details><small>Insufficient public trajectory evidence for a narrower terminal failure class.</small></td><td><select data-row="9" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="9" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="9" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-11</td><td>held-out confirmation</td><td>click-011</td><td>pass</td><td>67.359</td><td>no_failure<small>Secondary: none</small></td><td><details><summary>Key evidence (2 references)</summary><p><strong>item_9</strong> 1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.08s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=/workspace/src pytest -q&#x27;
+
+........................................................................ [  4%]
+........................................................................ [  9%]
+..................................................x..................... [ 14%]
+........................................................................ [ 18%]
+........................................................................ [ 23%]
+........................................................................ [ 28%]
+........................................................................ [ 33%]
+........................................................................ [ 37%]
+........................................................................ [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 52%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+.......................................................sssssssssssssssss [ 75%]
+ssss................ss.................................................. [ 80%]
+........................................................................ [ 85%]
+........................................................................ [ 90%]
+........................................................................ [ 94%]
+........................................................................ [ 99%]
+......                                                                   [100%]
+1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.08s
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=1497; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="10" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="10" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="10" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr><tr><td>M3-12</td><td>held-out confirmation</td><td>click-012</td><td>pass</td><td>47.844</td><td>no_failure<small>Secondary: none</small></td><td><details><summary>Key evidence (2 references)</summary><p><strong>item_8</strong> 1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.92s</p><details><summary>Public command and output</summary><pre>/usr/bin/bash -lc &#x27;PYTHONPATH=/workspace/src pytest -q&#x27;
+
+........................................................................ [  4%]
+........................................................................ [  9%]
+..................................................x..................... [ 14%]
+........................................................................ [ 19%]
+........................................................................ [ 24%]
+........................................................................ [ 29%]
+........................................................................ [ 34%]
+........................................................................ [ 39%]
+........................................................................ [ 44%]
+........................................................................ [ 49%]
+........................................................................ [ 54%]
+........................................................................ [ 59%]
+........................................................................ [ 64%]
+........................................................................ [ 69%]
+........................................................................ [ 73%]
+...sssssssssssssssssssss................ss.............................. [ 78%]
+........................................................................ [ 83%]
+........................................................................ [ 88%]
+........................................................................ [ 93%]
+........................................................................ [ 98%]
+....................                                                     [100%]
+1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.92s
+</pre></details><p><strong>host-evaluation</strong> State=resolved; evaluator passed=1441; failures=0; errors=0</p></details><small>Independent evaluator passed; intermediate obstacles are diagnostic secondary labels.</small></td><td><select data-row="11" data-key="human_primary"><option value="">Select your label</option><option>env_setup</option><option>missing_context</option><option>wrong_file_located</option><option>convention_violation</option><option>test_flakiness</option><option>reasoning_error</option><option>unclassified</option><option>no_failure</option></select><input data-row="11" data-key="human_secondary" placeholder="Secondary labels, comma separated"><textarea data-row="11" data-key="human_notes" placeholder="Evidence reference and reasoning; uncertainty is allowed"></textarea></td></tr></tbody></table></div>
+<script>const rows=[{"trajectory": "M3-01", "review_role": "development calibration", "task": "click-002", "outcome": "pass", "m5_assignment": "development calibration only", "agent_wall_seconds": "53.593", "rule_primary": "no_failure", "rule_secondary": "env_setup", "key_trace_evidence": "item_7 (JSONL line 15): raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 1.97s | item_11 (JSONL line 22): raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 1.96s | host-evaluation: State=resolved; evaluator passed=2000; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "env_setup", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-02", "review_role": "development calibration", "task": "click-003", "outcome": "pass", "m5_assignment": "development calibration only", "agent_wall_seconds": "49.437", "rule_primary": "no_failure", "rule_secondary": "env_setup, reasoning_error", "key_trace_evidence": "item_7 (JSONL line 15): raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 2.47s | item_9 (JSONL line 18): 665 passed, 71 deselected in 0.69s | item_10 (JSONL line 20): AssertionError | host-evaluation: State=resolved; evaluator passed=1953; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "env_setup, reasoning_error", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-03", "review_role": "development calibration", "task": "click-009", "outcome": "pass", "m5_assignment": "development calibration only", "agent_wall_seconds": "48.016", "rule_primary": "no_failure", "rule_secondary": "", "key_trace_evidence": "item_10 (JSONL line 21): 1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.31s | host-evaluation: State=resolved; evaluator passed=1630; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-04", "review_role": "development calibration", "task": "click-010", "outcome": "fail", "m5_assignment": "development calibration only", "agent_wall_seconds": "122.219", "rule_primary": "reasoning_error", "rule_secondary": "reasoning_error", "key_trace_evidence": "item_12 (JSONL line 25): E           AssertionError: assert 'None' == '1'; tests/test_options.py:2316: AssertionError; tests/test_options.py:2499: AssertionError; 29 failed, 1481 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.75s | item_20 (JSONL line 41): E       AssertionError: assert 'green' in '\\n'; tests/test_defaults.py:157: AssertionError; 1 failed in 0.08s | host-evaluation: State=test_failure; evaluator passed=1518; failures=69; errors=0", "human_primary": "reasoning_error", "human_secondary": "reasoning_error", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-05", "review_role": "held-out confirmation", "task": "click-001", "outcome": "pass", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "66.656", "rule_primary": "no_failure", "rule_secondary": "env_setup, reasoning_error", "key_trace_evidence": "item_7 (JSONL line 15): raise PackageNotFoundError(name); E   importlib.metadata.PackageNotFoundError: No package metadata was found for click; !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!; 31000 deselected, 1 error in 2.02s | item_9 (JSONL line 18): tests/test_utils/test_make_default_short_help.py:39: AssertionError; E       AssertionError: assert '123 567...' == '123 567 9.'; tests/test_utils/test_make_default_short_help.py:39: AssertionError; 3 failed, 11 passed in 0.03s | item_11 (JSONL line 22): 12 passed, 2 deselected in 0.01s | host-evaluation: State=resolved; evaluator passed=2092; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "env_setup, reasoning_error", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-06", "review_role": "held-out confirmation", "task": "click-004", "outcome": "pass", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "48.891", "rule_primary": "no_failure", "rule_secondary": "", "key_trace_evidence": "item_6 (JSONL line 13): 1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.59s | host-evaluation: State=resolved; evaluator passed=1749; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-07", "review_role": "held-out confirmation", "task": "click-005", "outcome": "pass", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "56.079", "rule_primary": "no_failure", "rule_secondary": "reasoning_error", "key_trace_evidence": "item_6 (JSONL line 13): 1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.85s | item_8 (JSONL line 16): AssertionError | host-evaluation: State=resolved; evaluator passed=1894; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "reasoning_error", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-08", "review_role": "held-out confirmation", "task": "click-006", "outcome": "fail", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "50.187", "rule_primary": "unclassified", "rule_secondary": "", "key_trace_evidence": "item_8 (JSONL line 17): 1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.44s | host-evaluation: State=test_failure; evaluator passed=1679; failures=2; errors=0", "human_primary": "reasoning_error", "human_secondary": "missing_context", "human_notes": "patch strips ANSI even when color is enabled. Agent never tested the color-enabled branch stated in the requirement. Hypothesis, unconfirmed: direct import of should_strip_ansi bypasses CliRunner's color patching."}, {"trajectory": "M3-09", "review_role": "held-out confirmation", "task": "click-007", "outcome": "pass", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "67.875", "rule_primary": "no_failure", "rule_secondary": "reasoning_error", "key_trace_evidence": "item_10 (JSONL line 20): 1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.45s | item_11 (JSONL line 22): AssertionError; except importlib.metadata.PackageNotFoundError:; except importlib.metadata.PackageNotFoundError: | item_12 (JSONL line 24): AssertionError | host-evaluation: State=resolved; evaluator passed=1661; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "reasoning_error", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-10", "review_role": "held-out confirmation", "task": "click-008", "outcome": "fail", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "77.343", "rule_primary": "unclassified", "rule_secondary": "", "key_trace_evidence": "item_7 (JSONL line 15): 405 passed, 24 skipped, 1000 deselected in 0.60s | item_11 (JSONL line 22): 1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.22s | host-evaluation: State=test_failure; evaluator passed=1654; failures=2; errors=0", "human_primary": "reasoning_error", "human_secondary": "", "human_notes": "fix only applies when the stream is MaybeStripAnsi. Agent's diagnostics never exercised the TTY with nonexistent PAGER path stated in the requirement and were not rerun after the final patch."}, {"trajectory": "M3-11", "review_role": "held-out confirmation", "task": "click-011", "outcome": "pass", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "67.359", "rule_primary": "no_failure", "rule_secondary": "", "key_trace_evidence": "item_9 (JSONL line 18): 1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.08s | host-evaluation: State=resolved; evaluator passed=1497; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "", "human_notes": "Agree with rule_primary and rule_secondary as listed."}, {"trajectory": "M3-12", "review_role": "held-out confirmation", "task": "click-012", "outcome": "pass", "m5_assignment": "baseline repeat 1; retain, do not rerun", "agent_wall_seconds": "47.844", "rule_primary": "no_failure", "rule_secondary": "", "key_trace_evidence": "item_8 (JSONL line 17): 1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.92s | host-evaluation: State=resolved; evaluator passed=1441; failures=0; errors=0", "human_primary": "no_failure", "human_secondary": "", "human_notes": "Agree with rule_primary and rule_secondary as listed."}]; const columns=["trajectory", "review_role", "task", "outcome", "m5_assignment", "agent_wall_seconds", "rule_primary", "rule_secondary", "key_trace_evidence", "human_primary", "human_secondary", "human_notes"]; const storageKey="arp-m3-47cb0a1f9900df853e00fbb72000ac76710f27379560ea7722098b07730a0834-reviewed-9d0284d8ca209179cec6a4e08d99adc9dea0b8dc7362555249cafdcab4434b8e";
+function count(){document.getElementById('count').textContent=rows.filter(r=>r.human_primary).length+' / 12 primary labels entered';}
+try{const saved=JSON.parse(localStorage.getItem(storageKey)||'null');if(saved&&saved.length===rows.length){saved.forEach((r,i)=>['human_primary','human_secondary','human_notes'].forEach(k=>rows[i][k]=r[k]||''));}}catch(e){}
+document.querySelectorAll('[data-row]').forEach(el=>{el.value=rows[+el.dataset.row][el.dataset.key];el.addEventListener('input',()=>{rows[+el.dataset.row][el.dataset.key]=el.value;try{localStorage.setItem(storageKey,JSON.stringify(rows));}catch(e){}count();});});
+function cell(value){let text=String(value??'');if(/^[=+@-]/.test(text))text="'"+text;return '"'+text.replaceAll('"','""')+'"';}
+document.getElementById('download').onclick=()=>{const csv=[columns.map(cell).join(','),...rows.map(r=>columns.map(k=>cell(r[k])).join(','))].join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='m3_human_labels.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};count();</script></html>

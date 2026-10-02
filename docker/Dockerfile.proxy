@@ -1,0 +1,5 @@
+ARG EVALUATOR_IMAGE=arp-m1-evaluator:v1
+FROM ${EVALUATOR_IMAGE}
+COPY proxy.py /opt/proxy.py
+USER 1000:1000
+ENTRYPOINT ["python", "-I", "-u", "/opt/proxy.py"]

@@ -1,0 +1,378 @@
+{
+  "status": "user_authorized_M5_before_M4",
+  "created": "2026-10-02T09:18:59.281245+00:00",
+  "seed": 20261002,
+  "randomization": "Python Random(seed): shuffle sorted task blocks, then shuffle remaining arm/repeat slots inside each block.",
+  "order_amendment": "Latest user instruction supersedes the global 24-slot confirmation-only M3 future-order list; original M3 freeze remains intact. Twelve-task scope adds sixteen development slots, preserving the identical treatment and confirmation reuse.",
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "low",
+  "cli_version": "codex-cli 0.153.1",
+  "agent_image_id": "sha256:acc21a0a23bca286bce1d659a1449add682e731a7821568c594f28d0d961bcfd",
+  "proxy_image_id": "sha256:26457b3b80041f58700cf0b073f4f7a8e2c545f6f78049df77db80637acad2bd",
+  "evaluator_image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+  "intervention_path": "interventions/drafts/setup-v1/AGENTS.md",
+  "intervention_sha256": "ae59af6e5b2ef1b510958ef4159c0e0c05d9cbc0d313db7617fb6781dbc43c89",
+  "common_prompt_path": "interventions/common_prompt_v1.txt",
+  "common_prompt_sha256": "7fa0f683918a188744dc92649f9fa723132e3c13f66bc76f39226ddb5e7757d1",
+  "rubric_sha256": "47cb0a1f9900df853e00fbb72000ac76710f27379560ea7722098b07730a0834",
+  "manifest_sha256": "7bb11b763d3863a85dda7d02aa4588c030642ee077a6ecbf43aeae0898461dc5",
+  "m3_freeze_sha256": "2700acc2d124be41f1c9c14c4c62bd962ee5500e423f36457c0946b71ea783a8",
+  "remaining_order": [
+    {
+      "task_id": "click-007",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-007",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-007",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-002",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-002",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "development"
+    },
+    {
+      "task_id": "click-002",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-002",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "development"
+    },
+    {
+      "task_id": "click-005",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-005",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-005",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-001",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-001",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-001",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-010",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "development"
+    },
+    {
+      "task_id": "click-010",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-010",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "development"
+    },
+    {
+      "task_id": "click-010",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-008",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-008",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-008",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-004",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-004",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-004",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-006",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-006",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-006",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-009",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-009",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-009",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "development"
+    },
+    {
+      "task_id": "click-009",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "development"
+    },
+    {
+      "task_id": "click-012",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-012",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-012",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-011",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-011",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-011",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "confirmation"
+    },
+    {
+      "task_id": "click-003",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-003",
+      "arm": "intervention",
+      "repeat": 1,
+      "split": "development"
+    },
+    {
+      "task_id": "click-003",
+      "arm": "baseline",
+      "repeat": 2,
+      "split": "development"
+    },
+    {
+      "task_id": "click-003",
+      "arm": "intervention",
+      "repeat": 2,
+      "split": "development"
+    }
+  ],
+  "reused_baselines": [
+    {
+      "task_id": "click-001",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/01-click-001-baseline-1",
+      "result_sha256": "5b6e06df54419accb20b5ae05c313ea4c6bfe3f21cd423d83af3c0ba45355b0a",
+      "events_sha256": "49449e36d3efbcbca2629db46b4a98ea38d3b8554b8d555edf92c2452e995d0c",
+      "patch_sha256": "32385fe69960f429563dde977e205df1622ce18dd0db0cf372b5e4e9197931dd"
+    },
+    {
+      "task_id": "click-004",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/02-click-004-baseline-1",
+      "result_sha256": "8d2ab87dc2d3d592c86c5999cd71ccc34359c2c49be0f1efb16904765ada77d9",
+      "events_sha256": "d96d4d165020eb3f0d6238fa399979af3f3a0f5f44a82fef301d1e8cf3c00249",
+      "patch_sha256": "437909c077aafde566c77bacc507b1ca3db98f89c26a87b30e2feaa420ed80ae"
+    },
+    {
+      "task_id": "click-005",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/03-click-005-baseline-1",
+      "result_sha256": "26e7a11e695b4f8c357f06fc3879ca0c82d1ae13d4b803d5e88479f9a3e555df",
+      "events_sha256": "a174bd1b64f769f2eb17290e1885d032730e784ca895fc5eb77c4ecc5d08775f",
+      "patch_sha256": "540742d4b8f0170b1a23cacc1cd1c6ebf4da72cb2977ad8d30937ccf4e325c79"
+    },
+    {
+      "task_id": "click-006",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/04-click-006-baseline-1",
+      "result_sha256": "ca8824c12c77e90d8f5879322336e4a231239d3d6780750377194e83a7202c72",
+      "events_sha256": "4ac7a516379c189fb78b34854ccabb074bf55c21667ab24b1ce662ab19dcc918",
+      "patch_sha256": "a05d016121ad1b9e154ec910438260fc372d47dd7a94788c555df04ef31889ec"
+    },
+    {
+      "task_id": "click-007",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/05-click-007-baseline-1",
+      "result_sha256": "3f632ba7a2c9724c9f3cdac80df58f21ac7d377a90c8529a8c9afa7bccf7db68",
+      "events_sha256": "15cbd3de84546a4a2291ea0ac1c0f929f8f56383fe99e81c2408a82d7cff1a6a",
+      "patch_sha256": "df9055ef5b07cfe909162ca81ff56d618865a2ae8dbd45af9ac95a15cca45e33"
+    },
+    {
+      "task_id": "click-008",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/06-click-008-baseline-1",
+      "result_sha256": "2806647d9a45c87d80b3ea84cba23200dae6f8b8a5197b6143f9afaceb6981d6",
+      "events_sha256": "03aa17b5821656c5c3fe4a507be0eb12d1af29cc288f388f61e1928c7581fba1",
+      "patch_sha256": "10fb28e2fd2ec5257aea9593a8011ffdfbf20db3e4fffe194046976992da598b"
+    },
+    {
+      "task_id": "click-011",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/07-click-011-baseline-1",
+      "result_sha256": "5c6c0d4cba8728a8a4ce72978e2ba4cdb36adabd46d1d18f6d78cf796f0f3ef5",
+      "events_sha256": "b9e3ecb78a2ed75b9ea5924714cd1b0ffffff361ca01e077cab4ad8056cdcd19",
+      "patch_sha256": "863278ede9498c91507c79bfcc4eea01d24b5deb94877ef156369cfea0c4af5f"
+    },
+    {
+      "task_id": "click-012",
+      "arm": "baseline",
+      "repeat": 1,
+      "split": "confirmation",
+      "path": "artifacts/private/m3-confirmation-001/08-click-012-baseline-1",
+      "result_sha256": "a8cd298f68d2d90ebdaf84179a3781713e1565b0b382e079f3c1ae33dd4e939c",
+      "events_sha256": "98bbdbc30c28196555b289e8a1d94aacfe7c12df5957cc7c05c17e83706129d0",
+      "patch_sha256": "552eded020f6cb38ca95c0591f4802329c420f4e26f2395bb520283b88a56d4f"
+    }
+  ],
+  "new_scored_slots": 40,
+  "total_scored_slots": 48,
+  "historical_development_excluded": "M2 uses another model; Luna development calibration uses the earlier prompt and repeat 0. Neither is pooled into the new 48 slots.",
+  "limits": {
+    "agent_wall_seconds": 900,
+    "evaluator_seconds": 300,
+    "paid_api_cap": 0,
+    "stop_on_usage_limit": true,
+    "stop_on_two_docker_timeouts": true,
+    "no_automatic_retry_or_fallback": true
+  },
+  "accounting": {
+    "prior_cli_invocations": 28,
+    "new_scored_invocations_planned": 40,
+    "native_gate_invocations_planned": 1,
+    "projected_total": 69,
+    "ceiling_revision": "User explicitly authorized all remaining 12-task scored slots; replaces the earlier approximate 50 planning ceiling, retaining the $0 cap."
+  },
+  "analysis": {
+    "primary": "mean intervention-minus-baseline task success difference on eight confirmation tasks, two attempts each arm",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20261002,
+    "interval": "paired task-cluster percentile 95%; Hoeffding fallback if degenerate, also report Hoeffding always",
+    "key_secondary": "paired task mean agent-wall-seconds difference, including failed task attempts; paired cluster bootstrap 95%",
+    "all_tasks": "descriptive only",
+    "infrastructure": "missing outcome/exclusion; never silently score as failure or replace; no comparable final estimate if incomplete",
+    "zero_in_interval": "inconclusive"
+  },
+  "arm_order_limitation": "All eight M3 baseline repeat-1 runs precede intervention runs. Only the remaining baseline repeat 2 and intervention repeats 1 and 2 are randomized/interleaved. Arm order is not fully randomized; cohort/time confounding remains.",
+  "stop_checkpoint": "M5 analysis committed; do not start M4",
+  "source_sha256": {
+    "arp/m5.py": "a65c2e997a6bc4e9b91065cce6e96f008fc6a7e6d146c107f5819caab19bbbbb",
+    "arp/m5_analysis.py": "579cf041ad8eb75a2858969f2be9af54ed78b6353e6171b82fcb5d23f89d5c55"
+  }
+}

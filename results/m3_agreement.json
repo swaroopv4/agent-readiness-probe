@@ -1,0 +1,407 @@
+{
+  "milestone": "M3",
+  "status": "completed_approved_reduced_scope_stop_before_M4",
+  "reviewer": "Swaroop",
+  "recorded_at": "2026-10-02T09:00:44.408677+00:00",
+  "human_labels_supplied": 12,
+  "label_provenance": "Human labels supplied directly by Swaroop in the conversation; timestamp is transcription time, not inferred review time. Assistant hypothesis verification is recorded separately and does not amend supplied labels or notes.",
+  "human_labels_sha256": "9d0284d8ca209179cec6a4e08d99adc9dea0b8dc7362555249cafdcab4434b8e",
+  "rubric_sha256": "47cb0a1f9900df853e00fbb72000ac76710f27379560ea7722098b07730a0834",
+  "intervention_sha256": "ae59af6e5b2ef1b510958ef4159c0e0c05d9cbc0d313db7617fb6781dbc43c89",
+  "held_out_confirmation": {
+    "n": 8,
+    "primary_exact_matches": 6,
+    "primary_exact_agreement": 0.75,
+    "primary_kappa": 0.42857142857142855,
+    "kappa_definition": "All primary categories, including unclassified as a distinct prediction; no excluded abstentions.",
+    "primary_confusion": [
+      {
+        "human": "no_failure",
+        "rule": "no_failure",
+        "count": 6
+      },
+      {
+        "human": "reasoning_error",
+        "rule": "unclassified",
+        "count": 2
+      }
+    ],
+    "primary_per_class": {
+      "env_setup": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "missing_context": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "wrong_file_located": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "convention_violation": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "test_flakiness": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "reasoning_error": {
+        "human_support": 2,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": null,
+        "recall": 0.0,
+        "status": "measured"
+      },
+      "unclassified": {
+        "human_support": 0,
+        "rule_predictions": 2,
+        "true_positive": 0,
+        "false_positive": 2,
+        "false_negative": 0,
+        "precision": 0.0,
+        "recall": null,
+        "status": "measured"
+      },
+      "no_failure": {
+        "human_support": 6,
+        "rule_predictions": 6,
+        "true_positive": 6,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "status": "measured"
+      }
+    },
+    "secondary_exact_matches": 7,
+    "secondary_exact_agreement": 0.875,
+    "joint_exact_matches": 6,
+    "secondary_per_class": {
+      "env_setup": {
+        "human_support": 1,
+        "rule_predictions": 1,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "status": "measured"
+      },
+      "missing_context": {
+        "human_support": 1,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 1,
+        "precision": null,
+        "recall": 0.0,
+        "status": "measured"
+      },
+      "wrong_file_located": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "convention_violation": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "test_flakiness": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "reasoning_error": {
+        "human_support": 3,
+        "rule_predictions": 3,
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "status": "measured"
+      },
+      "unclassified": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "no_failure": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      }
+    },
+    "abstentions": 2,
+    "coverage": 0.75,
+    "covered_exact_agreement": 1.0,
+    "failed_outcomes": 2,
+    "failed_outcome_coverage": 0.0,
+    "disagreements": [
+      "M3-08",
+      "M3-10"
+    ]
+  },
+  "development_calibration": {
+    "n": 4,
+    "primary_exact_matches": 4,
+    "primary_exact_agreement": 1.0,
+    "primary_kappa": 1.0,
+    "kappa_definition": "All primary categories, including unclassified as a distinct prediction; no excluded abstentions.",
+    "primary_confusion": [
+      {
+        "human": "no_failure",
+        "rule": "no_failure",
+        "count": 3
+      },
+      {
+        "human": "reasoning_error",
+        "rule": "reasoning_error",
+        "count": 1
+      }
+    ],
+    "primary_per_class": {
+      "env_setup": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "missing_context": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "wrong_file_located": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "convention_violation": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "test_flakiness": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "reasoning_error": {
+        "human_support": 1,
+        "rule_predictions": 1,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "status": "measured"
+      },
+      "unclassified": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "no_failure": {
+        "human_support": 3,
+        "rule_predictions": 3,
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "status": "measured"
+      }
+    },
+    "secondary_exact_matches": 4,
+    "secondary_exact_agreement": 1.0,
+    "joint_exact_matches": 4,
+    "secondary_per_class": {
+      "env_setup": {
+        "human_support": 2,
+        "rule_predictions": 2,
+        "true_positive": 2,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "status": "measured"
+      },
+      "missing_context": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "wrong_file_located": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "convention_violation": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "test_flakiness": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "reasoning_error": {
+        "human_support": 2,
+        "rule_predictions": 2,
+        "true_positive": 2,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "status": "measured"
+      },
+      "unclassified": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      },
+      "no_failure": {
+        "human_support": 0,
+        "rule_predictions": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "status": "not measured (absent in both)"
+      }
+    },
+    "abstentions": 0,
+    "coverage": 1.0,
+    "covered_exact_agreement": 1.0,
+    "failed_outcomes": 1,
+    "failed_outcome_coverage": 1.0,
+    "disagreements": []
+  },
+  "limitations": [
+    "Only eight held-out task clusters; four development rows are calibration, not validation.",
+    "One human reviewer, unblinded to rule predictions; possible anchoring. Inter-human agreement not measured.",
+    "The reviewer inspected hidden failure evidence for M3-08 and M3-10; the frozen rule uses public trace evidence and aggregate outcome only.",
+    "Manual labels remain separate from original rule predictions. Unsupported classes are not measured.",
+    "No intervention effect measured; the observation from confirmation is not used to change the frozen intervention."
+  ],
+  "M4_started": false,
+  "additional_agent_or_evaluator_runs": 0
+}

@@ -1,0 +1,1128 @@
+{
+  "m2_commit": "eefd24ad0eb283af6fb11cac0dc9a0510b5f86dd",
+  "status": "development_ceiling_complete_pending_user_decision",
+  "confirmation_attempts": 0,
+  "dataset_version": "m1-v7",
+  "cli_version": "0.153.1",
+  "model_catalog": [
+    {
+      "slug": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "description": "Frontier intelligence for the most demanding work.",
+      "visibility": "list",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses with lighter reasoning"
+        },
+        {
+          "effort": "medium",
+          "description": "Balances speed and reasoning depth for everyday tasks"
+        },
+        {
+          "effort": "high",
+          "description": "Greater reasoning depth for complex problems"
+        },
+        {
+          "effort": "xhigh",
+          "description": "Extra high reasoning depth for complex problems"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth for the hardest problems"
+        },
+        {
+          "effort": "ultra",
+          "description": "Maximum reasoning with automatic task delegation"
+        }
+      ],
+      "default_reasoning_level": "low",
+      "priority": 2,
+      "supported_in_api": true
+    },
+    {
+      "slug": "gpt-reserve",
+      "display_name": "GPT-Reserve",
+      "description": "Fast and affordable agentic coding model.",
+      "visibility": "hide",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses with lighter reasoning"
+        },
+        {
+          "effort": "medium",
+          "description": "Balances speed and reasoning depth for everyday tasks"
+        },
+        {
+          "effort": "high",
+          "description": "Greater reasoning depth for complex problems"
+        },
+        {
+          "effort": "xhigh",
+          "description": "Extra high reasoning depth for complex problems"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth for the hardest problems"
+        }
+      ],
+      "default_reasoning_level": "medium",
+      "priority": 4,
+      "supported_in_api": true
+    },
+    {
+      "slug": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "description": "Older generation workhorse model.",
+      "visibility": "list",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses with lighter reasoning"
+        },
+        {
+          "effort": "medium",
+          "description": "Balances speed and reasoning depth for everyday tasks"
+        },
+        {
+          "effort": "high",
+          "description": "Greater reasoning depth for complex problems"
+        },
+        {
+          "effort": "xhigh",
+          "description": "Extra high reasoning depth for complex problems"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth for the hardest problems"
+        },
+        {
+          "effort": "ultra",
+          "description": "Maximum reasoning with automatic task delegation"
+        }
+      ],
+      "default_reasoning_level": "low",
+      "priority": 5,
+      "supported_in_api": true
+    },
+    {
+      "slug": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "description": "Older balanced model for straightforward work.",
+      "visibility": "list",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses with lighter reasoning"
+        },
+        {
+          "effort": "medium",
+          "description": "Balances speed and reasoning depth for everyday tasks"
+        },
+        {
+          "effort": "high",
+          "description": "Greater reasoning depth for complex problems"
+        },
+        {
+          "effort": "xhigh",
+          "description": "Extra high reasoning depth for complex problems"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth for the hardest problems"
+        },
+        {
+          "effort": "ultra",
+          "description": "Maximum reasoning with automatic task delegation"
+        }
+      ],
+      "default_reasoning_level": "medium",
+      "priority": 8,
+      "supported_in_api": true
+    },
+    {
+      "slug": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "description": "Older fast and efficient model.",
+      "visibility": "list",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses with lighter reasoning"
+        },
+        {
+          "effort": "medium",
+          "description": "Balances speed and reasoning depth for everyday tasks"
+        },
+        {
+          "effort": "high",
+          "description": "Greater reasoning depth for complex problems"
+        },
+        {
+          "effort": "xhigh",
+          "description": "Extra high reasoning depth for complex problems"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth for the hardest problems"
+        }
+      ],
+      "default_reasoning_level": "medium",
+      "priority": 9,
+      "supported_in_api": true
+    },
+    {
+      "slug": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "description": "Legacy coding model.",
+      "visibility": "list",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses with lighter reasoning"
+        },
+        {
+          "effort": "medium",
+          "description": "Balances speed and reasoning depth for everyday tasks"
+        },
+        {
+          "effort": "high",
+          "description": "Greater reasoning depth for complex problems"
+        },
+        {
+          "effort": "xhigh",
+          "description": "Extra high reasoning depth for complex problems"
+        }
+      ],
+      "default_reasoning_level": "medium",
+      "priority": 13,
+      "supported_in_api": true
+    },
+    {
+      "slug": "codex-auto-review",
+      "display_name": "Codex Auto Review",
+      "description": "Automatic approval review model for Codex.",
+      "visibility": "hide",
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses with lighter reasoning"
+        },
+        {
+          "effort": "medium",
+          "description": "Balances speed and reasoning depth for everyday tasks"
+        },
+        {
+          "effort": "high",
+          "description": "Greater reasoning depth for complex problems"
+        },
+        {
+          "effort": "xhigh",
+          "description": "Extra high reasoning depth for complex problems"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth for the hardest problems"
+        }
+      ],
+      "default_reasoning_level": "medium",
+      "priority": 43,
+      "supported_in_api": true
+    }
+  ],
+  "catalog_source": "artifacts/private/dev-catalog-001/catalog.json",
+  "catalog_sha256": "a38225e986ec48bee46231fc0759acd705fb0851ce453dc09f18e121e457ae12",
+  "catalog_fetched_utc": "2026-10-02T04:42:38.308108+00:00",
+  "standard_weakest_tier_selection": {
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "basis": "Smallest named standard coding tier offered in the authenticated current CLI picker. Hidden gpt-reserve is also advertised; its relative strength and suitability for this experiment are not established. No universal empirical model strength ordering is claimed."
+  },
+  "original_smokes": [
+    {
+      "run_id": "01-click-002-baseline-0",
+      "task_id": "click-002",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 64.078,
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 9,
+      "file_edit_calls": 0,
+      "usage": {
+        "input_tokens": 97324,
+        "cached_input_tokens": 79872,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1334,
+        "reasoning_output_tokens": 133
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_9",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.10s"
+          ],
+          "command_sha256": "8f1bfe8cc808759f9ff32d315672c7fcab0f374a3583e9bc054982d4324faf92",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.76s"
+          ],
+          "command_sha256": "8aa59f70eba7603590a8a310f824f91a6c1240f5aa4521bfd891097cc96ab90f",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.688000000023749,
+        "collected": 2025,
+        "passed": 2000,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "a24141377232197d3a860bfbed6c52f5f7ebf03aa16d41f0fe0dcf3a9bc36760",
+      "result_sha256": "2eb1a12499c15387cb1147cb4a380efbaceae3bd8605579f92fa1e1d0bc38f02"
+    },
+    {
+      "run_id": "02-click-003-baseline-0",
+      "task_id": "click-003",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 85.344,
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 8,
+      "file_edit_calls": 0,
+      "usage": {
+        "input_tokens": 150536,
+        "cached_input_tokens": 122368,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1714,
+        "reasoning_output_tokens": 169
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.04s"
+          ],
+          "command_sha256": "b8e706ae7c3d01c327d446d3e563878672938ad2681a7c18fcbb68fe529880ac",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1940 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.68s"
+          ],
+          "command_sha256": "225618c510165b7b867fa86bda9b202f1501f16b722796581d6abb974c8af4b4",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 2,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.59299999999348,
+        "collected": 1978,
+        "passed": 1953,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "c12393769999aa62e6d86db3201b7de06c21392f7f3fb609d1103bab37a27df1",
+      "result_sha256": "52d6b876a4acd46d832fddbf48f6b58bf044a8581f760b7746e49f87761d5dc6"
+    },
+    {
+      "run_id": "03-click-009-baseline-0",
+      "task_id": "click-009",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 56.656,
+      "cli_turns": 1,
+      "native_tool_calls": 5,
+      "command_calls": 5,
+      "file_edit_calls": 0,
+      "usage": {
+        "input_tokens": 84813,
+        "cached_input_tokens": 64896,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1376,
+        "reasoning_output_tokens": 13
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.21s"
+          ],
+          "command_sha256": "97d91c7d8da3a3173dbf4b9edc95f222a0dc09ddc7f5c3554f1b7998a907a330",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 2,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.85999999998603,
+        "collected": 1655,
+        "passed": 1630,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "e5d2b8d24a35e348c106f2bb040054b2ea3fbe688beeed838915c8455c8a8215",
+      "result_sha256": "9edb801f047b77a4fc0bd6e9ed650655b407376b187d6d18263ee4fbe3837a9a"
+    },
+    {
+      "run_id": "04-click-010-baseline-0",
+      "task_id": "click-010",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 160.265,
+      "cli_turns": 1,
+      "native_tool_calls": 10,
+      "command_calls": 10,
+      "file_edit_calls": 0,
+      "usage": {
+        "input_tokens": 240378,
+        "cached_input_tokens": 201600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4186,
+        "reasoning_output_tokens": 949
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.07s"
+          ],
+          "command_sha256": "c19e08c417f14101ea13f8328985a237116c6eb9dfb9ddc19068e3a59a1237ec",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_13",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.95s"
+          ],
+          "command_sha256": "c592bcfc483990144644b802525a4b36c906633a5d69bbbe7d054a2f094d05e2",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_3",
+          "exit_code": 128,
+          "summary_lines": []
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 1,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.594000000040978,
+        "collected": 1611,
+        "passed": 1587,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "b674385b9efab796fb9910bbbf9cce83b560503b4e7eb0bf41e03e0e9958b477",
+      "result_sha256": "34275305562883631c35df597d9fdb3e575b01a623f5db3352aed394d7245446"
+    },
+    {
+      "run_id": "05-click-002-baseline-1",
+      "task_id": "click-002",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 71.265,
+      "cli_turns": 1,
+      "native_tool_calls": 6,
+      "command_calls": 6,
+      "file_edit_calls": 0,
+      "usage": {
+        "input_tokens": 108654,
+        "cached_input_tokens": 80896,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1431,
+        "reasoning_output_tokens": 151
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.79s"
+          ],
+          "command_sha256": "f2766aeadb684ab36d3cd02e2907a9da108a1936fe86a304c506ab203b418a7f",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.44s"
+          ],
+          "command_sha256": "664ead20c941c0c37d53de318d8c06396477be6f9c4b9e4a28a5800ac73df7b7",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.5,
+        "collected": 2025,
+        "passed": 2000,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "dd4f6039ec2fc382b37e9e8694acaf8220ba50cc867a8c3f13387b17f7662386",
+      "result_sha256": "ae761a31b914b94054a01dc8866d85693e642886b864da0ed1243af9f4121519"
+    }
+  ],
+  "weaker_attempts": [
+    {
+      "run_id": "01-click-002-baseline-0",
+      "task_id": "click-002",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 53.593,
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 7,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 163895,
+        "cached_input_tokens": 132864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2001,
+        "reasoning_output_tokens": 405
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "ValueError: <object object at 0x7e7b80f10640> is not a valid Sentinel",
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.97s"
+          ],
+          "command_sha256": "ba30e978b182260bcb0863b8e31485bfcefa0192242460baf97977dea377021a",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.96s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 2,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_12",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.171999999962281,
+        "collected": 2025,
+        "passed": 2000,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "5da3517b7defb371cd9299cb641e21bbccb81212b9c7059ebc9e0299b6c5a03b",
+      "result_sha256": "016b0e53bb73727fef57e8202f650b77251ae670d82378995b02f286d251f6f9"
+    },
+    {
+      "run_id": "02-click-003-baseline-0",
+      "task_id": "click-003",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 49.437,
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 113670,
+        "cached_input_tokens": 93952,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1825,
+        "reasoning_output_tokens": 245
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 129,
+          "blocked_before_pytest": true,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [],
+          "command_sha256": "76678b7e74f811ef0a07323b16090d837d0fd927b8bc0d578ba8a825cf102ca9",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_7",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.47s"
+          ],
+          "command_sha256": "7a0a54d72c06a2a70ded854e759cbd500d12c38f1736a6a77d40d219ca5d87df",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "665 passed, 71 deselected in 0.69s"
+          ],
+          "command_sha256": "06fdaf1e37c4c2bfbd1b84e8ff5595173517a05ae2a6dae5227147afc8439664",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_6",
+          "exit_code": 129,
+          "reason": "git command prevented pytest execution"
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.547000000020489,
+        "collected": 1978,
+        "passed": 1953,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "88d54ff1b7d8eea6734829857404124f7ef942c544d7eb3cb86dc77ffb0525f6",
+      "result_sha256": "2565c92607709c25c901d962e1df0a4babdc31df84e236f21d34e14431d759b8"
+    },
+    {
+      "run_id": "03-click-009-baseline-0",
+      "task_id": "click-009",
+      "split": "development",
+      "state": "resolved",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 48.016,
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 131847,
+        "cached_input_tokens": 109312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1692,
+        "reasoning_output_tokens": 537
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.31s"
+          ],
+          "command_sha256": "7a2caff9fcea2547fb10a0c89a59142b0c969df6fb3c94c52b4a45610b2651d5",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_2",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.7189999999827705,
+        "collected": 1655,
+        "passed": 1630,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "c14aaca87732c6e9ae0520e8792a4c79aa091e16306074b52abf59683e93533a",
+      "result_sha256": "4daa530314f6bb228ddc911e1c2fcb8f181d4c1db83bcb7c176ca113b0bc6f6f"
+    },
+    {
+      "run_id": "04-click-010-baseline-0",
+      "task_id": "click-010",
+      "split": "development",
+      "state": "test_failure",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "agent_wall_seconds": 122.219,
+      "cli_turns": 1,
+      "native_tool_calls": 18,
+      "command_calls": 14,
+      "file_edit_calls": 4,
+      "usage": {
+        "input_tokens": 454247,
+        "cached_input_tokens": 391680,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4687,
+        "reasoning_output_tokens": 2288
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_12",
+          "exit_code": 1,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       assert 'None' == \"'upper'\"",
+            "E         ",
+            "E         - 'upper'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"'lower'\"",
+            "E         ",
+            "E         - 'lower'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"'uPPer'\"",
+            "E         ",
+            "E         - 'uPPer'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"'lOwEr'\"",
+            "E         ",
+            "E         - 'lOwEr'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"' \u1555( \u141b )\u1557 '\"",
+            "E         ",
+            "E         - ' \u1555( \u141b )\u1557 '",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"'upper'\"",
+            "E         ",
+            "E         - 'upper'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"'False'\"",
+            "E         ",
+            "E         - 'False'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"'42'\"",
+            "E         ",
+            "E         - '42'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       assert 'None' == \"'12.3'\"",
+            "E         ",
+            "E         - '12.3'",
+            "E         + None",
+            "tests/test_basic.py:334: AssertionError",
+            "E       AssertionError: assert 'green' in '\\n'",
+            "E        +  where '\\n' = <Result okay>.output",
+            "tests/test_defaults.py:157: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: 'js'\"",
+            "E         ",
+            "E         - Callback value: 'js'",
+            "E         ?                 ^^^^",
+            "E         + Callback value: None",
+            "E         ?                 ^^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: 'xml'\"",
+            "E         ",
+            "E         - Callback value: 'xml'",
+            "E         ?                 ^^^^^",
+            "E         + Callback value: None",
+            "E         ?                 ^^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: 'jS'\"",
+            "E         ",
+            "E         - Callback value: 'jS'",
+            "E         ?                 ^^^^",
+            "E         + Callback value: None",
+            "E         ?                 ^^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: 'xMl'\"",
+            "E         ",
+            "E         - Callback value: 'xMl'",
+            "E         ?                 ^^^^^",
+            "E         + Callback value: None",
+            "E         ?                 ^^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: ' \u1555( \u141b )\u1557 '\"",
+            "E         ",
+            "E         - Callback value: ' \u1555( \u141b )\u1557 '",
+            "E         + Callback value: None",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: 'js'\"",
+            "E         ",
+            "E         - Callback value: 'js'",
+            "E         ?                 ^^^^",
+            "E         + Callback value: None",
+            "E         ?                 ^^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: 'False'\"",
+            "E         ",
+            "E         - Callback value: 'False'",
+            "E         ?                 ^^^^^ -",
+            "E         + Callback value: None",
+            "E         ?                 ^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: '42'\"",
+            "E         ",
+            "E         - Callback value: '42'",
+            "E         ?                 ^^^^",
+            "E         + Callback value: None",
+            "E         ?                 ^^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E       assert 'Callback value: None' == \"Callback value: '12.3'\"",
+            "E         ",
+            "E         - Callback value: '12.3'",
+            "E         ?                 ^^^^^^",
+            "E         + Callback value: None",
+            "E         ?                 ^^^^",
+            "tests/test_options.py:1611: AssertionError",
+            "E           assert 'None' == \"<class 'test...ions.Class1'>\"",
+            "E             ",
+            "E             - <class 'test_options.Class1'>",
+            "E             + None",
+            "tests/test_options.py:2316: AssertionError",
+            "E           assert 'None' == \"'True'\"",
+            "E             ",
+            "E             - 'True'",
+            "E             + None",
+            "tests/test_options.py:2316: AssertionError",
+            "E           assert 'None' == \"<class 'test...ions.Class1'>\"",
+            "E             ",
+            "E             - <class 'test_options.Class1'>",
+            "E             + None",
+            "tests/test_options.py:2316: AssertionError",
+            "E           AssertionError: assert None",
+            "E            +  where None = <function match at 0x72480e681c60>(re.compile('<test_options.Class1 object at 0x[0-9A-Fa-f]+>'), 'None')",
+            "E            +    where <function match at 0x72480e681c60> = re.match",
+            "E            +    and   'None' = <Result okay>.output",
+            "tests/test_options.py:2314: AssertionError",
+            "E           AssertionError: assert None",
+            "E            +  where None = <function match at 0x72480e681c60>(re.compile('<test_options.Class2 object at 0x[0-9A-Fa-f]+>'), 'None')",
+            "E            +    where <function match at 0x72480e681c60> = re.match",
+            "E            +    and   'None' = <Result okay>.output",
+            "tests/test_options.py:2314: AssertionError",
+            "E           AssertionError: assert None",
+            "E            +  where None = <function match at 0x72480e681c60>(re.compile('<test_options.Class1 object at 0x[0-9A-Fa-f]+>'), 'None')",
+            "E            +    where <function match at 0x72480e681c60> = re.match",
+            "E            +    and   'None' = <Result okay>.output",
+            "tests/test_options.py:2314: AssertionError",
+            "E           AssertionError: assert None",
+            "E            +  where None = <function match at 0x72480e681c60>(re.compile('<test_options.Class2 object at 0x[0-9A-Fa-f]+>'), 'None')",
+            "E            +    where <function match at 0x72480e681c60> = re.match",
+            "E            +    and   'None' = <Result okay>.output",
+            "tests/test_options.py:2314: AssertionError",
+            "E           AssertionError: assert 'None' == '1'",
+            "E             ",
+            "E             - 1",
+            "E             + None",
+            "tests/test_options.py:2316: AssertionError",
+            "E           AssertionError: assert 'None' == '1'",
+            "E             ",
+            "E             - 1",
+            "E             + None",
+            "tests/test_options.py:2316: AssertionError",
+            "E       assert 'None' == \"<class 'test...ions.Class1'>\"",
+            "E         ",
+            "E         - <class 'test_options.Class1'>",
+            "E         + None",
+            "tests/test_options.py:2499: AssertionError",
+            "29 failed, 1481 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.75s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_20",
+          "exit_code": 1,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       AssertionError: assert 'green' in '\\n'",
+            "E        +  where '\\n' = <Result okay>.output",
+            "tests/test_defaults.py:157: AssertionError",
+            "1 failed in 0.08s"
+          ],
+          "command_sha256": "f7ade0eeeb27d8e31c7d1a8622e0a91639be468434f8edea9b87882024460c08",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 2,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 10.03200000000652,
+        "collected": 1611,
+        "passed": 1518,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 69,
+      "evaluation_error_count": 0,
+      "events_sha256": "98d23a92760e6636a8ddd31947fa64e7db206b20299b7e9da7a16040a68c0095",
+      "result_sha256": "ece60ab7fcd4e8bea337a3a9530c23febdc93931efbaf73ef45f810cd4bd5568"
+    }
+  ],
+  "paired_descriptive_comparison": [
+    {
+      "task_id": "click-002",
+      "astra_wall_seconds": 64.078,
+      "luna_wall_seconds": 53.593,
+      "astra_native_tool_calls": 9,
+      "luna_native_tool_calls": 9,
+      "astra_input_tokens": 97324,
+      "luna_input_tokens": 163895
+    },
+    {
+      "task_id": "click-003",
+      "astra_wall_seconds": 85.344,
+      "luna_wall_seconds": 49.437,
+      "astra_native_tool_calls": 8,
+      "luna_native_tool_calls": 8,
+      "astra_input_tokens": 150536,
+      "luna_input_tokens": 113670
+    },
+    {
+      "task_id": "click-009",
+      "astra_wall_seconds": 56.656,
+      "luna_wall_seconds": 48.016,
+      "astra_native_tool_calls": 5,
+      "luna_native_tool_calls": 8,
+      "astra_input_tokens": 84813,
+      "luna_input_tokens": 131847
+    },
+    {
+      "task_id": "click-010",
+      "astra_wall_seconds": 160.265,
+      "luna_wall_seconds": 122.219,
+      "astra_native_tool_calls": 10,
+      "luna_native_tool_calls": 18,
+      "astra_input_tokens": 240378,
+      "luna_input_tokens": 454247
+    }
+  ],
+  "agent_wall_definition": "Recorded adapter seconds from CLI process launch through its termination and model-metadata collection; excludes container setup, source capture, offline evaluation, and cleanup.",
+  "native_tool_call_definition": "Completed CLI item events of command_execution, file_change, mcp_tool_call, or web_search; failed calls included. A batched shell command counts once. Unexposed internal Code Mode wrapper calls are not measured.",
+  "cli_turn_definition": "turn.completed events; one per attempt, not individual model requests or reasoning steps.",
+  "token_definition": "Cumulative per-turn CLI usage, summed if multiple turns; cached input is a subset of input. Output and reasoning counters retained as returned; do not add subset counters to their parents.",
+  "failed_intermediate_test_definition": "Actual public pytest executions with nonzero exit, collection error, or behavioral failures visible in output, including failures masked by final shell exit 0. A git short circuit is separately counted as an unexecuted test command. Intentional bug reproductions and expected xfails are not failed pytest runs.",
+  "accounting": {
+    "previous_cli_invocations": 14,
+    "additional_task_attempts": 4,
+    "additional_native_endpoint_probes": 1,
+    "catalog_inference_calls": 0,
+    "total_cli_invocations": 19,
+    "docker_timeouts": 0,
+    "incremental_paid_api_spend": 0,
+    "dollar_cost": "not measured",
+    "remaining_original_approximately_50_ceiling": 31,
+    "remaining_scored_runs_if_luna_frozen_and_four_development_baselines_reused": 44
+  },
+  "probes": {
+    "https://github.com": "proxy CONNECT 403",
+    "https://pypi.org": "proxy CONNECT 403",
+    "https://1.1.1.1": "proxy CONNECT 403",
+    "direct 1.1.1.1": "OSError: [Errno 101] Network is unreachable",
+    "direct 8.8.8.8": "OSError: [Errno 101] Network is unreachable",
+    "external_dns": "blocked",
+    "codex_endpoint_tls": 401,
+    "auth_mount": "read-only",
+    "identity": "1000:1000"
+  },
+  "native_tool_gate": {
+    "passed": true,
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "finished": "2026-10-02T04:45:10.641974+00:00"
+  },
+  "recommendation": {
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "status": "approved by user on 2026-10-02; intervention and confirmation execution remain pending",
+    "success_primary": true,
+    "efficiency_co_primary": false,
+    "wall_time": "prespecified key secondary outcome; recorded adapter wall seconds for every attempt; no failure-penalty composite is approved",
+    "tool_calls_and_tokens": "diagnostic outcomes, together with failed public test runs",
+    "basis": "Original five passed; smallest standard tier passed three of four development tasks, with a real public/evaluator failure on click-010. Four tasks provide limited precision; confirmation outcomes were not used."
+  },
+  "source_sha256": {
+    "arp/m2.py": "bec48cdf4d6020bb7859066cf6586ec6fb4b58da3a9f8722c19fd6be8d292661",
+    "arp/adapters.py": "2d725265df952167a3b3611cfeb052f2970054cabd33838b97752c4987a0e631",
+    "arp/dev_ceiling.py": "c58b9925e0e934434fe5ff1ccc1d2e1b35494702af5ff7fd3885ccb108b9a872",
+    "arp/attempt_metrics.py": "1149bc6261cef46007db22fb6af080e2a44469826f321d5ba0f13273743fb96b"
+  },
+  "approved_configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "success": "primary",
+    "wall_time": "prespecified key secondary",
+    "tool_calls": "diagnostic",
+    "tokens": "diagnostic",
+    "failed_public_test_runs": "diagnostic",
+    "approved_date": "2026-10-02",
+    "confirmation_execution_authorized": false
+  }
+}

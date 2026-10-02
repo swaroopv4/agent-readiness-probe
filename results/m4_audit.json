@@ -1,0 +1,52 @@
+{
+  "status": "M4_complete_pending_review",
+  "attempts": 48,
+  "intervention_reads_verified": 24,
+  "metric_corrections": 2,
+  "source_digests": {
+    "results/m5_summary.json": "420b7bd36899b6e034d40dee4ea168ed6d0b40357ff8f5c549308264f5ac47aa",
+    "results/m5_plan.json": "90e01883877a5b12689f68a0d725d79f3da7a6b488872565b497844e5176445a",
+    "review/m3_human_labels.json": "9d0284d8ca209179cec6a4e08d99adc9dea0b8dc7362555249cafdcab4434b8e",
+    "results/m1_summary.json": "be59af787c713fc641e2d88c7aa189307170faa163bad75eb9ef7dee39172581",
+    "results/m3_agreement.json": "c8d9b8d6fd24f7a8195c176bad0ee63a027cd34a318b1787832d8967d1f9bcbf",
+    "docs/m3_human_review.md": "88e47e6c3ec15746fdd8b8980b29dc357e966371cd9a8e324aa746ce9070c4e0",
+    "interventions/drafts/setup-v1/AGENTS.md": "ae59af6e5b2ef1b510958ef4159c0e0c05d9cbc0d313db7617fb6781dbc43c89"
+  },
+  "report_sha256": "1e529fbc3ff1e9e97b8482ad47a48643126b16d70a407617b19ad975021afe37",
+  "report_bytes": 316253,
+  "frozen_human_labels_unchanged": true,
+  "new_agent_calls": 0,
+  "new_evaluator_calls": 0,
+  "new_hypothesis_tests": 0,
+  "browser": {
+    "status": "passed",
+    "mode": "standalone file URL",
+    "viewports": [
+      {
+        "viewport": 1440,
+        "document": 1440,
+        "sections": 7
+      },
+      {
+        "viewport": 760,
+        "document": 760,
+        "sections": 7
+      },
+      {
+        "viewport": 390,
+        "document": 390,
+        "sections": 7
+      }
+    ],
+    "external_requests": [],
+    "page_errors": [],
+    "embedded_attempts": 48,
+    "print_rendered": true
+  },
+  "core_tests": {
+    "tests": 112,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  }
+}

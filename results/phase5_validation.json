@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "staged_tree_exported": "2f36ec43490000cc00453c6fb4692ad718f24724",
+  "private_evidence_store_exported": false,
+  "local_document_links_checked": 25,
+  "findings": 5,
+  "outreach_body_words": 71,
+  "outreach_requested_restrictions_passed": true,
+  "outreach_sent": false,
+  "spoken_script_words": 243,
+  "spoken_segments": 6,
+  "quickstart": "Exact README HTTP preview command served the bundled report from a tracked-files-only export.",
+  "quickstart_report_sha256": "1e529fbc3ff1e9e97b8482ad47a48643126b16d70a407617b19ad975021afe37",
+  "exported_checkout_tests": {
+    "tests": 115,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "document_sha256": {
+    "README.md": "bff0c978785c0cec4a5a6039d27b3df91120b43db9ce4c5b2c784660c11ff2d1",
+    "docs/findings.md": "9e0716d0fe0f6417ba2f0010251228a63d0522c8bbde515f9c78b59cb12b06cb",
+    "docs/demo_script.md": "31cbfa2e70582fdbe032e2ff9aa4d235fa299c7ff2bbd4e77e30cde33f09806c",
+    "docs/outreach.md": "5dc76adc9d7ecde07c56ce55f52df112d1d2ab1d9ad00973596d3b7d80898f23",
+    "docs/phase4_audit.md": "3d6e86b04f3f7672cdefc5f2e3b357fb2b23d0092fb7b8b9eb6709c9908c089e",
+    "docs/pre_publish_check.md": "9667f899b361942a37a0e68a1040a2d229b4999a35fddee57fcde97ed463385f"
+  },
+  "new_agent_calls": 0,
+  "new_evaluator_calls": 0,
+  "paid_api_spend": 0,
+  "software_check_recovery": "Earlier export tests exposed Windows default-temp ACL and missing nested-parent errors. Both XML records retained in phase5-public-export-001 and 002. README now uses ignored root-local basetemp."
+}

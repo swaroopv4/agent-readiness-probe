@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "head_at_scan": "3b3822aa81dd2e2ce000747ddac0b432f5f37ab0",
+  "reachable_commits": 15,
+  "tracked_working_files": 109,
+  "reachable_blobs": 154,
+  "unique_historical_paths_checked": 100,
+  "commit_tag_objects_checked": 15,
+  "auth_comparison": "Current local auth token values compared in memory; no values copied or reported.",
+  "known_credential_values_compared": 3,
+  "local_env_files_checked": 1,
+  "private_gold_oracle_payloads_compared": 24,
+  "added_hidden_test_blocks_compared": 12,
+  "ignore_probes_passed": [
+    ".env",
+    ".env.local",
+    "artifacts/private/auth.json",
+    "artifacts/private/gold.patch",
+    "workspaces/task/.env",
+    ".pytest-tmp-local-001/result.json"
+  ],
+  "findings": [],
+  "scope": "Tracked working files and all blobs reachable from local refs; no publication or remote push.",
+  "limitations": "Pattern and known-value scanning is not a proof against every possible secret encoding. Private raw traces and task/oracle stores remain ignored on disk. Public metadata includes commit IDs, test names, aggregate verdicts and reviewed agent evidence. Public historical fixes can be recovered from upstream history, so this dataset is not a reusable untouched held-out benchmark after disclosure."
+}

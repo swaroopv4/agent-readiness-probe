@@ -1,0 +1,4519 @@
+{
+  "milestone": "M5",
+  "status": "M5_complete_pending_review",
+  "config": {
+    "seed": 20261002,
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "intervention_sha256": "ae59af6e5b2ef1b510958ef4159c0e0c05d9cbc0d313db7617fb6781dbc43c89",
+    "common_prompt_sha256": "7fa0f683918a188744dc92649f9fa723132e3c13f66bc76f39226ddb5e7757d1",
+    "rubric_sha256": "47cb0a1f9900df853e00fbb72000ac76710f27379560ea7722098b07730a0834",
+    "arm_order_limitation": "All eight M3 baseline repeat-1 runs precede intervention runs. Only the remaining baseline repeat 2 and intervention repeats 1 and 2 are randomized/interleaved. Arm order is not fully randomized; cohort/time confounding remains."
+  },
+  "plan_sha256": "90e01883877a5b12689f68a0d725d79f3da7a6b488872565b497844e5176445a",
+  "retained_M3_baselines": 8,
+  "new_launched": 40,
+  "new_scored_completed": 40,
+  "unlaunched_attempts_remaining": 0,
+  "scored_outcomes_still_missing": 0,
+  "attempts": [
+    {
+      "run_id": "01-click-001-baseline-1",
+      "task_id": "click-001",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:22:42.729616+00:00",
+      "agent_wall_seconds": 66.656,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 6,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 131111,
+        "cached_input_tokens": 108288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2798,
+        "reasoning_output_tokens": 961
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.02s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 128,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "E       IndexError: list index out of range",
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "3 failed, 11 passed in 0.03s"
+          ],
+          "command_sha256": "fa5638f0ed5ecd6c595626c89195cbe4a2e2148efaf32d005cc132d1e6885755",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "12 passed, 2 deselected in 0.01s"
+          ],
+          "command_sha256": "a3690e33e42dd88fc65f0187cbd897467cd34ff71fdfaf3cc74258990d9b5bcb",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 2,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.280999999959022,
+        "collected": 2117,
+        "passed": 2092,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "49449e36d3efbcbca2629db46b4a98ea38d3b8554b8d555edf92c2452e995d0c",
+      "result_sha256": "5b6e06df54419accb20b5ae05c313ea4c6bfe3f21cd423d83af3c0ba45355b0a",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "02-click-004-baseline-1",
+      "task_id": "click-004",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:24:05.406688+00:00",
+      "agent_wall_seconds": 48.891,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 5,
+      "command_calls": 4,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 90132,
+        "cached_input_tokens": 63232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1862,
+        "reasoning_output_tokens": 261
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.59s"
+          ],
+          "command_sha256": "d0ded67413d505fe52a2dfa04be05d1cf437bfe82358f1121a5086e5318994ec",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_3",
+          "exit_code": 128,
+          "summary_lines": [
+            "        except KeyError:",
+            "        except KeyError:"
+          ]
+        },
+        {
+          "item_id": "item_8",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.297000000020489,
+        "collected": 1774,
+        "passed": 1749,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "d96d4d165020eb3f0d6238fa399979af3f3a0f5f44a82fef301d1e8cf3c00249",
+      "result_sha256": "8d2ab87dc2d3d592c86c5999cd71ccc34359c2c49be0f1efb16904765ada77d9",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "03-click-005-baseline-1",
+      "task_id": "click-005",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:25:08.558493+00:00",
+      "agent_wall_seconds": 56.079,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 97649,
+        "cached_input_tokens": 65792,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2311,
+        "reasoning_output_tokens": 555
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.85s"
+          ],
+          "command_sha256": "0a173ee76ce74c49cd6d355bb46c556913ccac3120a50541636bcdb8ae60d1bf",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.23399999999674,
+        "collected": 1919,
+        "passed": 1894,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "a174bd1b64f769f2eb17290e1885d032730e784ca895fc5eb77c4ecc5d08775f",
+      "result_sha256": "26e7a11e695b4f8c357f06fc3879ca0c82d1ae13d4b803d5e88479f9a3e555df",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "04-click-006-baseline-1",
+      "task_id": "click-006",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "test_failure",
+      "success": false,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:26:18.421410+00:00",
+      "agent_wall_seconds": 50.187,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 148493,
+        "cached_input_tokens": 116224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2017,
+        "reasoning_output_tokens": 588
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.44s"
+          ],
+          "command_sha256": "681606321f6e70701aef94e8d36d196509f9ba9fdad542a4b0d22f3518ceeddf",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_9",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.09399999998277,
+        "collected": 1706,
+        "passed": 1679,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "4ac7a516379c189fb78b34854ccabb074bf55c21667ab24b1ce662ab19dcc918",
+      "result_sha256": "ca8824c12c77e90d8f5879322336e4a231239d3d6780750377194e83a7202c72",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "05-click-007-baseline-1",
+      "task_id": "click-007",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:27:22.012269+00:00",
+      "agent_wall_seconds": 67.875,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 10,
+      "command_calls": 9,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 180445,
+        "cached_input_tokens": 153856,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2806,
+        "reasoning_output_tokens": 698
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.45s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_12",
+          "exit_code": 1,
+          "summary_lines": [
+            "AssertionError"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.125,
+        "collected": 1686,
+        "passed": 1661,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "15cbd3de84546a4a2291ea0ac1c0f929f8f56383fe99e81c2408a82d7cff1a6a",
+      "result_sha256": "3f632ba7a2c9724c9f3cdac80df58f21ac7d377a90c8529a8c9afa7bccf7db68",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "06-click-008-baseline-1",
+      "task_id": "click-008",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "test_failure",
+      "success": false,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:28:43.317774+00:00",
+      "agent_wall_seconds": 77.343,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 141408,
+        "cached_input_tokens": 114432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3089,
+        "reasoning_output_tokens": 1370
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "AttributeError: 'tuple' object has no attribute 'buffer'",
+            "405 passed, 24 skipped, 1000 deselected in 0.60s"
+          ],
+          "command_sha256": "7176f6e9c20dc26a7963b2a5d2a7172ab0e0357fc173e88762f599f14aac47b0",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.22s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 7.89000000001397,
+        "collected": 1681,
+        "passed": 1654,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "03aa17b5821656c5c3fe4a507be0eb12d1af29cc288f388f61e1928c7581fba1",
+      "result_sha256": "2806647d9a45c87d80b3ea84cba23200dae6f8b8a5197b6143f9afaceb6981d6",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "07-click-011-baseline-1",
+      "task_id": "click-011",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:30:14.007267+00:00",
+      "agent_wall_seconds": 67.359,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 6,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 128682,
+        "cached_input_tokens": 106240,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2207,
+        "reasoning_output_tokens": 676
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.08s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 128,
+          "summary_lines": []
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 1,
+          "summary_lines": [
+            "TypeError: Parameter.__init__() got an unexpected keyword argument 'value_proc'"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.3439999999827705,
+        "collected": 1521,
+        "passed": 1497,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "b9e3ecb78a2ed75b9ea5924714cd1b0ffffff361ca01e077cab4ad8056cdcd19",
+      "result_sha256": "5c6c0d4cba8728a8a4ce72978e2ba4cdb36adabd46d1d18f6d78cf796f0f3ef5",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "08-click-012-baseline-1",
+      "task_id": "click-012",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M3 retained baseline repeat 1",
+      "started": "2026-10-02T08:31:34.101998+00:00",
+      "agent_wall_seconds": 47.844,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 131387,
+        "cached_input_tokens": 103168,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1752,
+        "reasoning_output_tokens": 563
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.92s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_9",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.296999999962281,
+        "collected": 1465,
+        "passed": 1441,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "98bbdbc30c28196555b289e8a1d94aacfe7c12df5957cc7c05c17e83706129d0",
+      "result_sha256": "a8cd298f68d2d90ebdaf84179a3781713e1565b0b382e079f3c1ae33dd4e939c",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "01-click-007-baseline-2",
+      "task_id": "click-007",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:19:37.187243+00:00",
+      "agent_wall_seconds": 42.64,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 6,
+      "command_calls": 5,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 102869,
+        "cached_input_tokens": 85248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1654,
+        "reasoning_output_tokens": 575
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.78s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 9.15700000000652,
+        "collected": 1686,
+        "passed": 1658,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 3,
+      "evaluation_error_count": 0,
+      "events_sha256": "972d93729b6716ed697c393c076bb395a50077bb3f84326c1af20b6d0756b73a",
+      "result_sha256": "dbee93de46b7d8dc40993fd33c9a9bfd0cccf3529933e733b9d8c00e70487801",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "02-click-007-intervention-2",
+      "task_id": "click-007",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:20:34.316412+00:00",
+      "agent_wall_seconds": 62.125,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 6,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 134618,
+        "cached_input_tokens": 100096,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2176,
+        "reasoning_output_tokens": 457
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.46s"
+          ],
+          "command_sha256": "134df29a01e397d3ceb1ebe68ccd31fdd669193866cf098ddc043da0f654ff98",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.05s"
+          ],
+          "command_sha256": "bef64cab730ccd1fbc944929f1794d29c3647901d4a2d8cf1c979e95f090df3b",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 10.125,
+        "collected": 1686,
+        "passed": 1661,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "7dd7fc702de2d4546131a061e5485059da92916d7e2860e229fb651571f2c326",
+      "result_sha256": "e20ce420877c73648dc11f6ea08211943e61ec1c32a888b15b11b74950cb1f4e",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "03-click-007-intervention-1",
+      "task_id": "click-007",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:21:51.698786+00:00",
+      "agent_wall_seconds": 38.843,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 5,
+      "command_calls": 4,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 97234,
+        "cached_input_tokens": 76288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1419,
+        "reasoning_output_tokens": 421
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1658 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.77s"
+          ],
+          "command_sha256": "986c99822f8851e81772fde94b49c1e5b0c341378392aeb2fdcc764accbfab6e",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.65600000001723,
+        "collected": 1686,
+        "passed": 1658,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 3,
+      "evaluation_error_count": 0,
+      "events_sha256": "2259682ea32adc885a99dce8ed7024203572ce03e06a58cbdaaf90991b6a850b",
+      "result_sha256": "cb8156024768ccd1fbe87a2bd9e567a9300a0cb4e00650a6d33cb0dd967e3cd7",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "04-click-002-baseline-1",
+      "task_id": "click-002",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:22:44.241082+00:00",
+      "agent_wall_seconds": 61.781,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 7,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 174926,
+        "cached_input_tokens": 154624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2134,
+        "reasoning_output_tokens": 621
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "ValueError: <object object at 0x7e83ae7c4640> is not a valid Sentinel",
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.21s"
+          ],
+          "command_sha256": "3da4a3aac0f6b5cbd2ba72d3c99eaac6112286bed2b5dcd6665069ab510fb435",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.31s"
+          ],
+          "command_sha256": "3da4a3aac0f6b5cbd2ba72d3c99eaac6112286bed2b5dcd6665069ab510fb435",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1963 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.03s"
+          ],
+          "command_sha256": "5c86e100ec5a54abc1c3b1e1f9ca42b5b7e58339fd504e72049e32a4e425c7e0",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 2,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.76600000000326,
+        "collected": 2025,
+        "passed": 2000,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "efc6b0211e9cef08d29e601804d6e60f5d34d202145a735af572a183f21ab25e",
+      "result_sha256": "14be62c5064c5b84d534bb5f28ebf5dc2f52a79b595a7497cb19868692c0d3f0",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup"
+      ]
+    },
+    {
+      "run_id": "05-click-002-baseline-2",
+      "task_id": "click-002",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:24:02.783884+00:00",
+      "agent_wall_seconds": 63.422,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 10,
+      "command_calls": 8,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 191091,
+        "cached_input_tokens": 156416,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2160,
+        "reasoning_output_tokens": 400
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "ValueError: <object object at 0x731658958640> is not a valid Sentinel",
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.00s"
+          ],
+          "command_sha256": "7c0b48ac5295363f2612721fca3723b546eb1e46adb896fc26042184dd6520cf",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1963 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.94s"
+          ],
+          "command_sha256": "00a235358b5799fe6c33cf5b4dbfd56c180e315aa8170b139a69fffa100eb54e",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.71899999998277,
+        "collected": 2025,
+        "passed": 2000,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "8b4edc8733ff97e77a59b87699bc3a94328486f23ece48317e416106ba0d1b44",
+      "result_sha256": "14b66bf5a69c0bb408a29db042d7d4dec7c69bdeb2653a9001ea8e6524d6f082",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup"
+      ]
+    },
+    {
+      "run_id": "06-click-002-intervention-1",
+      "task_id": "click-002",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:25:21.516158+00:00",
+      "agent_wall_seconds": 70.86,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 7,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 133051,
+        "cached_input_tokens": 109312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2430,
+        "reasoning_output_tokens": 667
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "ValueError: <object object at 0x7ed9922a4640> is not a valid Sentinel",
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.89s"
+          ],
+          "command_sha256": "df5f455b258b1945c7fa10a8694e2c268bc47ce439eea54bd7ed3b4bc035f40a",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.95s"
+          ],
+          "command_sha256": "202b9e170d95970f4b9f7af761c93fe47c066f31bc24d834b8ba72e1287531ff",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.73s"
+          ],
+          "command_sha256": "7bd0f60bddc220737006d38b975f57ca5b26a343e6f38e5cb3467ecbb47ab2aa",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 1,
+          "summary_lines": [
+            "ValueError: <object object at 0x728136770640> is not a valid Sentinel"
+          ]
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.625,
+        "collected": 2025,
+        "passed": 2000,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "fb9d1a2f4f154e81b3be6d8ce95969a6054d438106184a11347fdf19dae44c67",
+      "result_sha256": "57308d9092da6e849977e289ee6fa8e4750b81caa119a40b3ed3ac0acaba1c39",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup"
+      ]
+    },
+    {
+      "run_id": "07-click-002-intervention-2",
+      "task_id": "click-002",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:26:47.263906+00:00",
+      "agent_wall_seconds": 63.703,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 6,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 116367,
+        "cached_input_tokens": 95232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2212,
+        "reasoning_output_tokens": 449
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "ValueError: <object object at 0x716aaec3c640> is not a valid Sentinel",
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.32s"
+          ],
+          "command_sha256": "a63ff4ecc89caa9950f213262737f1a40f1b4599bbcab9b2e3f0ab179a9f02e4",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.94s"
+          ],
+          "command_sha256": "079d134fd4a45e06c8a559d20235b71ac53fd185e3fcb5fbb0fa8890ae85cf65",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_11",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 10.921999999962281,
+        "collected": 2025,
+        "passed": 2000,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "da890c3f2decbd916486679afc756dcf7176be574952ad802ac10a3218a1a6c9",
+      "result_sha256": "dad15c9bcf4a8c122f720f7be64a42a59bf1141fcd08dd243801702d3582d0cb",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup"
+      ]
+    },
+    {
+      "run_id": "08-click-005-intervention-2",
+      "task_id": "click-005",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:28:07.722863+00:00",
+      "agent_wall_seconds": 48.125,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 6,
+      "command_calls": 5,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 93828,
+        "cached_input_tokens": 78592,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1701,
+        "reasoning_output_tokens": 476
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.84s"
+          ],
+          "command_sha256": "9acfccd22cc1b85305cb4a21efacdaf9b7afc4f51342a6d3240bed21207a7721",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_9",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 10.875,
+        "collected": 1919,
+        "passed": 1894,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "ec4af583a34fd4970b86c9d9ed9b81e25ca0ff28501ce1048bbd92c41be0cdb4",
+      "result_sha256": "551e641767967cab7dbdf2f87b75aeef0d337903ce4992beacc45a3d14d17935",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "09-click-005-intervention-1",
+      "task_id": "click-005",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:29:12.589416+00:00",
+      "agent_wall_seconds": 44.516,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 96566,
+        "cached_input_tokens": 81920,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1574,
+        "reasoning_output_tokens": 367
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "172 passed in 0.13s"
+          ],
+          "command_sha256": "0a5d2812b1a698ddaa4b076b813c13d4302bbc998969ac21349b5905af69e51e",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.14s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_10",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.204000000027008,
+        "collected": 1919,
+        "passed": 1894,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "a2f39a4ab6eed076331667f3e0885dce6c424a72b4d06754fdad24fa213ecce5",
+      "result_sha256": "57941d0cd1567b386f61cccf639f9dc5e89849b2cca9a4e43a6dcfbfdf9cd26f",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "10-click-005-baseline-2",
+      "task_id": "click-005",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:30:12.709242+00:00",
+      "agent_wall_seconds": 42.375,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 6,
+      "command_calls": 5,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 87946,
+        "cached_input_tokens": 68864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1497,
+        "reasoning_output_tokens": 305
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.23s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_3",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 12.828000000037719,
+        "collected": 1919,
+        "passed": 1894,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "11f14afe42e3cce5331740a9f4687a3ec125ebb3734e310e15a0305d3e4133c1",
+      "result_sha256": "15b7bc181caafc94c8df79ad956cb4caf367b953dd909d891463ae174f64ed1f",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "11-click-001-intervention-1",
+      "task_id": "click-001",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:31:24.405613+00:00",
+      "agent_wall_seconds": 79.5,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 155837,
+        "cached_input_tokens": 131584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2903,
+        "reasoning_output_tokens": 1073
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 1,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "2 failed, 12 passed in 0.04s"
+          ],
+          "command_sha256": "9d534b98146921cac6f12662acf3ffd9d0e38b1e493ddaad149ca419b7a434a1",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 2.61s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 1,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "2 failed, 2068 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.13s"
+          ],
+          "command_sha256": "c225e9256705b6c4fa66de8a4926c5303af18c428cd2642f86eaa970e479071b",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 3,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 128,
+          "summary_lines": [
+            "        except UnicodeError:"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 19.125,
+        "collected": 2117,
+        "passed": 2092,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "644031473952d9d2d7447a3777b530008b03b2e7335e0b8efcf072e4fd3128d0",
+      "result_sha256": "cb24ee69fe067be642c1194fd84b2c85536a804021a97c958c62f97355667e5e",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "12-click-001-baseline-2",
+      "task_id": "click-001",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:33:21.588301+00:00",
+      "agent_wall_seconds": 40.875,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 8,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 123500,
+        "cached_input_tokens": 107776,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2899,
+        "reasoning_output_tokens": 1095
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.92s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "2 failed, 12 passed in 0.03s"
+          ],
+          "command_sha256": "88213cbfb03e78d94046a138b2b90394f612454f2f7dde7ecbb012e40b24febd",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "12 passed, 2 deselected in 0.02s"
+          ],
+          "command_sha256": "e8e08f717b2245e54148bbf03cf2d7b286a68482f870d40bbc40fe7509c30dec",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 2,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_5",
+          "exit_code": 128,
+          "summary_lines": []
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 13.796999999962281,
+        "collected": 2117,
+        "passed": 2092,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "f8376ab81aa647b4e4a8ebc52c270662418ea837ae0dc63f68d0c8cb3dcaef6a",
+      "result_sha256": "090dd04b7fb5e9b681fd986125c2b0e3e7020306ccd8987c6d3b8595d46022a8",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "13-click-001-intervention-2",
+      "task_id": "click-001",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:34:24.134450+00:00",
+      "agent_wall_seconds": 79.0,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 6,
+      "command_calls": 5,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 92570,
+        "cached_input_tokens": 76032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2839,
+        "reasoning_output_tokens": 1034
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "140 passed in 0.16s"
+          ],
+          "command_sha256": "6dd0047060dcf02b14b62f7c55e7509673fef7aab3542f61216cf980c855089b",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_8",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.91s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 128,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": true,
+          "summary_lines": [
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "E       AssertionError: assert '123 567...' == '123 567 9.'",
+            "E         ",
+            "E         - 123 567 9.",
+            "E         ?        --",
+            "E         + 123 567...",
+            "E         ?         ++",
+            "tests/test_utils/test_make_default_short_help.py:39: AssertionError",
+            "2 failed, 2068 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.92s"
+          ],
+          "command_sha256": "6a16c87e3bd8203242e394e1035806a09691c791c000fb2f49d1a44cae17d55b",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 2,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.39000000001397,
+        "collected": 2117,
+        "passed": 2092,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "b244e8f2f16918e0145837f2b3fbe4ecefbd37a66ec3c0dc5e30b7cc03a07fc7",
+      "result_sha256": "4f56fd2f50f79c86f1b8a7def3253fb740c314a2660e7db5fe07ea5752795b61",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "14-click-010-intervention-2",
+      "task_id": "click-010",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:35:59.491373+00:00",
+      "agent_wall_seconds": 91.687,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 14,
+      "command_calls": 11,
+      "file_edit_calls": 3,
+      "usage": {
+        "input_tokens": 317694,
+        "cached_input_tokens": 288512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3247,
+        "reasoning_output_tokens": 861
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_12",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.14s"
+          ],
+          "command_sha256": "e4c2d4d99b907f0fa163102746963e9862132f3942312ca8ed1f0f0489574225",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_15",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "648 passed in 0.75s"
+          ],
+          "command_sha256": "b7aa46588b11d9008faec6e025484420fdf3cfcd06242ff186645844c8f387be",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_17",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.92s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_3",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.063000000023749,
+        "collected": 1611,
+        "passed": 1587,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "25d8d1dca78eee37d98b92a35668c98a2bf7766f2a1a267cc70aaefd9d7a6eb4",
+      "result_sha256": "ee54468566c3f11fcb68e08fae81c3d49e0197b244ba244248e474034bb565a7",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "15-click-010-baseline-1",
+      "task_id": "click-010",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:37:47.684538+00:00",
+      "agent_wall_seconds": 105.969,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 15,
+      "command_calls": 9,
+      "file_edit_calls": 6,
+      "usage": {
+        "input_tokens": 337669,
+        "cached_input_tokens": 306176,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4009,
+        "reasoning_output_tokens": 1410
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.53s"
+          ],
+          "command_sha256": "59383238146724d981f4b91ba6a6f439d51622213a0e3a448627758bec2703c5",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.10s"
+          ],
+          "command_sha256": "34f55751b6c73456c70a1cf41b8ecf7535e49ea5681d5243d2cbb41d8547bb82",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_18",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.09s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 9.235000000044238,
+        "collected": 1611,
+        "passed": 1577,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 10,
+      "evaluation_error_count": 0,
+      "events_sha256": "c5e1521b08dbd1594e5db9525e2ebce983d5741ae77ce8eced07351806b27d08",
+      "result_sha256": "bd621152ed4829610277b08ee98eb59d8faf24aa950785c6db17994831af9332",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "16-click-010-baseline-2",
+      "task_id": "click-010",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:39:48.559503+00:00",
+      "agent_wall_seconds": 71.609,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 7,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 272139,
+        "cached_input_tokens": 222208,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2705,
+        "reasoning_output_tokens": 692
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.12s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.20s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_9",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.73399999999674,
+        "collected": 1611,
+        "passed": 1586,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 1,
+      "evaluation_error_count": 0,
+      "events_sha256": "251413f487b15729a450f3dd78bcc19d309fea8e813fd12449bf38625ae62322",
+      "result_sha256": "c48fb93e1facfa1ca4a52a086f5d93fb189550e2b95b2f93974486a558126f4a",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "17-click-010-intervention-1",
+      "task_id": "click-010",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:41:14.886648+00:00",
+      "agent_wall_seconds": 74.765,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 11,
+      "command_calls": 9,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 221336,
+        "cached_input_tokens": 189696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2886,
+        "reasoning_output_tokens": 806
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1510 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.32s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_11",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.110000000044238,
+        "collected": 1611,
+        "passed": 1585,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "baf86dd59bb43cbc61f8665e10681efd866f8a366dd39068890077f5b2993b0a",
+      "result_sha256": "6fe0be2136d9177bb56fc37040ade3dffe477f42b889ff00b04e181bc56a6298",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "18-click-008-intervention-1",
+      "task_id": "click-008",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:42:43.446385+00:00",
+      "agent_wall_seconds": 64.25,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 129345,
+        "cached_input_tokens": 109312,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2527,
+        "reasoning_output_tokens": 997
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "257 passed, 24 skipped in 0.39s"
+          ],
+          "command_sha256": "3371e7ff074ee3702e1b2f7880ed96370ee5954471c2422d9ec1dd235c6fd44d",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 129,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "257 passed, 24 skipped in 0.39s"
+          ],
+          "command_sha256": "48be9cad0283bc410cbfae6dcd4564eb8306df454eae7f7abf882ca0d49b2402",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.02s"
+          ],
+          "command_sha256": "665600a5b542409f7091689f031caad139394aaa6da2470f5464101b487f3262",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.25,
+        "collected": 1681,
+        "passed": 1654,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "612598c9f1375d47361d1e8b1b5eb4101019b06a67dfde9b2d34ebb975a1575d",
+      "result_sha256": "8f3aa68bd0b6e29082a2ec798e3b613f09bfe9e1b99ef72c862f4cb3c783a4fd",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "19-click-008-baseline-2",
+      "task_id": "click-008",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:44:02.496104+00:00",
+      "agent_wall_seconds": 44.781,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 139606,
+        "cached_input_tokens": 121344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1486,
+        "reasoning_output_tokens": 406
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "405 passed, 24 skipped, 1000 deselected in 0.66s"
+          ],
+          "command_sha256": "6101ab19c4275bb9bb2bf5b057c68ea0a81db4968996e3d84c3c5132ea682a30",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.31s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_10",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.89100000000326,
+        "collected": 1681,
+        "passed": 1656,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "26c61afb2685195af12454c211affcedfaf36005cb68cffc0dc92c3ba378b546",
+      "result_sha256": "12f42597c7a9948eec24f3d201467ec2d4f3993eed1d768ced3b6b9eefb9cde5",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "20-click-008-intervention-2",
+      "task_id": "click-008",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:45:00.825705+00:00",
+      "agent_wall_seconds": 48.297,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 5,
+      "command_calls": 4,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 71851,
+        "cached_input_tokens": 37888,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1894,
+        "reasoning_output_tokens": 758
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "405 passed, 24 skipped, 1000 deselected in 0.61s"
+          ],
+          "command_sha256": "fe76713c40ec40a9ef5f5c54b57fd4fa2292d4bf7ca18002cc10f001ddb82d9b",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_8",
+          "exit_code": 128,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1654 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.50s"
+          ],
+          "command_sha256": "60c82843ce864b36e8ee7a6afabefe4058617651e500bf4f2c7f0bdd52aed2c7",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.9060000000172295,
+        "collected": 1681,
+        "passed": 1656,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "c888a0d205b6652804a12c254021bfecf55e39283b834c7b29b725d392f2540f",
+      "result_sha256": "84e7320d37de057dcc273c9dcd3819e086cf21c71976f79b565403e58d7236a4",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "21-click-004-intervention-1",
+      "task_id": "click-004",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:46:02.605038+00:00",
+      "agent_wall_seconds": 44.422,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 5,
+      "command_calls": 4,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 77064,
+        "cached_input_tokens": 65792,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1771,
+        "reasoning_output_tokens": 191
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.60s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_3",
+          "exit_code": 128,
+          "summary_lines": [
+            "        except KeyError:",
+            "        except KeyError:"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.03200000000652,
+        "collected": 1774,
+        "passed": 1749,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "14bdc2b960e2bc1c6817d3791559bb6457ecc161458b147e3dff1cb4b6547b78",
+      "result_sha256": "361e963443684de0c2318e16cf41d51afbdea69967c6eabdf74f2ac21e083f17",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "22-click-004-intervention-2",
+      "task_id": "click-004",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:47:02.238313+00:00",
+      "agent_wall_seconds": 52.172,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 106202,
+        "cached_input_tokens": 93696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2066,
+        "reasoning_output_tokens": 352
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "36 passed in 0.02s"
+          ],
+          "command_sha256": "877cb5c328c3d51caf1e46a6a1efe23a5bd755be6cb7148aa95940bc66d86f71",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.69s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_3",
+          "exit_code": 128,
+          "summary_lines": []
+        },
+        {
+          "item_id": "item_6",
+          "exit_code": 1,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.297000000020489,
+        "collected": 1774,
+        "passed": 1749,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "0182a671d3fb681a52266a444d9128cc376d05d76efbb9a053ef2a212fcb1731",
+      "result_sha256": "68687284e7b8b330fa8221ac8c98ad07c939892bc4b1de682229753394f39812",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "23-click-004-baseline-2",
+      "task_id": "click-004",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:48:08.797134+00:00",
+      "agent_wall_seconds": 54.391,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 6,
+      "command_calls": 4,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 109440,
+        "cached_input_tokens": 78080,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2060,
+        "reasoning_output_tokens": 331
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 4.05s"
+          ],
+          "command_sha256": "2b6974d0f2e6b82aae4ca5d47d53595b1b72b1869be1f396b54b6ae68911d14d",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.577999999979511,
+        "collected": 1774,
+        "passed": 1749,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "c899a5efd94a6242ae380e24ce397d0f351b2284bd59ccc293c44edb4890442e",
+      "result_sha256": "7f08a46842e5fdfe2023bec5d2cff4dedafa90e4be114ba9607fc994ee28f2fe",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "24-click-006-intervention-1",
+      "task_id": "click-006",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:49:17.557011+00:00",
+      "agent_wall_seconds": 64.656,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 12,
+      "command_calls": 10,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 216420,
+        "cached_input_tokens": 174080,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2596,
+        "reasoning_output_tokens": 749
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "365 passed, 23 skipped, 1000 deselected in 0.53s"
+          ],
+          "command_sha256": "cd703f3fdec0ef2c1e0684d04a121f186737a5295df712a75a011b40704a2adb",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_13",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.61s"
+          ],
+          "command_sha256": "30dc54393c775d3b2b2d4e4dc8277e7bfcd43834f412ea1e786c06ab7d26e57d",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_6",
+          "exit_code": 1,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 7.936999999976251,
+        "collected": 1706,
+        "passed": 1679,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "929de6904155a8d253a123bd1b834ddb866008c8e7748e23504930393f34d111",
+      "result_sha256": "309389cea0719b1ec2bb0652bc77bda8478ca0915346e5e5ab07047442ed044f",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "25-click-006-baseline-2",
+      "task_id": "click-006",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:50:36.101176+00:00",
+      "agent_wall_seconds": 49.36,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 114243,
+        "cached_input_tokens": 76032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1601,
+        "reasoning_output_tokens": 427
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.67s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_9",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.98499999998603,
+        "collected": 1706,
+        "passed": 1679,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "e828d3191614aeed736cef85b7cd7b2bc68f4204d463b0934044a134e23323ba",
+      "result_sha256": "ff85a23d426a54896284e5d9048e4e3fcb817ac8bbf64de1c7df4e9748b6cc05",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "26-click-006-intervention-2",
+      "task_id": "click-006",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "test_failure",
+      "success": false,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:51:39.775835+00:00",
+      "agent_wall_seconds": 57.328,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 11,
+      "command_calls": 10,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 191128,
+        "cached_input_tokens": 161792,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1927,
+        "reasoning_output_tokens": 518
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "259 passed, 24 skipped in 0.37s"
+          ],
+          "command_sha256": "de516f3ffbc60216341e2dbd30554b2962a0f0bf751abc8c7d4cca3415b1718e",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_13",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1677 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.65s"
+          ],
+          "command_sha256": "c225e9256705b6c4fa66de8a4926c5303af18c428cd2642f86eaa970e479071b",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_5",
+          "exit_code": 128,
+          "summary_lines": []
+        },
+        {
+          "item_id": "item_14",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 1,
+        "seconds": 8.90600000001723,
+        "collected": 1706,
+        "passed": 1679,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 2,
+      "evaluation_error_count": 0,
+      "events_sha256": "c033716b88d8675f70e156bb320d38ee96a67b6892aac9466171e5005f1b1914",
+      "result_sha256": "82c06a6c9abee82cd2259bfbcd944876bfa478ae5f2318daafad48e1cbf3fb9b",
+      "rule_primary": "unclassified",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "27-click-009-intervention-1",
+      "task_id": "click-009",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:52:52.057043+00:00",
+      "agent_wall_seconds": 56.75,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 8,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 155414,
+        "cached_input_tokens": 115456,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1918,
+        "reasoning_output_tokens": 602
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "676 passed in 0.73s"
+          ],
+          "command_sha256": "bc362c1517d18175e649fc3473694301239b630af4ce03c019db601a690a897b",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.37s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.98499999998603,
+        "collected": 1655,
+        "passed": 1630,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "687c3e5c8bd0df98f00dcc2a74733902c5d1d5959b0589c3628fb92d19da2b77",
+      "result_sha256": "e4385893743b71da8390e944dc3cc5a0e398b2b343a9840c5cb6fe8ae4353da5",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "28-click-009-baseline-1",
+      "task_id": "click-009",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:54:03.951206+00:00",
+      "agent_wall_seconds": 56.063,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 137814,
+        "cached_input_tokens": 112640,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1892,
+        "reasoning_output_tokens": 647
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.21s"
+          ],
+          "command_sha256": "360ef07712825559fe58373b2849f7e77d9409eb6b1d71f1405265f31173a3cf",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.18s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_4",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.85899999999674,
+        "collected": 1655,
+        "passed": 1630,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "8ad86e554123389d06bd723c730004163e09daf2ee1b8af24589d4da6bd120c0",
+      "result_sha256": "e6d81eeee79ffc608969f819cc54475cb7f62501d273de0fd6c7d51e08e3a6c0",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "29-click-009-intervention-2",
+      "task_id": "click-009",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:55:13.130140+00:00",
+      "agent_wall_seconds": 44.735,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 8,
+      "command_calls": 7,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 138896,
+        "cached_input_tokens": 114432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1598,
+        "reasoning_output_tokens": 411
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.24s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.01600000000326,
+        "collected": 1655,
+        "passed": 1630,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "fac045b308eb2984520f2864b450a2dead3e5767d2998ada4faaee90a4609ac6",
+      "result_sha256": "a3d15f160c7ad034d2f25e69a3cee838851b74d642b1afb1f93953393a7b8a34",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "30-click-009-baseline-2",
+      "task_id": "click-009",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:56:11.136468+00:00",
+      "agent_wall_seconds": 48.531,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 8,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 168912,
+        "cached_input_tokens": 147712,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1780,
+        "reasoning_output_tokens": 384
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1624 passed, 24 skipped, 30000 deselected, 1 xfailed in 3.22s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.8439999999827705,
+        "collected": 1655,
+        "passed": 1630,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "c4af9fb149f784461c2a36f63eef68f3b31baca27810d731449886fef1dd0133",
+      "result_sha256": "07e000d69af9fe16d5a32441fd41f254cec27ceedee8bb481a5224f59bdf7e32",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "31-click-012-intervention-1",
+      "task_id": "click-012",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:57:12.886336+00:00",
+      "agent_wall_seconds": 41.485,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 6,
+      "command_calls": 5,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 89592,
+        "cached_input_tokens": 68096,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1442,
+        "reasoning_output_tokens": 274
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.91s"
+          ],
+          "command_sha256": "f6d53d1afb53e31c3b4869d473c42bfd161bfd36e1f585244f8224d2cfc920ac",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_8",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.35999999998603,
+        "collected": 1465,
+        "passed": 1441,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "0709df6c5c19abb749baa9e7ece80724a0e818556219ad448bc046ac92f7b9e3",
+      "result_sha256": "366b0a9d0fd42c53ff056d34a830249344faa96cb60de17e47876bed2a98811c",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "32-click-012-baseline-2",
+      "task_id": "click-012",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:58:07.424116+00:00",
+      "agent_wall_seconds": 45.343,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 127119,
+        "cached_input_tokens": 92160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1598,
+        "reasoning_output_tokens": 315
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.06s"
+          ],
+          "command_sha256": "4bb0ff10cafc57aa69f35b383e4532d17d6f57f6fc7d7f754a5876e73d26f41f",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_10",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.422000000020489,
+        "collected": 1465,
+        "passed": 1441,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "7985790609113cd0425b5bdd5da783e806f5605679a9e0fcd4f4df445acb4bc4",
+      "result_sha256": "3b451db20c5fabae9eaac2b8adee629955ababe077b91bb221cc1033ecbea623",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "33-click-012-intervention-2",
+      "task_id": "click-012",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T09:59:05.658077+00:00",
+      "agent_wall_seconds": 56.468,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 116898,
+        "cached_input_tokens": 104192,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1803,
+        "reasoning_output_tokens": 405
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_9",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1436 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.99s"
+          ],
+          "command_sha256": "14ca759f4c0187b0974f452d4b05ef9b37084c535a22e7d180a832631e2bcd47",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_5",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.282000000006519,
+        "collected": 1465,
+        "passed": 1441,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "0498b948f7f72c10111f367d50cfa4a14a5e008e6aaadd62bec421ef1de42de6",
+      "result_sha256": "b886d597130e727cb9ee24853eaf0d291e5a4d49be68a83317033f7b390b31d8",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "34-click-011-intervention-2",
+      "task_id": "click-011",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T10:00:14.879469+00:00",
+      "agent_wall_seconds": 53.891,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 6,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 113442,
+        "cached_input_tokens": 75776,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1808,
+        "reasoning_output_tokens": 759
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "332 passed, 23 skipped in 0.45s"
+          ],
+          "command_sha256": "cd703f3fdec0ef2c1e0684d04a121f186737a5295df712a75a011b40704a2adb",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.96s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.717999999993481,
+        "collected": 1521,
+        "passed": 1497,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "904c547107fe3e7d4e9a68e5b17c9c27b3ae389c66d7bbf15f3733ce79414420",
+      "result_sha256": "6ad728cadfb005c2fb444fbc674e92e3a5bb01453dc93ba516bcf47f9f38e9a6",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "35-click-011-intervention-1",
+      "task_id": "click-011",
+      "split": "confirmation",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T10:01:22.383769+00:00",
+      "agent_wall_seconds": 76.859,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 7,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 169614,
+        "cached_input_tokens": 149760,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1916,
+        "reasoning_output_tokens": 685
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "185 passed, 23 skipped in 0.24s"
+          ],
+          "command_sha256": "45976ec27ef834c4c51b0251ff74c0fec6ecc5dd9456f9ba3583f16e4fe13283",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_11",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 3.19s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_12",
+          "exit_code": 129,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 9.061999999976251,
+        "collected": 1521,
+        "passed": 1497,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "94d9aa261307054ecdd3bb1f29f83bd6a1d0568da75168a1f481fdc60c39c0e9",
+      "result_sha256": "bdf3dcfd22a337d71169e096565f953dc81f697941f29f83fe3454932a82a418",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "36-click-011-baseline-2",
+      "task_id": "click-011",
+      "split": "confirmation",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T10:02:54.260516+00:00",
+      "agent_wall_seconds": 67.344,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 7,
+      "command_calls": 5,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 112115,
+        "cached_input_tokens": 82944,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2028,
+        "reasoning_output_tokens": 779
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1494 passed, 23 skipped, 30000 deselected, 1 xfailed in 2.99s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 0,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_10",
+          "exit_code": 128,
+          "summary_lines": [
+            "secret \"Value: \\nError: '***' is not a valid integer.\\nValue: \\n\\nAborted!\\n\"",
+            "custom 'Value: \\nError: custom failure\\nValue: \\n\\nAborted!\\n'"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 7.842999999993481,
+        "collected": 1521,
+        "passed": 1497,
+        "skipped": 24,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "ab17406283526619f9708b50c9fc3af061b28c5fdc270ed7f752727db792791b",
+      "result_sha256": "0be7111d0dc64c3bb0871c86b7b644f623a261b4d259b6210626456468677546",
+      "rule_primary": "no_failure",
+      "rule_secondary": []
+    },
+    {
+      "run_id": "37-click-003-baseline-1",
+      "task_id": "click-003",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T10:04:15.675354+00:00",
+      "agent_wall_seconds": 50.703,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 8,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 161577,
+        "cached_input_tokens": 125440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2090,
+        "reasoning_output_tokens": 482
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "229 passed in 0.28s"
+          ],
+          "command_sha256": "a67e578577fd71d5d242a70a385a8c7d7356f26e1f2fc25080bd8b9053220d53",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.86s"
+          ],
+          "command_sha256": "f7fec73808c2220a4ecf0707de975d5729de13e9de9d6aff938a7f6b6a1ffc85",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_10",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.313000000023749,
+        "collected": 1978,
+        "passed": 1953,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "28cb776e4445d58e717d2aa1393e6d3dd73525ff6bd2d4bfc43a12ad13109588",
+      "result_sha256": "3eb27d1845564f72da193288652515982c6edc56e2d6b055dd82b88d265231eb",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "38-click-003-intervention-1",
+      "task_id": "click-003",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 1,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T10:05:22.761460+00:00",
+      "agent_wall_seconds": 73.375,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 10,
+      "command_calls": 9,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 236041,
+        "cached_input_tokens": 192256,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2461,
+        "reasoning_output_tokens": 594
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.83s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_10",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1940 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.70s"
+          ],
+          "command_sha256": "665600a5b542409f7091689f031caad139394aaa6da2470f5464101b487f3262",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_11",
+          "exit_code": 128,
+          "summary_lines": [
+            "AssertionError"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.5,
+        "collected": 1978,
+        "passed": 1953,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "491e954f871498c91e4eb1fb46247fbf5f8cf23f29e0acfdba2bac9c6c999d29",
+      "result_sha256": "8b8eb6797d6e5ae696022ea3f6a535dadd1bbf48ee55af0a9760a0a0bced0f91",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "39-click-003-baseline-2",
+      "task_id": "click-003",
+      "split": "development",
+      "arm": "baseline",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T10:06:51.283192+00:00",
+      "agent_wall_seconds": 84.594,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 12,
+      "command_calls": 10,
+      "file_edit_calls": 2,
+      "usage": {
+        "input_tokens": 199109,
+        "cached_input_tokens": 153088,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3011,
+        "reasoning_output_tokens": 723
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_6",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.86s"
+          ],
+          "command_sha256": "fb89dafee4ec827e94d179e1eaef700049593fd75f9a4e6cf7165df61719a5ab",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_8",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1912 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.68s"
+          ],
+          "command_sha256": "5c86e100ec5a54abc1c3b1e1f9ca42b5b7e58339fd504e72049e32a4e425c7e0",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_11",
+          "exit_code": 1,
+          "summary_lines": [
+            "AssertionError"
+          ]
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.46799999999348,
+        "collected": 1978,
+        "passed": 1953,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "950b9f91c0188e1f4d2f755c20b45cd58955ab9dd9c79fd59af7bfcf07f78a2c",
+      "result_sha256": "17d30ec21c1c40b7c997d45d5fb8ad40ee5c91cce60efc4dc36a82f0665a3902",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup",
+        "reasoning_error"
+      ]
+    },
+    {
+      "run_id": "40-click-003-intervention-2",
+      "task_id": "click-003",
+      "split": "development",
+      "arm": "intervention",
+      "repeat": 2,
+      "state": "resolved",
+      "success": true,
+      "source": "M5 new attempt",
+      "started": "2026-10-02T10:08:30.990485+00:00",
+      "agent_wall_seconds": 56.11,
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "low",
+      "cli_turns": 1,
+      "native_tool_calls": 9,
+      "command_calls": 8,
+      "file_edit_calls": 1,
+      "usage": {
+        "input_tokens": 188276,
+        "cached_input_tokens": 159232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1674,
+        "reasoning_output_tokens": 313
+      },
+      "public_pytest_runs": [
+        {
+          "item_id": "item_7",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "838 passed in 0.83s"
+          ],
+          "command_sha256": "3d494eff50bfbe00353d52c46e78bb3678ab969793af2d83702abd868c9343ea",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_9",
+          "exit_code": 2,
+          "blocked_before_pytest": false,
+          "failed_run": true,
+          "collection_error": true,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "_________________ ERROR collecting tests/test_deprecations.py __________________",
+            "E   StopIteration",
+            "E   importlib.metadata.PackageNotFoundError: No package metadata was found for click",
+            "ERROR tests/test_deprecations.py",
+            "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+            "31000 deselected, 1 error in 1.77s"
+          ],
+          "command_sha256": "bc24663b00e53f396526c039d39b35f44110c4acac7584a0260d7afdb1706329",
+          "output_truncated": false
+        },
+        {
+          "item_id": "item_12",
+          "exit_code": 0,
+          "blocked_before_pytest": false,
+          "failed_run": false,
+          "collection_error": false,
+          "behavioral_failure": false,
+          "summary_lines": [
+            "1940 passed, 24 skipped, 31000 deselected, 1 xfailed in 3.68s"
+          ],
+          "command_sha256": "665600a5b542409f7091689f031caad139394aaa6da2470f5464101b487f3262",
+          "output_truncated": false
+        }
+      ],
+      "failed_public_pytest_runs": 1,
+      "other_nonzero_commands": [
+        {
+          "item_id": "item_13",
+          "exit_code": 128,
+          "summary_lines": []
+        }
+      ],
+      "evaluation": {
+        "returncode": 0,
+        "seconds": 8.422000000020489,
+        "collected": 1978,
+        "passed": 1953,
+        "skipped": 25,
+        "timed_out": false
+      },
+      "evaluation_failure_count": 0,
+      "evaluation_error_count": 0,
+      "events_sha256": "65ef2960a54bba40b4199c1df6d75e340952e0cbd0c0b22bec922cf95dbf1292",
+      "result_sha256": "f55233e0cc17c15098fef9e43124c817614ebdbeebd58181a358bf188e2d4edc",
+      "rule_primary": "no_failure",
+      "rule_secondary": [
+        "env_setup"
+      ]
+    }
+  ],
+  "analysis": {
+    "complete_48_slot_design": true,
+    "primary_confirmation": {
+      "estimate": 0.0,
+      "bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "resamples": 10000,
+      "seed": 20261002,
+      "clusters": 8,
+      "degenerate": true,
+      "hoeffding_95": [
+        -0.9603227913199207,
+        0.9603227913199207
+      ],
+      "hoeffding_half_width": 0.9603227913199207,
+      "selected_interval": [
+        -0.9603227913199207,
+        0.9603227913199207
+      ],
+      "selected_method": "Hoeffding fallback (degenerate bootstrap)",
+      "conclusion": "inconclusive"
+    },
+    "key_secondary_confirmation_wall": {
+      "estimate": 2.6621250000000005,
+      "bootstrap_95": [
+        -3.1210468749999993,
+        10.5381875
+      ],
+      "resamples": 10000,
+      "seed": 20261002,
+      "clusters": 8,
+      "degenerate": false,
+      "definition": "Intervention minus baseline mean agent wall seconds, paired over tasks; includes unsuccessful task attempts and agent caps, excludes infrastructure. No success-only efficiency claim or penalty composite."
+    },
+    "confirmation": {
+      "tasks": 8,
+      "planned_attempts_per_arm": 16,
+      "arms": {
+        "baseline": {
+          "successes": 12,
+          "scored_attempts": 16,
+          "execution_coverage": 1.0,
+          "task_weighted_success_rate": 0.75,
+          "mean_wall_seconds": 54.3339375,
+          "agent_caps": 0,
+          "failed_task_attempts": 4,
+          "first_attempt_successes": 6,
+          "first_attempt_scored": 8,
+          "first_attempt_wilson_95": [
+            0.40927543031016883,
+            0.9285207872478909
+          ],
+          "pass_at_2_tasks": 7,
+          "pass_at_2_denominator": 8
+        },
+        "intervention": {
+          "successes": 12,
+          "scored_attempts": 16,
+          "execution_coverage": 1.0,
+          "task_weighted_success_rate": 0.75,
+          "mean_wall_seconds": 56.9960625,
+          "agent_caps": 0,
+          "failed_task_attempts": 4,
+          "first_attempt_successes": 6,
+          "first_attempt_scored": 8,
+          "first_attempt_wilson_95": [
+            0.40927543031016883,
+            0.9285207872478909
+          ],
+          "pass_at_2_tasks": 7,
+          "pass_at_2_denominator": 8
+        }
+      },
+      "success_delta": 0.0,
+      "wall_delta_seconds": 2.6621250000000005
+    },
+    "development_descriptive": {
+      "tasks": 4,
+      "planned_attempts_per_arm": 8,
+      "arms": {
+        "baseline": {
+          "successes": 6,
+          "scored_attempts": 8,
+          "execution_coverage": 1.0,
+          "task_weighted_success_rate": 0.75,
+          "mean_wall_seconds": 67.834,
+          "agent_caps": 0,
+          "failed_task_attempts": 2,
+          "first_attempt_successes": 3,
+          "first_attempt_scored": 4,
+          "first_attempt_wilson_95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "pass_at_2_tasks": 3,
+          "pass_at_2_denominator": 4
+        },
+        "intervention": {
+          "successes": 7,
+          "scored_attempts": 8,
+          "execution_coverage": 1.0,
+          "task_weighted_success_rate": 0.875,
+          "mean_wall_seconds": 66.498125,
+          "agent_caps": 0,
+          "failed_task_attempts": 1,
+          "first_attempt_successes": 4,
+          "first_attempt_scored": 4,
+          "first_attempt_wilson_95": [
+            0.5101091635454027,
+            1.0
+          ],
+          "pass_at_2_tasks": 4,
+          "pass_at_2_denominator": 4
+        }
+      },
+      "success_delta": 0.125,
+      "wall_delta_seconds": -1.3358749999999961
+    },
+    "all_tasks_descriptive": {
+      "tasks": 12,
+      "planned_attempts_per_arm": 24,
+      "arms": {
+        "baseline": {
+          "successes": 18,
+          "scored_attempts": 24,
+          "execution_coverage": 1.0,
+          "task_weighted_success_rate": 0.75,
+          "mean_wall_seconds": 58.833958333333335,
+          "agent_caps": 0,
+          "failed_task_attempts": 6,
+          "first_attempt_successes": 9,
+          "first_attempt_scored": 12,
+          "first_attempt_wilson_95": [
+            0.46769466506643426,
+            0.9110583316059453
+          ],
+          "pass_at_2_tasks": 10,
+          "pass_at_2_denominator": 12
+        },
+        "intervention": {
+          "successes": 19,
+          "scored_attempts": 24,
+          "execution_coverage": 1.0,
+          "task_weighted_success_rate": 0.7916666666666666,
+          "mean_wall_seconds": 60.16341666666666,
+          "agent_caps": 0,
+          "failed_task_attempts": 5,
+          "first_attempt_successes": 10,
+          "first_attempt_scored": 12,
+          "first_attempt_wilson_95": [
+            0.5519691377470266,
+            0.9530348578161463
+          ],
+          "pass_at_2_tasks": 11,
+          "pass_at_2_denominator": 12
+        }
+      },
+      "success_delta": 0.041666666666666664,
+      "wall_delta_seconds": 1.329458333333335
+    },
+    "task_results": [
+      {
+        "task_id": "click-001",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 53.7655,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 66.656,
+              "run_id": "01-click-001-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 40.875,
+              "run_id": "12-click-001-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 79.25,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 79.5,
+              "run_id": "11-click-001-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 79.0,
+              "run_id": "13-click-001-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": 25.484499999999997,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-002",
+        "split": "development",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 62.6015,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 61.781,
+              "run_id": "04-click-002-baseline-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 63.422,
+              "run_id": "05-click-002-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 67.2815,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 70.86,
+              "run_id": "06-click-002-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 63.703,
+              "run_id": "07-click-002-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": 4.679999999999993,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-003",
+        "split": "development",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 67.6485,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 50.703,
+              "run_id": "37-click-003-baseline-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 84.594,
+              "run_id": "39-click-003-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 64.7425,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 73.375,
+              "run_id": "38-click-003-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 56.11,
+              "run_id": "40-click-003-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": -2.9059999999999917,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-004",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 51.641,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 48.891,
+              "run_id": "02-click-004-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 54.391,
+              "run_id": "23-click-004-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 48.297,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 44.422,
+              "run_id": "21-click-004-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 52.172,
+              "run_id": "22-click-004-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": -3.344000000000001,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-005",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 49.227000000000004,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 56.079,
+              "run_id": "03-click-005-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 42.375,
+              "run_id": "10-click-005-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 46.320499999999996,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 44.516,
+              "run_id": "09-click-005-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 48.125,
+              "run_id": "08-click-005-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": -2.9065000000000083,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-006",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 0,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0,
+          "mean_wall_seconds": 49.7735,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 50.187,
+              "run_id": "04-click-006-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 49.36,
+              "run_id": "25-click-006-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 0,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0,
+          "mean_wall_seconds": 60.992000000000004,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 64.656,
+              "run_id": "24-click-006-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 57.328,
+              "run_id": "26-click-006-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": 11.218500000000006,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-007",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 1,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0.5,
+          "mean_wall_seconds": 55.2575,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 67.875,
+              "run_id": "05-click-007-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 42.64,
+              "run_id": "01-click-007-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 1,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0.5,
+          "mean_wall_seconds": 50.484,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 38.843,
+              "run_id": "03-click-007-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 62.125,
+              "run_id": "02-click-007-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0.0,
+        "wall_delta_seconds": -4.7734999999999985,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-008",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 1,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0.5,
+          "mean_wall_seconds": 61.062,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 77.343,
+              "run_id": "06-click-008-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 44.781,
+              "run_id": "19-click-008-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 1,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0.5,
+          "mean_wall_seconds": 56.2735,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 64.25,
+              "run_id": "18-click-008-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 48.297,
+              "run_id": "20-click-008-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0.0,
+        "wall_delta_seconds": -4.788499999999999,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-009",
+        "split": "development",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 52.297,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 56.063,
+              "run_id": "28-click-009-baseline-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 48.531,
+              "run_id": "30-click-009-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 50.7425,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 56.75,
+              "run_id": "27-click-009-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 44.735,
+              "run_id": "29-click-009-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": -1.5544999999999973,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-010",
+        "split": "development",
+        "baseline": {
+          "successes": 0,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0,
+          "mean_wall_seconds": 88.78899999999999,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 105.969,
+              "run_id": "15-click-010-baseline-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 71.609,
+              "run_id": "16-click-010-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 1,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 0.5,
+          "mean_wall_seconds": 83.226,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "test_failure",
+              "success": false,
+              "agent_wall_seconds": 74.765,
+              "run_id": "17-click-010-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 91.687,
+              "run_id": "14-click-010-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0.5,
+        "wall_delta_seconds": -5.562999999999988,
+        "direction": "gain"
+      },
+      {
+        "task_id": "click-011",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 67.35149999999999,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 67.359,
+              "run_id": "07-click-011-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 67.344,
+              "run_id": "36-click-011-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 65.375,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 76.859,
+              "run_id": "35-click-011-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 53.891,
+              "run_id": "34-click-011-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": -1.9764999999999873,
+        "direction": "unchanged"
+      },
+      {
+        "task_id": "click-012",
+        "split": "confirmation",
+        "baseline": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 46.593500000000006,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 47.844,
+              "run_id": "08-click-012-baseline-1",
+              "source": "M3 retained baseline repeat 1"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 45.343,
+              "run_id": "32-click-012-baseline-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "intervention": {
+          "successes": 2,
+          "scored": 2,
+          "planned": 2,
+          "success_rate": 1,
+          "mean_wall_seconds": 48.9765,
+          "attempts": [
+            {
+              "repeat": 1,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 41.485,
+              "run_id": "31-click-012-intervention-1",
+              "source": "M5 new attempt"
+            },
+            {
+              "repeat": 2,
+              "state": "resolved",
+              "success": true,
+              "agent_wall_seconds": 56.468,
+              "run_id": "33-click-012-intervention-2",
+              "source": "M5 new attempt"
+            }
+          ]
+        },
+        "comparable_complete": true,
+        "success_delta": 0,
+        "wall_delta_seconds": 2.3829999999999956,
+        "direction": "unchanged"
+      }
+    ],
+    "gains": [],
+    "losses": [],
+    "unchanged": [
+      "click-001",
+      "click-004",
+      "click-005",
+      "click-006",
+      "click-007",
+      "click-008",
+      "click-011",
+      "click-012"
+    ],
+    "infrastructure_exclusions": [],
+    "unlaunched_slots": [],
+    "human_labels_changed": false
+  },
+  "docker_timeouts": 0,
+  "accounting": {
+    "prior_cli_invocations": 28,
+    "new_scored_invocations_planned": 40,
+    "native_gate_invocations_planned": 1,
+    "projected_total": 69,
+    "ceiling_revision": "User explicitly authorized all remaining 12-task scored slots; replaces the earlier approximate 50 planning ceiling, retaining the $0 cap.",
+    "new_cli_invocations_observed": 41,
+    "total_cli_invocations_observed": 69,
+    "incremental_paid_api_spend": 0,
+    "dollar_cost": "not measured"
+  },
+  "M4_started": false,
+  "human_labels_changed": false,
+  "stop_reason": null
+}

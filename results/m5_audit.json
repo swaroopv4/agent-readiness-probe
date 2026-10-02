@@ -1,0 +1,22 @@
+{
+  "status": "M5_evidence_and_cleanup_verified",
+  "retained_M3_baselines": 8,
+  "new_attempts_audited": 40,
+  "original_M3_human_labels_unchanged": true,
+  "intervention_full_read_evidence": 24,
+  "intervention_runs": 24,
+  "frozen_model_prompt_AGENTS_rubric_sources_and_manifest": "unchanged",
+  "same_fresh_offline_evaluator": true,
+  "core_tests_passed": 106,
+  "core_tests_skipped": 1,
+  "skip_reason": "Windows host symlink privilege",
+  "docker_timeouts": 0,
+  "owned_containers_remaining": [],
+  "owned_networks_remaining": [],
+  "saved_auth_credential_bytes_detected": false,
+  "private_audit_path": "artifacts/private/m5-run-001/audit.json",
+  "m5_plan_sha256": "90e01883877a5b12689f68a0d725d79f3da7a6b488872565b497844e5176445a",
+  "m5_summary_sha256": "420b7bd36899b6e034d40dee4ea168ed6d0b40357ff8f5c549308264f5ac47aa",
+  "incremental_paid_api_spend": 0,
+  "M4_started": false
+}

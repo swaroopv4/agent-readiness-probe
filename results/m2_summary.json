@@ -1,0 +1,277 @@
+{
+  "milestone": "M2",
+  "status": "complete_pending_user_review",
+  "dataset_version": "m1-v7",
+  "m1_commit": "f000b0b",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "cli_version": "codex-cli 0.153.1",
+  "agent_image_id": "sha256:acc21a0a23bca286bce1d659a1449add682e731a7821568c594f28d0d961bcfd",
+  "proxy_image_id": "sha256:26457b3b80041f58700cf0b073f4f7a8e2c545f6f78049df77db80637acad2bd",
+  "evaluator_image_id": "sha256:506974e3505483d01d749cfc2cffc6bae2e3d375f2f5ff69d241bc353b630cb7",
+  "completed_smoke_attempts": 5,
+  "resolved": 5,
+  "all_probes_passed": true,
+  "native_tool_probe_passed": true,
+  "probes": {
+    "https://github.com": "proxy CONNECT 403",
+    "https://pypi.org": "proxy CONNECT 403",
+    "https://1.1.1.1": "proxy CONNECT 403",
+    "direct 1.1.1.1": "OSError: [Errno 101] Network is unreachable",
+    "direct 8.8.8.8": "OSError: [Errno 101] Network is unreachable",
+    "external_dns": "blocked",
+    "codex_endpoint_tls": 401,
+    "auth_mount": "read-only",
+    "identity": "1000:1000"
+  },
+  "attempts": [
+    {
+      "task_id": "click-002",
+      "repeat": 0,
+      "state": "resolved",
+      "agent_seconds": 64.078,
+      "usage": {
+        "turns": [
+          {
+            "input_tokens": 97324,
+            "cached_input_tokens": 79872,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1334,
+            "reasoning_output_tokens": 133
+          }
+        ]
+      },
+      "native_command_calls": 9,
+      "evidence": "artifacts/private/m2-linux-run-005/01-click-002-baseline-0",
+      "passed": 2000,
+      "skipped": 25,
+      "failed": 0,
+      "errors": 0,
+      "evaluator_seconds": 8.688000000023749,
+      "patch_sha256": "e446740d0d1c0603f6fcfbc995bcf2cc3eb36ff679fe34e52695c908e36feaa8",
+      "patch_bytes": 515
+    },
+    {
+      "task_id": "click-003",
+      "repeat": 0,
+      "state": "resolved",
+      "agent_seconds": 85.344,
+      "usage": {
+        "turns": [
+          {
+            "input_tokens": 150536,
+            "cached_input_tokens": 122368,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1714,
+            "reasoning_output_tokens": 169
+          }
+        ]
+      },
+      "native_command_calls": 8,
+      "evidence": "artifacts/private/m2-linux-run-005/02-click-003-baseline-0",
+      "passed": 1953,
+      "skipped": 25,
+      "failed": 0,
+      "errors": 0,
+      "evaluator_seconds": 8.59299999999348,
+      "patch_sha256": "4e86b956d38ebd2caed4cec8a0828a10a414f6b3908309e7ed4357ce391e972d",
+      "patch_bytes": 1157
+    },
+    {
+      "task_id": "click-009",
+      "repeat": 0,
+      "state": "resolved",
+      "agent_seconds": 56.656,
+      "usage": {
+        "turns": [
+          {
+            "input_tokens": 84813,
+            "cached_input_tokens": 64896,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1376,
+            "reasoning_output_tokens": 13
+          }
+        ]
+      },
+      "native_command_calls": 5,
+      "evidence": "artifacts/private/m2-linux-run-005/03-click-009-baseline-0",
+      "passed": 1630,
+      "skipped": 25,
+      "failed": 0,
+      "errors": 0,
+      "evaluator_seconds": 7.85999999998603,
+      "patch_sha256": "f5e8592f16cb26e86aac2d46b97322c286effa3dc54fafcbfd2300b07b922301",
+      "patch_bytes": 1152
+    },
+    {
+      "task_id": "click-010",
+      "repeat": 0,
+      "state": "resolved",
+      "agent_seconds": 160.265,
+      "usage": {
+        "turns": [
+          {
+            "input_tokens": 240378,
+            "cached_input_tokens": 201600,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4186,
+            "reasoning_output_tokens": 949
+          }
+        ]
+      },
+      "native_command_calls": 10,
+      "evidence": "artifacts/private/m2-linux-run-005/04-click-010-baseline-0",
+      "passed": 1587,
+      "skipped": 24,
+      "failed": 0,
+      "errors": 0,
+      "evaluator_seconds": 7.594000000040978,
+      "patch_sha256": "61e03bbf0367dc3d34e8d9d661e1b6815eed92c3b587cfc9a2df5d7d6bacdad0",
+      "patch_bytes": 5653
+    },
+    {
+      "task_id": "click-002",
+      "repeat": 1,
+      "state": "resolved",
+      "agent_seconds": 71.265,
+      "usage": {
+        "turns": [
+          {
+            "input_tokens": 108654,
+            "cached_input_tokens": 80896,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1431,
+            "reasoning_output_tokens": 151
+          }
+        ]
+      },
+      "native_command_calls": 6,
+      "evidence": "artifacts/private/m2-linux-run-005/05-click-002-baseline-1",
+      "passed": 2000,
+      "skipped": 25,
+      "failed": 0,
+      "errors": 0,
+      "evaluator_seconds": 9.5,
+      "patch_sha256": "1ce8b5864a045bcf379b8b218b3970e38c767806bfb4291fee892b02fe17f61e",
+      "patch_bytes": 655
+    }
+  ],
+  "incremental_paid_api_spend": 0,
+  "dollar_cost": "not measured",
+  "credentials_visible_in_ephemeral_agent": true,
+  "docker_timeouts": 0,
+  "endpoint_probe_usage": {
+    "turns": [
+      {
+        "input_tokens": 17452,
+        "cached_input_tokens": 8448,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 98,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  "confirmation_attempts": 0,
+  "later_milestones_started": false,
+  "recorded_at": "2026-10-02T01:14:17.387434+00:00",
+  "core_tests": {
+    "passed": 88,
+    "skipped": 1,
+    "skip_reason": "Windows host symlink creation privilege"
+  },
+  "cleanup": {
+    "containers": [],
+    "networks": [],
+    "credential_material_in_evidence": false
+  },
+  "m1_integrity": {
+    "git_fsck": "passed",
+    "accepted_commit": "f000b0b",
+    "accepted_commit_is_ancestor": true,
+    "accepted_tasks": 12,
+    "preserved_evaluator_runs": 108,
+    "manifest_and_review_unchanged": true
+  },
+  "earlier_windows_launches": {
+    "cli_infrastructure_aborts": 2,
+    "container_setup_aborts": 1,
+    "events": [
+      {
+        "artifact": "artifacts/private/m2-smoke-001",
+        "failure": "Local app-server initialization denied before inference",
+        "usage": "not measured"
+      },
+      {
+        "artifact": "artifacts/private/m2-smoke-002",
+        "failure": "WebSocket TLS UnknownIssuer, no task tools invoked",
+        "usage": "not measured"
+      },
+      {
+        "artifact": "artifacts/private/m2-smoke-003",
+        "failure": "Docker exec readiness check timed out at 10 seconds, forced removal timed out at 30 seconds, CLI never launched"
+      }
+    ]
+  },
+  "linux_diagnostics": [
+    {
+      "evidence": "artifacts/private/m2-linux-run-001",
+      "kind": "proxy subnet setup abort",
+      "cli_invocations": 0,
+      "evaluations": 0
+    },
+    {
+      "evidence": "artifacts/private/m2-linux-run-002",
+      "kind": "successful endpoint inference; metadata capture incomplete",
+      "cli_invocations": 1,
+      "evaluations": 0
+    },
+    {
+      "evidence": "artifacts/private/m2-linux-run-003",
+      "kind": "successful endpoint inference; task readiness race before task CLI",
+      "cli_invocations": 1,
+      "evaluations": 0
+    },
+    {
+      "evidence": "artifacts/private/m2-linux-run-004",
+      "kind": "disabled Code Mode runtime; three unchanged submissions evaluated and fourth CLI halted",
+      "cli_invocations": 4,
+      "evaluations": 3
+    },
+    {
+      "evidence": "artifacts/private/m2-linux-run-005/probes",
+      "kind": "successful endpoint and native write/read probe",
+      "cli_invocations": 1,
+      "evaluations": 0
+    }
+  ],
+  "operational_accounting": {
+    "total_cli_invocations": 14,
+    "scored_development_attempts": 5,
+    "connectivity_tool_probe_invocations": 3,
+    "excluded_linux_task_infrastructure_launches": 4,
+    "previous_windows_cli_aborts": 2,
+    "valid_scored_evaluator_runs": 5,
+    "diagnostic_evaluator_runs": 3,
+    "remaining_invocations_under_original_50_ceiling": 36,
+    "remaining_scored_runs_in_48_run_design": 43,
+    "later_complete_design_requires_ceiling_review": true
+  },
+  "smoke_usage_totals": {
+    "input_tokens": 681705,
+    "cached_input_tokens": 549632,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 10041,
+    "reasoning_output_tokens": 1415
+  },
+  "agent_seconds_total": 437.608,
+  "evaluator_seconds_total": 42.235,
+  "source_sha256": {
+    "arp/adapters.py": "df91245de04d4232f0d54f901fbbbb0c46fdd0401ad00826fec3bc788534ca62",
+    "arp/m2.py": "cd66c7e3111c7001fe44ea3919abad5c242323093e47555b0c7be8e56c04d910",
+    "arp/linux_runtime.py": "5d5466b20dbbc4b4558426552959fc8b2c3562bb376bfef06876d1e86c1723fa",
+    "docker/Dockerfile.agent": "34816b05f403c1520c3d04e393d8d7ffcc99130c97015f70841a9ef1c92c31a9",
+    "docker/Dockerfile.proxy": "2cbe48f866f45dfdf44f6404b7a3f5730874c4f7a62631758c9fd6f32ee93a8e",
+    "docker/proxy.py": "6a39d37eab224d99abe1aeb9925145c757cee684b9f4b910ee061caa66a9001f"
+  },
+  "model_identity_limit": "Effective client model in rollout; reasoning default from fetched catalog and explicit smoke CLI flags. Backend served-model identity is not independently exposed."
+}
